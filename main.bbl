@@ -1,5 +1,25 @@
 \begin{thebibliography}{1}
 
+\bibitem{lima2020wisardpkg}
+Aluízio~S. Lima~Filho, Gabriel~P. Guarisa, Leopoldo A.~D. Lusquino~Filho, Luiz F.~R. Oliveira, Felipe M.~G. França, and Priscila M.~V. Lima.
+\newblock wisardpkg - a library for wisard-based models.
+\newblock {\em arXiv preprint arXiv:2005.00887}, 2020.
+
+\bibitem{lusquino2020}
+Leopoldo A.~D. Lusquino~Filho, Luiz F.~R. Oliveira, Aluizio Lima~Filho, Gabriel~P. Guarisa, Lucca~M. Felix, Priscila M.~V. Lima, and Felipe M.~G. França.
+\newblock Extending the weightless wisard classifier for regression.
+\newblock {\em Neurocomputing}, 419:125--138, 2020.
+
+\bibitem{santiago2023}
+Leandro Santiago.
+\newblock Redes sem peso wisard - soluções para memória eficiente, 2023.
+\newblock Apresentação sobre modelos WiSARD e otimizações de memória.
+
+\bibitem{santiago2020}
+Leandro Santiago, Leticia Verona, Fabio Rangel, Fabrício Firmino, Daniel~S. Menasché, Wouter Caarls, Mauricio Breternitz~Jr, Sandip Kundu, Priscila M.~V. Lima, and Felipe M.~G. França.
+\newblock Weightless neural networks as memory segmented bloom filters.
+\newblock {\em Neurocomputing}, 416:354--366, 2020.
+
 \bibitem{susskind2022}
 Zachary Susskind, Aman Arora, Igor D.~S. Miranda, Luis A.~Q. Villon, Rafael~F. Katopodis, Leandro~S. Araújo, Diego L.~C. Dutra, Priscila M.~V. Lima, Felipe M.~G. França, Mauricio Breternitz~Jr, and Lizy~K. John.
 \newblock Weightless neural networks for efficient edge inference.

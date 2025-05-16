@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1747409021.82979 "main.aux" "main.bbl" "main" 1747409321.20571 0
-  "./references.bib" 1747407882.35902 601 7498d7a3f415a685e01bb4a7aa1b586a ""
+["bibtex main"] 1747412445.68413 "main.aux" "main.bbl" "main" 1747412446.59506 0
+  "./references.bib" 1747412356.06665 2114 8724c764833372d1842301f0b6433a9c ""
   "/usr/local/texlive/2025basic/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "main.aux" 1747409321.08686 8123 7dd9cf28387917476b77385ca6f74c45 "pdflatex"
+  "main.aux" 1747412446.46791 8872 593570d9df1b2e755969a3eca67950f8 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1747409320.5449 "main.tex" "main.pdf" "main" 1747409321.20582 0
+["pdflatex"] 1747412445.70854 "main.tex" "main.pdf" "main" 1747412446.59522 0
   "/Users/miguel/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx0900.600pk" 1747407904.77973 22480 73c5c1153996e4982b2e6cc645c61f29 ""
   "/Users/miguel/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk" 1747407902.77792 25396 a2df8cbd3976c6d56a0f694cebcd1969 ""
   "/Users/miguel/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk" 1747407902.36094 31928 29dfa169e5b190f627ba29c9f0a26e69 ""
@@ -127,10 +127,10 @@
   "/usr/local/texlive/2025basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1746454350 134019 cd4c6b77f00bd3e43f30e7435d99d00a ""
   "/usr/local/texlive/2025basic/texmf-var/web2c/pdftex/pdflatex.fmt" 1746452518 2663828 6a8655031d155e1619ed6f474cdc6c49 ""
   "/usr/local/texlive/2025basic/texmf.cnf" 1741448314 628 81d1ada0f601fb1ffa62f1323192d946 ""
-  "main.aux" 1747409321.08686 8123 7dd9cf28387917476b77385ca6f74c45 "pdflatex"
-  "main.bbl" 1747409021.84945 493 7e6db0af436ae746231a405a2a3c4551 "bibtex main"
-  "main.out" 1747409321.08956 3394 49225bc26567d828691b7d1db55f5df8 "pdflatex"
-  "main.tex" 1747409318.9584 23451 82e499d2913708868894891c8678f879 ""
+  "main.aux" 1747412446.46791 8872 593570d9df1b2e755969a3eca67950f8 "pdflatex"
+  "main.bbl" 1747412445.70641 1606 7edd1ad2f4825627c7c63c3cca5f5da4 "bibtex main"
+  "main.out" 1747412446.4737 3394 49225bc26567d828691b7d1db55f5df8 "pdflatex"
+  "main.tex" 1747412424.29026 23627 d4e7b0986b98df2413b17d430ceed2f4 ""
   (generated)
   "main.aux"
   "main.log"

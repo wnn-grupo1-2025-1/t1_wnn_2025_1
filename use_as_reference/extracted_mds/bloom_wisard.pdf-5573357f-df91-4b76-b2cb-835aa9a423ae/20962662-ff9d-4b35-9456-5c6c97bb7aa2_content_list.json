@@ -1,0 +1,1495 @@
+[
+    {
+        "type": "text",
+        "text": "Redes Sem Peso WiSARD - Soluções para Memória Eficiente ",
+        "text_level": 1,
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Leandro Santiago ",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "WiSARD - Soluções para Memória Eficiente ",
+        "text_level": 1,
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "WiSARD (Wilkie, Stoneham and Aleksander’s Recognition Device) ",
+        "text_level": 1,
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Neurônio representado como nó RAM Múltiplos Discriminadores Discriminador = Conjunto de RAMs Entradas endereçam blocos de RAMs usando mapeamento pseudo-aleatório biunívoco ",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "WiSARD ",
+        "text_level": 1,
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Discriminador representa uma classe a ser reconhecida ",
+        "text_level": 1,
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "N RAMs e tuplas M bits para cada tupla A RAM armazena 2 M bits Entrada binária: M $\\times$ N bits ",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Etapa de Treinamento ",
+        "text_level": 1,
+        "page_idx": 4
+    },
+    {
+        "type": "image",
+        "img_path": "images/7f62923ab6e4a92a8dcbee2d1b6f78282a69d15c5856177355e53e8ae581f019.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 4
+    },
+    {
+        "type": "image",
+        "img_path": "images/5da5e52ceb5e87f1ee5c53fda7bee362acdd448b5246983ea5fc97893e33f50d.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 4
+    },
+    {
+        "type": "image",
+        "img_path": "images/ef0cc98abc200f1b6bff525aaa3b7d31c79ab122468d97d2b6aacde68d3cd1e5.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "Etapa de Treinamento ",
+        "text_level": 1,
+        "page_idx": 5
+    },
+    {
+        "type": "image",
+        "img_path": "images/77cdb81b1ce877d0dcc482fcf3030f77b25792c0fb13842e5088b3e0ac3bdbfb.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 5
+    },
+    {
+        "type": "image",
+        "img_path": "images/c3872e16fc4e37a5a41826ba70645e833b6aadf0f595d05db4435c3339677f58.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 5
+    },
+    {
+        "type": "image",
+        "img_path": "images/f61fca61c5cc0fb39ca05d3b6bbc133aee0d5993697c8047a868891435f514cd.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Etapa de Treinamento ",
+        "text_level": 1,
+        "page_idx": 6
+    },
+    {
+        "type": "image",
+        "img_path": "images/7807eab362feb7f1e84820c93d8ab9f399692eb50be18556245d31c63b446883.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Etapa de Treinamento ",
+        "text_level": 1,
+        "page_idx": 7
+    },
+    {
+        "type": "image",
+        "img_path": "images/25096b52d5cae41efb46333a7de42179fccc2514c2ecdf2135217dad4b291cab.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Etapa de Treinamento ",
+        "text_level": 1,
+        "page_idx": 8
+    },
+    {
+        "type": "image",
+        "img_path": "images/b97d580dd9678c91c7880431f2933a604da1df588fd62b731052b413a4b44b9a.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "Etapa de Classificação ",
+        "text_level": 1,
+        "page_idx": 9
+    },
+    {
+        "type": "image",
+        "img_path": "images/2bb494328be5d7784698611b896a5e3aa115656c9645438f41de491a534a1c5f.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "Etapa de Classificação ",
+        "text_level": 1,
+        "page_idx": 10
+    },
+    {
+        "type": "image",
+        "img_path": "images/7ffd3a3e1d27d2ff0919a5fe8108c42fb52fccc653473c863b3b19841b172c6c.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "Etapa de Classificação ",
+        "text_level": 1,
+        "page_idx": 11
+    },
+    {
+        "type": "image",
+        "img_path": "images/5331aeaf59977701ac8574edb4a16f53bd614a9c36ef72fbe1c32c27c997804f.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "Confiança Relativa ",
+        "text_level": 1,
+        "page_idx": 12
+    },
+    {
+        "type": "image",
+        "img_path": "images/8d00087e230e2e5f688f338b7f41195514f1fe4ae08a89a566590f7768b39279.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "WiSARD: Problemas ",
+        "text_level": 1,
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "Capacidade de generalização do modelo depende da quantidade de posições de RAMs preenchidas ",
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "WiSARD: Problemas ",
+        "text_level": 1,
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Capacidade de generalização do modelo depende da quantidade de posições de RAMs preenchidas ",
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Como lidar com saturação? ",
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Aumentar tamanho da tupla $$ mais endereços por neurônio Utilizar q-RAM com $q > 1$ (até 8 bits) ",
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "WiSARD: Problemas ",
+        "text_level": 1,
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "Capacidade de generalização do modelo depende da quantidade de posições de RAMs preenchidas ",
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "Como lidar com saturação? ",
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "Aumentar tamanho da tupla $$ mais endereços por neurônio ◦ Utilizar q-RAM com $q > 1$ (até 8 bits) ",
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "→ Como lidar com empate nas respostas dos discriminadores? ◦ Bleaching ",
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "WiSARD: Problemas ",
+        "text_level": 1,
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "Capacidade de generalização do modelo depende da quantidade de posições de RAMs preenchidas ",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "Como lidar com saturação? ",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "Aumentar tamanho da tupla $$ mais endereços por neurônio ◦ Utilizar q-RAM com $q > 1$ (até 8 bits) ",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "Como lidar com empate nas respostas dos discriminadores? ◦ Bleaching ",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "Como lidar com grande espaço de memória? ",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "Tabela Hash - Dicionário Bloom WiSARD - Leandro Santiago (2020) AMQ WiSARD - Leandro Santiago (?) ",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "Problema da Memória ",
+        "text_level": 1,
+        "page_idx": 17
+    },
+    {
+        "type": "image",
+        "img_path": "images/fc466452edadfb59080004d2abf0abbae028af27d254fd01a3559c22ddf5f435.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "Bloom WiSARD ",
+        "text_level": 1,
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "Approximate Membership Query - AMQ ",
+        "text_level": 1,
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "Exact Membership Query ",
+        "page_idx": 19
+    },
+    {
+        "type": "image",
+        "img_path": "images/1031a10819c47499ea55c989942b97344370d406fd25d8afb196e100a22cc974.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "Approximate Membership Query ",
+        "page_idx": 19
+    },
+    {
+        "type": "image",
+        "img_path": "images/31038e5a4b0eeca931d37940d1695869c51973356563e007787308bba776138a.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "Bloom Filter ",
+        "text_level": 1,
+        "page_idx": 20
+    },
+    {
+        "type": "text",
+        "text": "Conjunto ${ \\cal { S } } = \\{ x _ { 1 } , x _ { 2 } , . . . , x _ { n } \\}$ de $\\boldsymbol { n }$ elementos é descrito como m-bit array ",
+        "page_idx": 20
+    },
+    {
+        "type": "text",
+        "text": "As posições do array $\\{ 1 , . . . , m \\}$ são geradas por k funções hash independenes $h _ { 1 } , . . . , h _ { k }$ ",
+        "page_idx": 20
+    },
+    {
+        "type": "text",
+        "text": "Todas as posições começam zeradas ",
+        "page_idx": 20
+    },
+    {
+        "type": "text",
+        "text": "Probabilidade falso positivo baixa ",
+        "page_idx": 20
+    },
+    {
+        "type": "text",
+        "text": "Bloom Filter - Insertion Operation ",
+        "text_level": 1,
+        "page_idx": 21
+    },
+    {
+        "type": "image",
+        "img_path": "images/a540bb78263afabf656e925a723df1c6d1178c345aeedcce18004d7eb4bb62ee.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 21
+    },
+    {
+        "type": "text",
+        "text": "Bloom Filter - Insertion Operation ",
+        "text_level": 1,
+        "page_idx": 22
+    },
+    {
+        "type": "image",
+        "img_path": "images/b683d1c71f98ae8ad2403fb177d429b79a94e77412136515643421a3930675cc.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "Bloom Filter - Insertion Operation ",
+        "text_level": 1,
+        "page_idx": 23
+    },
+    {
+        "type": "image",
+        "img_path": "images/e1e06a306e5f4064a70cd14bbf3ffac61c3fb6431c91fc8476ca9c524c730bca.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 23
+    },
+    {
+        "type": "text",
+        "text": "Bloom Filter - Query Operation ",
+        "text_level": 1,
+        "page_idx": 24
+    },
+    {
+        "type": "image",
+        "img_path": "images/9f2115fb81eeb23ac3ce250fa8b4c2bac95daf04ad05c7bf718053c6cf9b5161.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "Bloom Filter - Query Operation ",
+        "text_level": 1,
+        "page_idx": 25
+    },
+    {
+        "type": "image",
+        "img_path": "images/96bb3d6a40ead4a9fe89542b2edb5e013171ee67b646fbb9adf79c38a807d5af.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "Bloom Filter - Query Operation ",
+        "text_level": 1,
+        "page_idx": 26
+    },
+    {
+        "type": "image",
+        "img_path": "images/30e8bda2acc15bbde98962c62a5fa2f23fa9df44b9672dc1e9388dd6f9bf676d.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 26
+    },
+    {
+        "type": "text",
+        "text": "Optimal Parameters to Minimize False Positive ",
+        "text_level": 1,
+        "page_idx": 27
+    },
+    {
+        "type": "text",
+        "text": "$m =$ Number of bits.   \n$c =$ Capacity of set.   \n$k =$ Number of hashes.   \nerror = Probability of false positive. ",
+        "page_idx": 27
+    },
+    {
+        "type": "text",
+        "text": "Formulas: ",
+        "text_level": 1,
+        "page_idx": 27
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { r l } & { \\circ \\ \\mathbf { m } = - \\mathbf { c } \\times { \\frac { \\mathsf { l n } \\mathbf { e r r o r } } { ( \\mathsf { l n } 2 ) ^ { 2 } } } . } \\\\ & { \\circ \\ \\mathbf { k } = \\mathbf { m } \\times { \\frac { \\mathsf { l n } 2 } { \\mathbf { c } } } . } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 27
+    },
+    {
+        "type": "text",
+        "text": "AMQ com Tuplas ",
+        "text_level": 1,
+        "page_idx": 28
+    },
+    {
+        "type": "image",
+        "img_path": "images/480be3490d04d28ae286f7a4f0ff3a6c19830f174b0726cac87c8eba257cc1fd.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 28
+    },
+    {
+        "type": "text",
+        "text": "Bloom WiSARD Design ",
+        "text_level": 1,
+        "page_idx": 29
+    },
+    {
+        "type": "text",
+        "text": "Discriminadores = Conjunto de Bloom Filters ",
+        "page_idx": 29
+    },
+    {
+        "type": "text",
+        "text": "Função hash: MurmurHash Função hash não criptográfica eficiente para pesquisa baseada em hash ",
+        "page_idx": 29
+    },
+    {
+        "type": "text",
+        "text": "Double Hashing: ",
+        "page_idx": 29
+    },
+    {
+        "type": "equation",
+        "text": "$$\nh ( i , k ) = ( h _ { 1 } ( k ) + i \\times h _ { 2 } ( k ) ) { \\pmod { n } }\n$$",
+        "text_format": "latex",
+        "page_idx": 29
+    },
+    {
+        "type": "text",
+        "text": "Bloom WiSARD - Treinamento ",
+        "text_level": 1,
+        "page_idx": 30
+    },
+    {
+        "type": "image",
+        "img_path": "images/baec4d671b396fc7cf8e78f3dc96013baac9c03e0f2132eb4997f309e2546c9a.jpg",
+        "img_caption": [
+            "Bloom Filter 2 ",
+            "Bloom Filter 3 "
+        ],
+        "img_footnote": [],
+        "page_idx": 30
+    },
+    {
+        "type": "text",
+        "text": "Bloom WiSARD - Inferência ",
+        "text_level": 1,
+        "page_idx": 31
+    },
+    {
+        "type": "image",
+        "img_path": "images/341d36692b3a00d98620c182eaed01b67ee9df16f7dd683bb5747bedfc003d67.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 31
+    },
+    {
+        "type": "text",
+        "text": "Experimental Setup ",
+        "text_level": 1,
+        "page_idx": 32
+    },
+    {
+        "type": "text",
+        "text": "WiSARD versions: Standard WiSARD Dictionary WiSARD Bloom WiSARD ",
+        "page_idx": 32
+    },
+    {
+        "type": "text",
+        "text": "Total of 17 datasets 6 Binary Classification 11 Multiclass Classification ",
+        "page_idx": 32
+    },
+    {
+        "type": "text",
+        "text": "Random 3-fold cross validation when dataset does not provide separately training and testing set   \n20 runs for each scenario ",
+        "page_idx": 32
+    },
+    {
+        "type": "text",
+        "text": "Results for Binary Classification ",
+        "text_level": 1,
+        "page_idx": 33
+    },
+    {
+        "type": "table",
+        "img_path": "images/4000f324d3d7cdaa7a285877e95fa9c8ac76f70f4afc4c0cc55e12c225e5e910.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Dataset</td><td>WNN</td><td>Acc</td><td>Train</td><td>Test</td><td>Memory (KB)</td></tr><tr><td>Adult</td><td>WiSARD Dict WiSARD Bloom WiSARD</td><td>0.722 0.721 0.718</td><td>4.414 1.947 1.932</td><td>1.05 1.188 1.166</td><td>8,978,432.000 383.535 80.173</td></tr><tr><td>Australian</td><td>WiSARD Dict WiSARD Bloom WiSARD</td><td>0.843 0.841 0.834</td><td>0.002 0.002 0.002</td><td>0.001 0.001 0.001</td><td>4,096.000 11.299 8.613</td></tr><tr><td>Banana</td><td>WiSARD Dict WiSARD Bloom WiSARD</td><td>0.87 0.871 0.864</td><td>0.052 0.054 0.058</td><td>0.028 0.033 0.036</td><td>13,312.000 23.428 3.047</td></tr><tr><td>Diabetes</td><td>WiSARD Dict WiSARD Bloom WiSARD</td><td>0.698 0.689 0.69</td><td>0.001 0.001 0.001</td><td>0.0007 0.0008 0.0008</td><td>2,048.000 6.553 4.793</td></tr><tr><td>Liver</td><td>WiSARD DictWiSARD Bloom WiSARD</td><td>0.593 0.587 0.591</td><td>0.001 0.001 0.001</td><td>0.0007 0.0008 0.0009</td><td>5,120.000 6.387 2.344</td></tr><tr><td>Mushroom</td><td>WiSARD DictWiSARD Bloom WiSARD</td><td>1 1 1</td><td>0.051 0.054 0.057</td><td>0.028 0.033 0.035</td><td>8,192.000 19.209 3.750</td></tr></table></body></html>\n\n",
+        "page_idx": 33
+    },
+    {
+        "type": "text",
+        "text": "Results for Multiclass Classification - Part 1 ",
+        "text_level": 1,
+        "page_idx": 34
+    },
+    {
+        "type": "table",
+        "img_path": "images/7564ddd7fc45ba9081a2716752285be6f2ef6e4827aae664051c3272aff6db2f.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Dataset</td><td>WNN</td><td>Acc</td><td>Train</td><td>Test</td><td>Memory (KB)</td></tr><tr><td rowspan=\"3\">Ecoli</td><td>WiSARD</td><td>0.793</td><td>0.0005</td><td>0.0005</td><td>7,168.000</td></tr><tr><td>DictWiSARD</td><td>0.799</td><td>0.0005</td><td>0.0005</td><td>5.664</td></tr><tr><td>Bloom WiSARD</td><td>0.799</td><td>0.0005</td><td>0.0007</td><td>3.281</td></tr><tr><td rowspan=\"3\">Glass</td><td>WiSARD</td><td>0.72</td><td>0.003</td><td>0.003</td><td>51,968.000</td></tr><tr><td>DictWiSARD</td><td>0.73</td><td>0.003</td><td>0.003</td><td>20.884</td></tr><tr><td>Bloom WiSARD</td><td>0.726</td><td>0.003</td><td>0.003</td><td>23.789</td></tr><tr><td rowspan=\"3\">Iris</td><td>WiSARD Dict WiSARD</td><td>0.985</td><td>0.0001</td><td>0.000009</td><td>1,536.000</td></tr><tr><td></td><td>0.977</td><td>0.0001</td><td>0.000008</td><td>0.747</td></tr><tr><td>Bloom WiSARD</td><td>0.976</td><td>0.0001</td><td>0.0001</td><td>0.703</td></tr><tr><td rowspan=\"3\">Letter</td><td>WiSARD</td><td>0.845</td><td>1.483</td><td>0.16</td><td>10,223,616.000</td></tr><tr><td>Dict WiSARD</td><td>0.846</td><td>0.0717</td><td>0.22</td><td>121.748</td></tr><tr><td>Bloom WiSARD</td><td>0.848</td><td>0.07</td><td>0.208</td><td>91.292</td></tr><tr><td rowspan=\"3\">MNIST</td><td>WiSARD</td><td>0.917</td><td>4.317</td><td>0.33</td><td>9,175,040.000</td></tr><tr><td>Dict WiSARD</td><td>0.916</td><td>0.811</td><td>0.475</td><td>1,368.457</td></tr><tr><td>Bloom WiSARD</td><td>0.915</td><td>0.77</td><td>0.369</td><td>819.049</td></tr></table></body></html>\n\n",
+        "page_idx": 34
+    },
+    {
+        "type": "text",
+        "text": "Results for Multiclass Classification - Part 2 ",
+        "text_level": 1,
+        "page_idx": 35
+    },
+    {
+        "type": "table",
+        "img_path": "images/42fe1300e6d84cd346ec86bb7461710d743bd65818c726d8cf5ce027ed809fd3.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Dataset</td><td>WNN</td><td>Acc</td><td>Train</td><td>Test</td><td>Memory (KB)</td></tr><tr><td rowspan=\"2\">Satimage</td><td>WiSARD</td><td>0.851</td><td>0.048</td><td>0.034</td><td>27,648.000</td></tr><tr><td>Dict WiSARD</td><td>0.853</td><td>0.05</td><td>0.049</td><td>69.141</td></tr><tr><td rowspan=\"2\">Segment</td><td>Bloom WiSARD WiSARD</td><td>0.851 0.935</td><td>0.053 0.009</td><td>0.05 0.007</td><td>12.656 17,024.000</td></tr><tr><td>Dict WiSARD</td><td>0.934</td><td>0.009</td><td>0.01</td><td>7.724</td></tr><tr><td rowspan=\"2\"></td><td>Bloom WiSARD</td><td>0.933</td><td>0.01</td><td>0.011</td><td>7.793</td></tr><tr><td>WiSARD</td><td>0.87</td><td>0.119</td><td>0.064</td><td>8,064.000</td></tr><tr><td rowspan=\"2\">Shuttle</td><td>Dict WiSARD</td><td>0.869</td><td>0.12</td><td>0.078</td><td>4.956</td></tr><tr><td>Bloom WiSARD WiSARD</td><td>0.868 0.67</td><td>0.132</td><td>0.103</td><td>3.691</td></tr><tr><td rowspan=\"2\">Vehicle</td><td>Dict WiSARD</td><td>0.672</td><td>0.003 0.003</td><td>0.0021 0.0026</td><td>9,216.000</td></tr><tr><td>Bloom WiSARD</td><td>0.662</td><td>0.003</td><td>0.0028</td><td>17.617 4.219</td></tr><tr><td rowspan=\"2\">Vowel</td><td>WiSARD</td><td>0.876</td><td>0.0023</td><td>0.0025</td><td>14,080.000</td></tr><tr><td>DictWiSARD</td><td>0.876</td><td>0.0023</td><td>0.0032</td><td>16.221</td></tr><tr><td rowspan=\"4\">Wine</td><td>Bloom WiSARD</td><td>0.879</td><td>0.0022</td><td>0.0036</td><td>6.445</td></tr><tr><td>WiSARD</td><td>0.932</td><td>0.0006</td><td>0.0003</td><td>4,992.000</td></tr><tr><td>Dict WiSARD</td><td>0.924</td><td>0.0005</td><td>0.0003</td><td>4.248</td></tr><tr><td>Bloom WiSARD</td><td>0.926</td><td>0.0005</td><td>0.0004</td><td>2.285</td></tr></table></body></html>\n\n",
+        "page_idx": 35
+    },
+    {
+        "type": "text",
+        "text": "Memory x Accuracy x Probability of False Positive - Part 1 ",
+        "text_level": 1,
+        "page_idx": 36
+    },
+    {
+        "type": "image",
+        "img_path": "images/d5f03a723f83737eac2e7a9b74acd88ff44c6fcbcc3055ab68477c15c3a318e4.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 36
+    },
+    {
+        "type": "text",
+        "text": "Memory x Accuracy x Probability of False Positive - Part 2 ",
+        "text_level": 1,
+        "page_idx": 37
+    },
+    {
+        "type": "image",
+        "img_path": "images/8f15242dbf48ec4eba74867a9d9bbf26ede482ae47dfe31cb85dfe9d03aa4cd4.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 37
+    },
+    {
+        "type": "text",
+        "text": "Memory x Accuracy x Probability of False Positive - Part 3 ",
+        "text_level": 1,
+        "page_idx": 38
+    },
+    {
+        "type": "image",
+        "img_path": "images/774f591a14a31d84be0c148dfe762159f98bb010c0a0b44923be6df1b023f934.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 38
+    },
+    {
+        "type": "text",
+        "text": "Memory x Accuracy x Probability of False Positive - Part 4 ",
+        "text_level": 1,
+        "page_idx": 39
+    },
+    {
+        "type": "image",
+        "img_path": "images/a6eb12441ebcdc85ddf6497714e31be896ef06c8b11903a45ece459fe3b436db.jpg",
+        "img_caption": [
+            "Bloom WiSARD Memory × Accuracy× Propability of False Positive "
+        ],
+        "img_footnote": [],
+        "page_idx": 39
+    },
+    {
+        "type": "text",
+        "text": "Conclusão ",
+        "text_level": 1,
+        "page_idx": 40
+    },
+    {
+        "type": "text",
+        "text": "Bloom filter economiza mais recursos de memória do que o Dicionário ",
+        "page_idx": 40
+    },
+    {
+        "type": "text",
+        "text": "Bloom filter com 10% de Falso Positivo mantêm boa precisão e reduz a memória em cerca de 7,7 vezes em comparação com a implementação de dicionários e até 6 ordens de magnitude quando comparados à implementação padrão do WiSARD ",
+        "page_idx": 40
+    },
+    {
+        "type": "text",
+        "text": "Bloom filter com 50% de Falso Positivo também mantêm boa precisão e reduz a memória em cerca de 3,3 vezes em comparação com 10% da configuração de Falso Positivo ",
+        "page_idx": 40
+    },
+    {
+        "type": "text",
+        "text": "BTHOWeN ",
+        "text_level": 1,
+        "page_idx": 41
+    },
+    {
+        "type": "text",
+        "text": "Motivação ",
+        "text_level": 1,
+        "page_idx": 42
+    },
+    {
+        "type": "text",
+        "text": "Crescimento da área de Edge Computing TinyML ",
+        "page_idx": 42
+    },
+    {
+        "type": "text",
+        "text": "Evolução de aceleradores para Deep Learning GP-GPU: CUDA TPU: Tensor Processing Unit ",
+        "page_idx": 42
+    },
+    {
+        "type": "text",
+        "text": "Tipos de Hardware para AI ",
+        "text_level": 1,
+        "page_idx": 43
+    },
+    {
+        "type": "image",
+        "img_path": "images/24c90dfd8c48c11b0defeaec8ade5b20747ba1d258100e2773bc33d761cc7cdc.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 43
+    },
+    {
+        "type": "text",
+        "text": "Reconfigurable Computing - FPGA ",
+        "text_level": 1,
+        "page_idx": 44
+    },
+    {
+        "type": "image",
+        "img_path": "images/5daf3c33d6eb3b3fa503e01bcd253b847d13eb7235fd42f3b4f03f443665530c.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 44
+    },
+    {
+        "type": "image",
+        "img_path": "images/7f5751ef7b59de63320803921377f176bec4bc3f354440ad17af9479a0ee63c7.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 44
+    },
+    {
+        "type": "text",
+        "text": "BTHOWeN ",
+        "text_level": 1,
+        "page_idx": 45
+    },
+    {
+        "type": "text",
+        "text": "BTHOWeN = Bleached Thermometer-encoded Hashed-input Optimized Weightless Neural Network ",
+        "page_idx": 45
+    },
+    {
+        "type": "text",
+        "text": "Implementação de hardware para edge inference FPGA - System Verilog ",
+        "page_idx": 45
+    },
+    {
+        "type": "text",
+        "text": "Técnicas utilizadas: Counting Bloom Filter Gaussian non-linear thermometer ◦ Bleaching (B-bleaching) ",
+        "page_idx": 45
+    },
+    {
+        "type": "text",
+        "text": "Counting Bloom Filter ",
+        "text_level": 1,
+        "page_idx": 46
+    },
+    {
+        "type": "text",
+        "text": "Bloom filter Inserção ◦ Query ",
+        "page_idx": 46
+    },
+    {
+        "type": "text",
+        "text": "Counting Bloom filter Deleção ",
+        "page_idx": 46
+    },
+    {
+        "type": "text",
+        "text": "Counting Bloom Filter - Insertion Operation ",
+        "text_level": 1,
+        "page_idx": 47
+    },
+    {
+        "type": "image",
+        "img_path": "images/cf1e568c6d5a76dec72715acb67c7ad1d078f70f2e4f984fe78b9facfb646659.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 47
+    },
+    {
+        "type": "text",
+        "text": "Counting Bloom Filter - Insertion Operation ",
+        "text_level": 1,
+        "page_idx": 48
+    },
+    {
+        "type": "image",
+        "img_path": "images/395382d0b09d028409f5d0b96edab4032422b06474830719a7b5adbc97ce5282.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 48
+    },
+    {
+        "type": "text",
+        "text": "Counting Bloom Filter - Insertion Operation ",
+        "text_level": 1,
+        "page_idx": 49
+    },
+    {
+        "type": "image",
+        "img_path": "images/c30eb7e027fdf4cd02df6c6c7f48809421abac5701df569507765e5ef8396e67.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 49
+    },
+    {
+        "type": "text",
+        "text": "Counting Bloom Filter - Insertion Operation ",
+        "text_level": 1,
+        "page_idx": 50
+    },
+    {
+        "type": "image",
+        "img_path": "images/76991a0f8589c1739c6ef6355020ede5b69b9f7f2c3c04406c894101027d2050.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 50
+    },
+    {
+        "type": "text",
+        "text": "Counting Bloom Filter - Query Operation ",
+        "text_level": 1,
+        "page_idx": 51
+    },
+    {
+        "type": "image",
+        "img_path": "images/fbcc1294bb624f8d3d798ffa799e33658d18962b407607039b3277f1465d16d5.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 51
+    },
+    {
+        "type": "text",
+        "text": "Counting Bloom Filter - Query Operation ",
+        "text_level": 1,
+        "page_idx": 52
+    },
+    {
+        "type": "image",
+        "img_path": "images/0f93efcd3c3d4e7d856e4cf1ae9e3090e2db7af543ad9819b94ed2d9f4081a33.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 52
+    },
+    {
+        "type": "text",
+        "text": "Counting Bloom Filter - Query Operation ",
+        "text_level": 1,
+        "page_idx": 53
+    },
+    {
+        "type": "image",
+        "img_path": "images/546044f174278cd66834287afb65b5ebba1e5114718154d105896d8863473d5a.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 53
+    },
+    {
+        "type": "text",
+        "text": "Counting Bloom Filter - Deletion Operation ",
+        "text_level": 1,
+        "page_idx": 54
+    },
+    {
+        "type": "image",
+        "img_path": "images/e9e65252b72481443fbb27babfa8295aa7d67e1da7c438f3be438f9740906fdd.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 54
+    },
+    {
+        "type": "text",
+        "text": "Counting Bloom Filter - Deletion Operation ",
+        "text_level": 1,
+        "page_idx": 55
+    },
+    {
+        "type": "image",
+        "img_path": "images/cad2503da6dff17e0eb56342117423ea2d91dcd2729afbc5568604f171d02b3f.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 55
+    },
+    {
+        "type": "text",
+        "text": "Counting Bloom Filter - Deletion Operation ",
+        "text_level": 1,
+        "page_idx": 56
+    },
+    {
+        "type": "image",
+        "img_path": "images/6f8e0016bf206626b6c4253e26adba7c60e30c52ff88c025bb31df6b7a68966e.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 56
+    },
+    {
+        "type": "text",
+        "text": "Counting Bloom Filter - Deletion Operation ",
+        "text_level": 1,
+        "page_idx": 57
+    },
+    {
+        "type": "image",
+        "img_path": "images/a4a3c961b1f2129d7d5e9ab94e03d5842b5ebb072be0c3457e683b32732fde28.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 57
+    },
+    {
+        "type": "text",
+        "text": "Bloom Filter Design ",
+        "text_level": 1,
+        "page_idx": 58
+    },
+    {
+        "type": "text",
+        "text": "Discriminadores = Conjunto de Counting Bloom Filters ",
+        "page_idx": 58
+    },
+    {
+        "type": "text",
+        "text": "Função hash: H3 para mapear de n m bits Dimensão: x (1 x n), p (n x m) ",
+        "page_idx": 58
+    },
+    {
+        "type": "equation",
+        "text": "$$\nh ( x ) = x [ 0 ] p _ { 0 } \\oplus x [ 1 ] p _ { 1 } \\oplus . . . \\oplus x [ n - 1 ] p _ { n - 1 }\n$$",
+        "text_format": "latex",
+        "page_idx": 58
+    },
+    {
+        "type": "text",
+        "text": "Arquitetura do BTHOWeN ",
+        "text_level": 1,
+        "page_idx": 59
+    },
+    {
+        "type": "image",
+        "img_path": "images/477b6933f79009f6deb992bac5d253090a4318c0aafe42d5a93477a9773783be.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 59
+    },
+    {
+        "type": "text",
+        "text": "BTHOWeN - Treinamento ",
+        "text_level": 1,
+        "page_idx": 60
+    },
+    {
+        "type": "image",
+        "img_path": "images/41628c1e3fd1f4b630bbc48fe5b0b1a414077b44f38201ff4a9797cdc0738fe5.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 60
+    },
+    {
+        "type": "text",
+        "text": "Experimental Setup ",
+        "text_level": 1,
+        "page_idx": 61
+    },
+    {
+        "type": "text",
+        "text": "Modelos: BTHOWeN O MLP C CNN - LeNet-1 ",
+        "page_idx": 61
+    },
+    {
+        "type": "text",
+        "text": "TensorFlow Lite (quantização com 8-bit) e hls4ml tool Total de 9 datasets ",
+        "page_idx": 61
+    },
+    {
+        "type": "text",
+        "text": "Acurácia dos Modelos do BTHOWeN ",
+        "text_level": 1,
+        "page_idx": 62
+    },
+    {
+        "type": "table",
+        "img_path": "images/19e1432dd766b29e33b198e01cca4e88f170d657363b5c828912590fa5499f16.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Model Name</td><td>Bits /Input</td><td>Bits /Filter</td><td>Entries /Filter</td><td>Hashes /Filter</td><td>Size (KiB)</td><td>Test Acc.</td></tr><tr><td>MNIST-Small</td><td>2</td><td>28</td><td>1024</td><td>2</td><td>70.0</td><td>0.934</td></tr><tr><td>MNIST-Medium</td><td>3</td><td>28</td><td>2048</td><td>2</td><td>210</td><td>0.943</td></tr><tr><td>MNIST-Large</td><td>6</td><td>49</td><td>8192</td><td>4</td><td>960</td><td>0.952</td></tr><tr><td>Ecoli</td><td>10</td><td>10</td><td>128</td><td>2</td><td>0.875</td><td>0.875</td></tr><tr><td>Iris</td><td>3</td><td>2</td><td>128</td><td>1</td><td>0.281</td><td>0.980</td></tr><tr><td>Letter</td><td>15</td><td>20</td><td>2048</td><td>4</td><td>78.0</td><td>0.900</td></tr><tr><td>Satimage</td><td>8</td><td>12</td><td>512</td><td>4</td><td>9.00</td><td>0.880</td></tr><tr><td>Shuttle</td><td>9</td><td>27</td><td>1024</td><td>2</td><td>2.63</td><td>0.999</td></tr><tr><td>Vehicle</td><td>16</td><td>16</td><td>256</td><td>3</td><td>2.25</td><td>0.762</td></tr><tr><td>Vowel</td><td>15</td><td>15</td><td>256</td><td>4</td><td>3.44</td><td>0.900</td></tr><tr><td>Wine</td><td>9</td><td>13</td><td>128</td><td>3</td><td>0.422</td><td>0.983</td></tr></table></body></html>\n\n",
+        "page_idx": 62
+    },
+    {
+        "type": "text",
+        "text": "Comparação BTHOWeN e DNN Quantizadas - Parte 1 ",
+        "text_level": 1,
+        "page_idx": 63
+    },
+    {
+        "type": "table",
+        "img_path": "images/13cc6154e0b1d80aaf464ef7c2f7625e894f656e9598b5b8b7377cf73f4592e5.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Dataset</td><td>Model</td><td>Bus Width</td><td>Cycles per Inf.</td><td>Hash Units</td><td>Dyn. Power (Tot. Power) (W)</td><td>Dyn. Energy (Tot. Energy) (nJ/Inf.)</td><td>LUTs</td><td>FFs</td><td>BRAMsDSPs (36Kb)</td><td></td><td> Accuracy</td></tr><tr><td rowspan=\"8\">MNIST</td><td>BTHOWeN-Small</td><td>64</td><td>25</td><td>5</td><td>0.195 (0.303)</td><td>48.75 (75.8)</td><td>15756</td><td>3522</td><td>0</td><td>0</td><td>0.934</td></tr><tr><td>BTHOWeN-Medium</td><td>64</td><td>37</td><td>5</td><td>0.386 (0.497)</td><td>142.8 (183.9)</td><td>38912</td><td>6577</td><td>0</td><td>0</td><td>0.943</td></tr><tr><td>BTHOWeN-Large</td><td>64</td><td>74</td><td>6</td><td>3.007 (3.509)</td><td>2225 (2597)</td><td>151704</td><td>18796</td><td>0</td><td>0</td><td>0.952</td></tr><tr><td>BTHOWeN-Large*</td><td>256</td><td>19</td><td>24</td><td>3.158 (3.661)</td><td>600.0 (695.6)</td><td>158367</td><td>25905</td><td>0</td><td>0</td><td>0.952</td></tr><tr><td>MLP784-16-10</td><td>64</td><td>846</td><td>-</td><td>0.029 (0.134)</td><td>245 (1133)</td><td>2163</td><td>3007</td><td>8</td><td>28</td><td>0.946</td></tr><tr><td>CNN1 (LeNet1) [34]</td><td>64</td><td>33615</td><td>-</td><td>0.058 (0.163)</td><td>19497 (54792)</td><td>5753</td><td>3115</td><td>7</td><td>18</td><td>0.947</td></tr><tr><td>CNN 2 (LeNet1) [34]</td><td>64</td><td>33555</td><td>-</td><td>0.043 (0.148)</td><td>14429 (49661)</td><td>3718</td><td>2208</td><td>5</td><td>10</td><td>0.920</td></tr><tr><td>HashedWNN[19]</td><td>32</td><td>28</td><td>-</td><td>0.423 (0.528)</td><td>118.4 (147.8)</td><td>9636</td><td>4568</td><td>128.5</td><td>5</td><td>0.907</td></tr><tr><td rowspan=\"2\">Ecoli</td><td>BTHOWeN</td><td>64</td><td>2</td><td>7</td><td>0.012 (0.117)</td><td>0.24 (2.34)</td><td>353</td><td>223</td><td>0</td><td>0</td><td>0.875</td></tr><tr><td>MLP7-8-8</td><td>64</td><td>14</td><td></td><td>0.03 (0.135)</td><td>4.2 (18.9)</td><td>1596</td><td>1615</td><td>0</td><td>0</td><td>0.875</td></tr><tr><td rowspan=\"2\">Iris</td><td>BTHOWeN</td><td>64</td><td>1</td><td>6</td><td>0.005 (0.109)</td><td>0.05 (1.09)</td><td>57</td><td>90</td><td>0</td><td>0</td><td>0.980</td></tr><tr><td>MLP 4-4-3</td><td>64</td><td>10</td><td>-</td><td>0.008 (0.112)</td><td>0.8 (11.2)</td><td>427</td><td>488</td><td>0</td><td>0</td><td>0.980</td></tr></table></body></html>\n\n",
+        "page_idx": 63
+    },
+    {
+        "type": "text",
+        "text": "Comparação BTHOWeN e DNN Quantizadas - Parte 2 ",
+        "text_level": 1,
+        "page_idx": 64
+    },
+    {
+        "type": "table",
+        "img_path": "images/db97c2a3b7a35ec7105bcdc1a2606fce199e1602d82b83873ea3bbf47ff65e23.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td rowspan=\"2\">Dataset</td><td rowspan=\"2\">Model</td><td rowspan=\"2\">Bus Width</td><td rowspan=\"2\">Cycles per</td><td rowspan=\"2\">Hash Units</td><td rowspan=\"2\">Dyn. Power (Tot.</td><td rowspan=\"2\">Dyn. Energy (Tot. Energy)</td><td rowspan=\"2\">LUTs</td><td rowspan=\"2\">FFs</td><td rowspan=\"2\">BRAMs (36Kb)</td><td rowspan=\"2\">DSPs</td><td rowspan=\"2\">Accuracy</td></tr><tr><td>(nJ/Inf.)</td></tr><tr><td rowspan=\"2\">Letter</td><td>BTHOWeN</td><td>64</td><td>Inf. 4</td><td>12</td><td>Power) (W) 0.623 (0.738)</td><td>24.92 (29.52)</td><td>21603</td><td>2715</td><td>0</td><td>0</td><td>0.900</td></tr><tr><td>MLP 16-40-26</td><td>64</td><td>26</td><td>-</td><td>0.109 (0.259)</td><td>39.52 (67.34)</td><td>17305</td><td>15738</td><td>0</td><td>0</td><td>0.904</td></tr><tr><td rowspan=\"2\"> Satimage</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>MBTHOWeN6</td><td>6464</td><td>525</td><td>24</td><td>0.084 (0.140)</td><td>4.2(9.5)</td><td>3771</td><td>1131</td><td>00</td><td>00</td><td>0.880</td></tr><tr><td rowspan=\"2\">Shuttle</td><td></td><td>6464</td><td></td><td></td><td></td><td></td><td>593</td><td></td><td></td><td></td><td></td></tr><tr><td>BTHOWeN</td><td></td><td>24</td><td>3-</td><td>0.018 (0.12)</td><td>0.36 (2.462)</td><td></td><td>121</td><td>00</td><td>00</td><td>0.999</td></tr><tr><td rowspan=\"2\">Vehicle</td><td>BTHOWeN</td><td>64</td><td>5</td><td>18</td><td>0.038 (0.143)</td><td>1.9 (7.15)</td><td>1781</td><td>597</td><td>0</td><td>0</td><td>0.762</td></tr><tr><td>MLP 18-16-4</td><td>64</td><td>15</td><td>-</td><td>0.024 (0.128)</td><td>3.6 (19.2)</td><td>2824</td><td>3035</td><td>0</td><td>0</td><td>0.766</td></tr><tr><td rowspan=\"2\">Vowel</td><td>BTHOWeN</td><td>64</td><td>2</td><td>12</td><td>0.040 (0.145)</td><td>0.8 (2.9)</td><td>1559</td><td>756</td><td>0</td><td>0</td><td>0.900</td></tr><tr><td>MLP 10-18-11</td><td>64</td><td>18</td><td>-</td><td>0.070 (0.175)</td><td>12.6 (31.5)</td><td>5743</td><td>4663</td><td>0</td><td>0</td><td>0.903</td></tr><tr><td rowspan=\"2\">Wine</td><td></td><td>6464</td><td>34</td><td>9-</td><td>0.01 (0.117)</td><td>0.36 (.1)</td><td>585</td><td>239</td><td>00</td><td>00</td><td></td></tr><tr><td>MLP13-103</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0.983</td></tr></table></body></html>\n\n",
+        "page_idx": 64
+    },
+    {
+        "type": "text",
+        "text": "BTHOWeN vs DNN - Latência e Energia Relativa ",
+        "text_level": 1,
+        "page_idx": 65
+    },
+    {
+        "type": "image",
+        "img_path": "images/08d299aa86d8afcb2a7281ced8da1e2d869b9d8ba8a425e202111943be71cb90.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 65
+    },
+    {
+        "type": "text",
+        "text": "Conclusão ",
+        "text_level": 1,
+        "page_idx": 66
+    },
+    {
+        "type": "text",
+        "text": "Função H3 e Termômetro Gaussiano melhorou a acurácia do MNIST de 91.5% para 95.2% ",
+        "page_idx": 66
+    },
+    {
+        "type": "text",
+        "text": "BTHOWeN é competitivo com outras arquiteturas: WNN, MLP e CNN ",
+        "page_idx": 66
+    },
+    {
+        "type": "text",
+        "text": "Em relação a outras arquitetura de WNN, BTHOWeN reduz erro por 41% e o tamanho do modelo by 51% considerando os 9 datasets ",
+        "page_idx": 66
+    },
+    {
+        "type": "text",
+        "text": "Comparado aos modelos MLP, BTHOWeN consome 20% da energia total enquanto reduz a latência em 85% ",
+        "page_idx": 66
+    },
+    {
+        "type": "text",
+        "text": "As melhorias de energia/latência em relação às CNNs são ainda maiores, embora as CNNs tenham maior precisão ",
+        "page_idx": 66
+    },
+    {
+        "type": "text",
+        "text": "ULEEN ",
+        "text_level": 1,
+        "page_idx": 67
+    },
+    {
+        "type": "text",
+        "text": "ULEEN ",
+        "text_level": 1,
+        "page_idx": 68
+    },
+    {
+        "type": "text",
+        "text": "ULEEN = Ultra-low-energy Edge Networks ",
+        "page_idx": 68
+    },
+    {
+        "type": "text",
+        "text": "$$ Implementação de hardware para edge inference - FPGA ",
+        "page_idx": 68
+    },
+    {
+        "type": "text",
+        "text": "Técnicas adicionais: Continuos Bloom Filter Ensemble Pruning Multi-pass training ",
+        "page_idx": 68
+    },
+    {
+        "type": "text",
+        "text": "Visão Geral da ULEEN ",
+        "text_level": 1,
+        "page_idx": 69
+    },
+    {
+        "type": "image",
+        "img_path": "images/e296cb9e37afa8b398148897e01f8eff98c5cd95d219c424d893747a8d1ee44a.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 69
+    },
+    {
+        "type": "text",
+        "text": "Continuos Bloom Filter ",
+        "text_level": 1,
+        "page_idx": 70
+    },
+    {
+        "type": "text",
+        "text": "→ Floating-point array → [-1, 1] ",
+        "page_idx": 70
+    },
+    {
+        "type": "text",
+        "text": "Gradiente $\\begin{array} { r } { s i g n ( x ) = \\left\\{ \\begin{array} { l l } { - 1 \\quad } & { x < 0 } \\\\ { 1 \\quad } & { x \\geq 0 } \\end{array} \\right. } \\end{array}$ ",
+        "page_idx": 70
+    },
+    {
+        "type": "equation",
+        "text": "$$\ns i g n ^ { \\prime } ( x ) = \\left\\{ \\begin{array} { l l } { { + \\infty } } & { { \\quad x = 0 } } \\\\ { { 0 } } & { { \\quad x \\neq 0 } } \\end{array} \\right.\n$$",
+        "text_format": "latex",
+        "page_idx": 70
+    },
+    {
+        "type": "text",
+        "text": "Continuos Bloom Filter ",
+        "text_level": 1,
+        "page_idx": 71
+    },
+    {
+        "type": "text",
+        "text": "Straight-through estimator (STE) function ",
+        "page_idx": 71
+    },
+    {
+        "type": "text",
+        "text": "Gradiente ",
+        "text_level": 1,
+        "page_idx": 71
+    },
+    {
+        "type": "equation",
+        "text": "$$\nS T E ( x ) = \\left\\{ { \\begin{array} { l l } { - 1 } & { \\quad x < 0 } \\\\ { 1 } & { \\quad x \\geq 0 } \\end{array} } \\right.\n$$",
+        "text_format": "latex",
+        "page_idx": 71
+    },
+    {
+        "type": "equation",
+        "text": "$$\nS T E ^ { \\prime } ( x ) = { \\left\\{ \\begin{array} { l l } { 1 } & { \\quad | x | \\leq 1 } \\\\ { 0 } & { \\quad | x | > 1 } \\end{array} \\right. }\n$$",
+        "text_format": "latex",
+        "page_idx": 71
+    },
+    {
+        "type": "text",
+        "text": "Continuos Bloom Filter ",
+        "text_level": 1,
+        "page_idx": 72
+    },
+    {
+        "type": "image",
+        "img_path": "images/b051d74654542182745ba5970d950018878c4201f8298101624779db2230546a.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 72
+    },
+    {
+        "type": "text",
+        "text": "Ensemble ",
+        "text_level": 1,
+        "page_idx": 73
+    },
+    {
+        "type": "image",
+        "img_path": "images/d73330eb7bdd614684b8bcbc72d7a8722b188982b1633637a6480bdbf1d9510e.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 73
+    },
+    {
+        "type": "text",
+        "text": "Pruning ",
+        "text_level": 1,
+        "page_idx": 74
+    },
+    {
+        "type": "text",
+        "text": "Discriminadores são testados com seus exemplos de treinamento. É analisado quais neurônios retornam 1 ",
+        "page_idx": 74
+    },
+    {
+        "type": "text",
+        "text": "Utility score (US) baseado nas taxas de falso (e verdadeiro) positivo (e negativo) ",
+        "page_idx": 74
+    },
+    {
+        "type": "equation",
+        "text": "$$\nU S = ( M - 1 ) ( T P R - F N R ) + ( T N R - F P R )\n$$",
+        "text_format": "latex",
+        "page_idx": 74
+    },
+    {
+        "type": "text",
+        "text": "Fração fixa de neurônios em cada discriminador com US mais baixas são removidos do modelo ",
+        "page_idx": 74
+    },
+    {
+        "type": "text",
+        "text": "bias inteiro adicionado nas respostas dos neurônios que é aprendido ",
+        "page_idx": 74
+    },
+    {
+        "type": "text",
+        "text": "Pruning ",
+        "text_level": 1,
+        "page_idx": 75
+    },
+    {
+        "type": "text",
+        "text": "Uniform Pruning ",
+        "text_level": 1,
+        "page_idx": 75
+    },
+    {
+        "type": "image",
+        "img_path": "images/8d6fe8a8cba92587d596aa6bf0e80ea68cfcc7fc1dbf194dc5e63580c264c15a.jpg",
+        "img_caption": [
+            "No Pruning "
+        ],
+        "img_footnote": [],
+        "page_idx": 75
+    },
+    {
+        "type": "image",
+        "img_path": "images/f3cfd9bb207a9f67560c5ff6e9a86987135dffbcf084ed6c64e38fe3c5a7a196.jpg",
+        "img_caption": [
+            "Non-Uniform Pruning "
+        ],
+        "img_footnote": [],
+        "page_idx": 75
+    },
+    {
+        "type": "image",
+        "img_path": "images/bb75f02bc33d92ce5afc58d262907f1d37a3cf4f3a5b33ec8c45fdb654cccb6f.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 75
+    },
+    {
+        "type": "text",
+        "text": "Multi-Pass Training ",
+        "text_level": 1,
+        "page_idx": 76
+    },
+    {
+        "type": "text",
+        "text": "Continuous Bloom filter são inicializados com valores aleatórios [-1, 1] ",
+        "page_idx": 76
+    },
+    {
+        "type": "text",
+        "text": "Backpropation com STE ",
+        "page_idx": 76
+    },
+    {
+        "type": "text",
+        "text": "Função de custo: Cross-entropy loss ",
+        "page_idx": 76
+    },
+    {
+        "type": "text",
+        "text": "Dropout = 0.5, Adam optimizer, learning rate = 10−3 ",
+        "page_idx": 76
+    },
+    {
+        "type": "text",
+        "text": "Saída neurônio: {-1, 0, 1} ",
+        "page_idx": 76
+    },
+    {
+        "type": "text",
+        "text": "Multi-Pass Training ",
+        "text_level": 1,
+        "page_idx": 77
+    },
+    {
+        "type": "image",
+        "img_path": "images/540453dcf64b4167ac87d3418a334fc9f759eaf3442980e75a72d1c61c092cce.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 77
+    },
+    {
+        "type": "text",
+        "text": "Inferência ",
+        "text_level": 1,
+        "page_idx": 78
+    },
+    {
+        "type": "text",
+        "text": "Countinuos Bloom filter é convertido em Bloom filter usando unit step function ",
+        "page_idx": 78
+    },
+    {
+        "type": "text",
+        "text": "Saída neurônio: {-1, 1} ",
+        "page_idx": 78
+    },
+    {
+        "type": "text",
+        "text": "Arquitetura ULEEN ",
+        "text_level": 1,
+        "page_idx": 79
+    },
+    {
+        "type": "image",
+        "img_path": "images/52184a1640b2ac8c819106e7d8cb067125e6dcb0de63a4bcd086b86bc57c4dba.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 79
+    },
+    {
+        "type": "text",
+        "text": "Implementação do Modelo ",
+        "text_level": 1,
+        "page_idx": 80
+    },
+    {
+        "type": "image",
+        "img_path": "images/e85e4aaa0cfe9ecf370a829fda9b74c6f437e2fdab37aba37473c158bb36b095.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 80
+    },
+    {
+        "type": "text",
+        "text": "Experimental Setup ",
+        "text_level": 1,
+        "page_idx": 81
+    },
+    {
+        "type": "text",
+        "text": "Modelos: O ULEEN Xilinx FINN - (3 hidden layers) ? BTHOWeN ",
+        "page_idx": 81
+    },
+    {
+        "type": "text",
+        "text": "Total de 5 datasets: MNIST + 4 MLPerf Tiny dataset ",
+        "page_idx": 81
+    },
+    {
+        "type": "text",
+        "text": "Acurácia: ULEEN vs FINN ",
+        "text_level": 1,
+        "page_idx": 82
+    },
+    {
+        "type": "table",
+        "img_path": "images/a9380d0195533243ea44d26bc771b004386ceed2ff773bcc029771c2328747d6.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td rowspan=\"2\">Dataset</td><td colspan=\"2\">ULEEN</td><td colspan=\"3\">FINN BNN Iso-accuracy</td><td colspan=\"3\">FINN BNN Iso-size</td></tr><tr><td>Size (KiB)</td><td>Test Acc.%</td><td>Size (KiB)</td><td>Test Acc.%</td><td>Hidden layer size</td><td>Size (KiB)</td><td>Test Acc.%</td><td>Hidden layer size</td></tr><tr><td>MNIST-S</td><td>16.9</td><td>96.2</td><td>40.8</td><td>95.8</td><td>256 × 3 (SFC)</td><td>16.4</td><td>95.2</td><td>128 ×3</td></tr><tr><td>MNIST-M</td><td>101</td><td>97.8</td><td>114</td><td>97.7</td><td>512 ×3 (MFC)</td><td>103</td><td>97.7</td><td>480 ×3</td></tr><tr><td>MNIST-L</td><td>262</td><td>98.5</td><td>355</td><td>98.4</td><td>1,024 × 3 (LFC)</td><td>283</td><td>98.0</td><td>896×3</td></tr><tr><td>KWS</td><td>101</td><td>70.3</td><td>324</td><td>70.6</td><td>1,024 × 3</td><td>101</td><td>67.0</td><td>524×3</td></tr><tr><td>ToyADMOS</td><td>16.6</td><td>86.3</td><td>36.1</td><td>86.1</td><td>256×3</td><td>16.4</td><td>85.5</td><td>144×3</td></tr><tr><td>VWW</td><td>251</td><td>61.8</td><td>3,329*</td><td>57.1*</td><td>2,048 × 3*</td><td>264</td><td>55.7</td><td>224×3</td></tr><tr><td>CIFAR-10</td><td>1,379</td><td>54.2</td><td>19,466*</td><td>45.7*</td><td>8,192 × 3*</td><td>1,345</td><td>44.4</td><td>1,700 × 3</td></tr></table></body></html>\n\n",
+        "page_idx": 82
+    },
+    {
+        "type": "text",
+        "text": "Detalhes Modelos ULEEN ",
+        "text_level": 1,
+        "page_idx": 83
+    },
+    {
+        "type": "table",
+        "img_path": "images/2fc494c1d607b0d6374dab8341da1bcc2b7428906765e56cd454b668ba5348fa.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Dataset</td><td>Model</td><td>Submodel</td><td>Bits/Inp</td><td>Inputs/Filter</td><td>Entries/Filter</td><td>Size (KiB)</td><td>Test Acc.%</td></tr><tr><td rowspan=\"9\">MNIST</td><td rowspan=\"3\">ULN-S</td><td>Ensemble</td><td>2</td><td>1</td><td>1</td><td>16.9</td><td>96.20</td></tr><tr><td>SM0</td><td>2</td><td>12</td><td>64</td><td>7.19</td><td>92.91</td></tr><tr><td>SM1 SM2</td><td>2 2</td><td>16 20</td><td>64 64</td><td>5.39 4.38</td><td>90.25 86.16</td></tr><tr><td rowspan=\"2\">ULN-M</td><td>Ensemble SM0</td><td>3 3</td><td>二 12</td><td>二 64</td><td>101 10.9</td><td>97.79 83.54</td></tr><tr><td>SM1 SM2 SM3 SM4</td><td>3 3 3 3</td><td>16 20 28 36</td><td>128 256 256</td><td>16.0 26.0 18.44</td><td>90.93 92.92 87.05</td></tr><tr><td rowspan=\"2\">ULN-L</td><td>Ensemble SM0 SM1</td><td>7 7 7</td><td>二 12 16</td><td>512 二 64</td><td>29.38 262 25.0</td><td>80.93 98.46 88.78</td></tr><tr><td>SM2 SM3 SM4 SM5</td><td>7 7 7</td><td>20 24 28</td><td>128 128 256 256</td><td>37.7 30.2 50.3 43.1</td><td>93.24 92.44 93.92</td></tr></table></body></html>\n\n",
+        "page_idx": 83
+    },
+    {
+        "type": "text",
+        "text": "Detalhes Modelos ULEEN ",
+        "text_level": 1,
+        "page_idx": 84
+    },
+    {
+        "type": "table",
+        "img_path": "images/f4b3325dd5557a414d967a8f9d2e1b47c683817fee03d3d137d42510ddb3c863.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Dataset</td><td>Model</td><td>Submodel</td><td>Bits/Inp</td><td>Inputs/Filter</td><td>Entries/Filter</td><td>Size (KiB)</td><td>Test Acc.%</td></tr><tr><td colspan=\"2\" rowspan=\"3\">KWS</td><td>Ensemble</td><td>12</td><td>二</td><td>二</td><td>101</td><td>70.34</td></tr><tr><td>SM0</td><td>12</td><td>5</td><td>8</td><td>9.62</td><td>56.93</td></tr><tr><td>SM1 SM2</td><td>12 12</td><td>6 7</td><td>16 32</td><td>16.1 27.5</td><td>59.32 59.94</td></tr><tr><td rowspan=\"5\">ToyADMOS</td><td>SM3</td><td>12</td><td>8</td><td>64</td><td>48.12</td><td>61.01</td></tr><tr><td>Ensemble</td><td>6</td><td>二</td><td></td><td>16.6</td><td>86.33</td></tr><tr><td>SM0</td><td>6</td><td>7</td><td>64</td><td>6.88</td><td>83.61</td></tr><tr><td>SM1</td><td>6</td><td>9</td><td>64</td><td>5.34</td><td>82.32</td></tr><tr><td>SM2</td><td>6</td><td>11</td><td>64</td><td>4.38</td><td>79.85</td></tr><tr><td rowspan=\"5\">VWW</td><td>Ensemble</td><td>12</td><td>二</td><td>二</td><td>251</td><td>61.76</td></tr><tr><td>SM0</td><td>12</td><td>5</td><td>8</td><td>30.2</td><td>59.07</td></tr><tr><td>SM1</td><td>12</td><td>7</td><td>16</td><td>43.2</td><td>57.78</td></tr><tr><td>SM2</td><td>12</td><td>9</td><td>32</td><td>67.2</td><td>59.20</td></tr><tr><td>SM3</td><td>12</td><td>11</td><td>64</td><td>110</td><td>58.96</td></tr><tr><td rowspan=\"5\">CIFAR-10</td><td>Ensemble</td><td>8</td><td>二</td><td>二</td><td>1379</td><td>54.21</td></tr><tr><td>SM0</td><td>8</td><td>6</td><td>32</td><td>112</td><td>49.12</td></tr><tr><td>SM1</td><td>8</td><td>8</td><td>64</td><td>168</td><td>49.53</td></tr><tr><td>SM2</td><td>8</td><td>12</td><td>128</td><td>224</td><td>46.39</td></tr><tr><td>SM3</td><td>8</td><td>16</td><td>256</td><td>336</td><td>42.23</td></tr><tr><td></td><td>SM4</td><td>8</td><td>20</td><td>512</td><td>538</td><td>38.27</td></tr></table></body></html>\n\n",
+        "page_idx": 84
+    },
+    {
+        "type": "text",
+        "text": "Eficiência Energética e de Área ",
+        "text_level": 1,
+        "page_idx": 85
+    },
+    {
+        "type": "image",
+        "img_path": "images/15f88ba126040a438816585529908bba8a0ee019acd7a9590c15a5b06199e0fe.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 85
+    },
+    {
+        "type": "image",
+        "img_path": "images/e54462256419f94d108a64542b67b48c301023df6c4a86650c67ae068e0a0cbf.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 85
+    },
+    {
+        "type": "text",
+        "text": "Conclusão ",
+        "text_level": 1,
+        "page_idx": 86
+    },
+    {
+        "type": "text",
+        "text": "Ensemble, pruning e multi-pass training melhoram a acurácia do modelo e reduz o tamanho dos parâmetros ",
+        "page_idx": 86
+    },
+    {
+        "type": "text",
+        "text": "Comparação com FINN: melhora na eficiência energética em estado estacionário em 3,8–9,1x e area-delay product em 1,7–7,8x nos datasets MNIST, KWS e ToyADMOS/car ",
+        "page_idx": 86
+    },
+    {
+        "type": "text",
+        "text": "ULEEN avança significativamente o estado da arte em precisão de WNN, demonstrando que WNNs podem superar até mesmo BNNs altamente otimizados para algumas aplicações ",
+        "page_idx": 86
+    },
+    {
+        "type": "text",
+        "text": "Conclusão ",
+        "text_level": 1,
+        "page_idx": 87
+    },
+    {
+        "type": "text",
+        "text": "Comparação dos Modelos WNN ",
+        "text_level": 1,
+        "page_idx": 88
+    },
+    {
+        "type": "table",
+        "img_path": "images/36900b75899e34d8007e37969aee1560cd28be3217271dfe395364141ed48769.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Model</td><td>Bloom filters</td><td>Thermometer encoding</td><td>Submodel ensembles</td><td>Bleaching</td><td>Multi-pass training</td><td> Pruning</td></tr><tr><td>WiSARD [4]</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr><tr><td>Bloom WiSARD[55]</td><td>√</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr><tr><td>WiSARD Encodings [31]</td><td>X</td><td>√</td><td>X</td><td>√</td><td>X</td><td>X</td></tr><tr><td>Regression WiSARD [44]</td><td>X</td><td>√</td><td>√</td><td>√</td><td>X</td><td>X</td></tr><tr><td>BTHOWeN[57]</td><td>√</td><td>√</td><td>X</td><td>√</td><td>X</td><td>X</td></tr><tr><td>ULEEN (this work)</td><td>√</td><td>√</td><td>√</td><td>X*</td><td>√</td><td>√</td></tr></table></body></html>\n\n",
+        "page_idx": 88
+    },
+    {
+        "type": "text",
+        "text": "WiSARD - Outros Tipos de Memória ",
+        "text_level": 1,
+        "page_idx": 89
+    },
+    {
+        "type": "text",
+        "text": "Ainda é possível reduzir os espaço de memória? Estrutura de Dados Esparsas - ex: SDM, SDR Redução da Tabela Verdade - Mapa de Karnaugh Gerar uma função que substitua memória - Problema XOR Outras representações de sistemas numéricos - RNS ",
+        "page_idx": 89
+    },
+    {
+        "type": "text",
+        "text": "Tópicos de Pesquisas ",
+        "text_level": 1,
+        "page_idx": 90
+    },
+    {
+        "type": "text",
+        "text": "Segurança-Assistida por Hardware Computação de Alto Desempenho Computação Reconfigurável $$ Inteligência Artificial Verde Redes Neurais sem Peso ◦ HyperDimensional Computing ",
+        "page_idx": 90
+    },
+    {
+        "type": "text",
+        "text": "Tópicos de Pesquisas ",
+        "text_level": 1,
+        "page_idx": 91
+    },
+    {
+        "type": "text",
+        "text": "HyperDimensional Computing Série Temporal - Forecasting e Nowcasting   \nProcessamento de Linguagem Natural Aprendizado Federado   \n◦ TinyML ",
+        "page_idx": 91
+    },
+    {
+        "type": "text",
+        "text": "Redes Sem Peso WiSARD - Soluções para Memória Eficiente ",
+        "text_level": 1,
+        "page_idx": 92
+    },
+    {
+        "type": "text",
+        "text": "Leandro Santiago ",
+        "page_idx": 92
+    },
+    {
+        "type": "text",
+        "text": "leandro@ic.uff.br ",
+        "text_level": 1,
+        "page_idx": 93
+    }
+]

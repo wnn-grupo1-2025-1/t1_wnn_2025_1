@@ -1,0 +1,2555 @@
+{
+    "pdf_info": [
+        {
+            "preproc_blocks": [
+                {
+                    "type": "title",
+                    "bbox": [
+                        115,
+                        158,
+                        602,
+                        213
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                118,
+                                159,
+                                597,
+                                213
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        118,
+                                        159,
+                                        597,
+                                        213
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Audio Preprocessing",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 0
+                        }
+                    ],
+                    "index": 0
+                }
+            ],
+            "layout_bboxes": [],
+            "page_idx": 0,
+            "page_size": [
+                720.0,
+                405.0
+            ],
+            "_layout_tree": [],
+            "images": [],
+            "tables": [],
+            "interline_equations": [],
+            "discarded_blocks": [],
+            "need_drop": false,
+            "drop_reason": [],
+            "para_blocks": [
+                {
+                    "type": "title",
+                    "bbox": [
+                        115,
+                        158,
+                        602,
+                        213
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                118,
+                                159,
+                                597,
+                                213
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        118,
+                                        159,
+                                        597,
+                                        213
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Audio Preprocessing",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 0
+                        }
+                    ],
+                    "index": 0,
+                    "page_num": "page_0",
+                    "page_size": [
+                        720.0,
+                        405.0
+                    ]
+                }
+            ]
+        },
+        {
+            "preproc_blocks": [
+                {
+                    "type": "title",
+                    "bbox": [
+                        30,
+                        45,
+                        113,
+                        72
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                30,
+                                46,
+                                111,
+                                73
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        30,
+                                        46,
+                                        111,
+                                        73
+                                    ],
+                                    "score": 1.0,
+                                    "content": "MFCC",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 0
+                        }
+                    ],
+                    "index": 0
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        37,
+                        98,
+                        534,
+                        168
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                66,
+                                100,
+                                357,
+                                119
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        66,
+                                        100,
+                                        357,
+                                        119
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Mel Frequency Cepstral Coefficients",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 1
+                        },
+                        {
+                            "bbox": [
+                                66,
+                                126,
+                                211,
+                                142
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        66,
+                                        126,
+                                        211,
+                                        142
+                                    ],
+                                    "score": 1.0,
+                                    "content": "cepstral - spectral",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 2
+                        },
+                        {
+                            "bbox": [
+                                65,
+                                149,
+                                527,
+                                168
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        65,
+                                        149,
+                                        155,
+                                        168
+                                    ],
+                                    "score": 1.0,
+                                    "content": "time signal",
+                                    "type": "text"
+                                },
+                                {
+                                    "bbox": [
+                                        156,
+                                        149,
+                                        176,
+                                        165
+                                    ],
+                                    "score": 0.61,
+                                    "content": "\\Rightarrow",
+                                    "type": "inline_equation",
+                                    "height": 16,
+                                    "width": 20
+                                },
+                                {
+                                    "bbox": [
+                                        177,
+                                        149,
+                                        320,
+                                        168
+                                    ],
+                                    "score": 1.0,
+                                    "content": " Fourier transform",
+                                    "type": "text"
+                                },
+                                {
+                                    "bbox": [
+                                        320,
+                                        150,
+                                        340,
+                                        165
+                                    ],
+                                    "score": 0.63,
+                                    "content": "\\phantom { 0 } \\mathrm { - } >",
+                                    "type": "inline_equation",
+                                    "height": 15,
+                                    "width": 20
+                                },
+                                {
+                                    "bbox": [
+                                        341,
+                                        149,
+                                        527,
+                                        168
+                                    ],
+                                    "score": 1.0,
+                                    "content": " frequency spectrum Fs",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 3
+                        }
+                    ],
+                    "index": 2
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        106,
+                        177,
+                        583,
+                        394
+                    ],
+                    "blocks": [
+                        {
+                            "type": "image_body",
+                            "bbox": [
+                                106,
+                                177,
+                                583,
+                                394
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        106,
+                                        177,
+                                        558,
+                                        394
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                106,
+                                                177,
+                                                558,
+                                                394
+                                            ],
+                                            "score": 0.554,
+                                            "type": "image",
+                                            "image_path": "cc62e27b2a2f6c3c4398da3c855d49630ac5e8692bd69a8069c813e5d63618a1.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 5,
+                            "virtual_lines": [
+                                {
+                                    "bbox": [
+                                        106,
+                                        177,
+                                        583,
+                                        249.33333333333331
+                                    ],
+                                    "spans": [],
+                                    "index": 4
+                                },
+                                {
+                                    "bbox": [
+                                        106,
+                                        249.33333333333331,
+                                        583,
+                                        321.66666666666663
+                                    ],
+                                    "spans": [],
+                                    "index": 5
+                                },
+                                {
+                                    "bbox": [
+                                        106,
+                                        321.66666666666663,
+                                        583,
+                                        393.99999999999994
+                                    ],
+                                    "spans": [],
+                                    "index": 6
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 5
+                }
+            ],
+            "layout_bboxes": [],
+            "page_idx": 1,
+            "page_size": [
+                720.0,
+                405.0
+            ],
+            "_layout_tree": [],
+            "images": [
+                {
+                    "type": "image",
+                    "bbox": [
+                        106,
+                        177,
+                        583,
+                        394
+                    ],
+                    "blocks": [
+                        {
+                            "type": "image_body",
+                            "bbox": [
+                                106,
+                                177,
+                                583,
+                                394
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        106,
+                                        177,
+                                        558,
+                                        394
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                106,
+                                                177,
+                                                558,
+                                                394
+                                            ],
+                                            "score": 0.554,
+                                            "type": "image",
+                                            "image_path": "cc62e27b2a2f6c3c4398da3c855d49630ac5e8692bd69a8069c813e5d63618a1.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 5,
+                            "virtual_lines": [
+                                {
+                                    "bbox": [
+                                        106,
+                                        177,
+                                        583,
+                                        249.33333333333331
+                                    ],
+                                    "spans": [],
+                                    "index": 4
+                                },
+                                {
+                                    "bbox": [
+                                        106,
+                                        249.33333333333331,
+                                        583,
+                                        321.66666666666663
+                                    ],
+                                    "spans": [],
+                                    "index": 5
+                                },
+                                {
+                                    "bbox": [
+                                        106,
+                                        321.66666666666663,
+                                        583,
+                                        393.99999999999994
+                                    ],
+                                    "spans": [],
+                                    "index": 6
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 5
+                }
+            ],
+            "tables": [],
+            "interline_equations": [],
+            "discarded_blocks": [],
+            "need_drop": false,
+            "drop_reason": [],
+            "para_blocks": [
+                {
+                    "type": "title",
+                    "bbox": [
+                        30,
+                        45,
+                        113,
+                        72
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                30,
+                                46,
+                                111,
+                                73
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        30,
+                                        46,
+                                        111,
+                                        73
+                                    ],
+                                    "score": 1.0,
+                                    "content": "MFCC",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 0
+                        }
+                    ],
+                    "index": 0,
+                    "page_num": "page_1",
+                    "page_size": [
+                        720.0,
+                        405.0
+                    ]
+                },
+                {
+                    "type": "list",
+                    "bbox": [
+                        37,
+                        98,
+                        534,
+                        168
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                66,
+                                100,
+                                357,
+                                119
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        66,
+                                        100,
+                                        357,
+                                        119
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Mel Frequency Cepstral Coefficients",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 1,
+                            "is_list_start_line": true
+                        },
+                        {
+                            "bbox": [
+                                66,
+                                126,
+                                211,
+                                142
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        66,
+                                        126,
+                                        211,
+                                        142
+                                    ],
+                                    "score": 1.0,
+                                    "content": "cepstral - spectral",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 2,
+                            "is_list_start_line": true
+                        },
+                        {
+                            "bbox": [
+                                65,
+                                149,
+                                527,
+                                168
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        65,
+                                        149,
+                                        155,
+                                        168
+                                    ],
+                                    "score": 1.0,
+                                    "content": "time signal",
+                                    "type": "text"
+                                },
+                                {
+                                    "bbox": [
+                                        156,
+                                        149,
+                                        176,
+                                        165
+                                    ],
+                                    "score": 0.61,
+                                    "content": "\\Rightarrow",
+                                    "type": "inline_equation",
+                                    "height": 16,
+                                    "width": 20
+                                },
+                                {
+                                    "bbox": [
+                                        177,
+                                        149,
+                                        320,
+                                        168
+                                    ],
+                                    "score": 1.0,
+                                    "content": " Fourier transform",
+                                    "type": "text"
+                                },
+                                {
+                                    "bbox": [
+                                        320,
+                                        150,
+                                        340,
+                                        165
+                                    ],
+                                    "score": 0.63,
+                                    "content": "\\phantom { 0 } \\mathrm { - } >",
+                                    "type": "inline_equation",
+                                    "height": 15,
+                                    "width": 20
+                                },
+                                {
+                                    "bbox": [
+                                        341,
+                                        149,
+                                        527,
+                                        168
+                                    ],
+                                    "score": 1.0,
+                                    "content": " frequency spectrum Fs",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 3,
+                            "is_list_start_line": true
+                        }
+                    ],
+                    "index": 2,
+                    "page_num": "page_1",
+                    "page_size": [
+                        720.0,
+                        405.0
+                    ],
+                    "bbox_fs": [
+                        65,
+                        100,
+                        527,
+                        168
+                    ]
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        106,
+                        177,
+                        583,
+                        394
+                    ],
+                    "blocks": [
+                        {
+                            "type": "image_body",
+                            "bbox": [
+                                106,
+                                177,
+                                583,
+                                394
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        106,
+                                        177,
+                                        558,
+                                        394
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                106,
+                                                177,
+                                                558,
+                                                394
+                                            ],
+                                            "score": 0.554,
+                                            "type": "image",
+                                            "image_path": "cc62e27b2a2f6c3c4398da3c855d49630ac5e8692bd69a8069c813e5d63618a1.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 5,
+                            "virtual_lines": [
+                                {
+                                    "bbox": [
+                                        106,
+                                        177,
+                                        583,
+                                        249.33333333333331
+                                    ],
+                                    "spans": [],
+                                    "index": 4
+                                },
+                                {
+                                    "bbox": [
+                                        106,
+                                        249.33333333333331,
+                                        583,
+                                        321.66666666666663
+                                    ],
+                                    "spans": [],
+                                    "index": 5
+                                },
+                                {
+                                    "bbox": [
+                                        106,
+                                        321.66666666666663,
+                                        583,
+                                        393.99999999999994
+                                    ],
+                                    "spans": [],
+                                    "index": 6
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 5,
+                    "page_num": "page_1",
+                    "page_size": [
+                        720.0,
+                        405.0
+                    ]
+                }
+            ]
+        },
+        {
+            "preproc_blocks": [
+                {
+                    "type": "title",
+                    "bbox": [
+                        30,
+                        45,
+                        112,
+                        72
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                30,
+                                46,
+                                111,
+                                74
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        30,
+                                        46,
+                                        111,
+                                        74
+                                    ],
+                                    "score": 1.0,
+                                    "content": "MFCC",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 0
+                        }
+                    ],
+                    "index": 0
+                },
+                {
+                    "type": "title",
+                    "bbox": [
+                        40,
+                        98,
+                        459,
+                        119
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                65,
+                                99,
+                                455,
+                                119
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        65,
+                                        99,
+                                        142,
+                                        119
+                                    ],
+                                    "score": 1.0,
+                                    "content": "cepstrum",
+                                    "type": "text"
+                                },
+                                {
+                                    "bbox": [
+                                        143,
+                                        99,
+                                        159,
+                                        116
+                                    ],
+                                    "score": 0.59,
+                                    "content": "\\mathbf { \\tau } = \\mathbf { \\tau }",
+                                    "type": "inline_equation",
+                                    "height": 17,
+                                    "width": 16
+                                },
+                                {
+                                    "bbox": [
+                                        160,
+                                        99,
+                                        455,
+                                        119
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Discrete Cosine Transform (log(|Fs|))",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 1
+                        }
+                    ],
+                    "index": 1
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        123,
+                        133,
+                        560,
+                        370
+                    ],
+                    "blocks": [
+                        {
+                            "type": "image_caption",
+                            "bbox": [
+                                136,
+                                130,
+                                166,
+                                141
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        136,
+                                        130,
+                                        166,
+                                        141
+                                    ],
+                                    "spans": [],
+                                    "index": 2
+                                }
+                            ],
+                            "index": 2
+                        },
+                        {
+                            "type": "image_body",
+                            "bbox": [
+                                123,
+                                133,
+                                560,
+                                370
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        123,
+                                        134,
+                                        560,
+                                        370
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                123,
+                                                134,
+                                                560,
+                                                370
+                                            ],
+                                            "score": 0.594,
+                                            "type": "image",
+                                            "image_path": "ed2a6ae5e99528009946440809fbcf873d7b66cca47ca50b543cefe884bcf3a3.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 4,
+                            "virtual_lines": [
+                                {
+                                    "bbox": [
+                                        123,
+                                        133,
+                                        560,
+                                        212.0
+                                    ],
+                                    "spans": [],
+                                    "index": 3
+                                },
+                                {
+                                    "bbox": [
+                                        123,
+                                        212.0,
+                                        560,
+                                        291.0
+                                    ],
+                                    "spans": [],
+                                    "index": 4
+                                },
+                                {
+                                    "bbox": [
+                                        123,
+                                        291.0,
+                                        560,
+                                        370.0
+                                    ],
+                                    "spans": [],
+                                    "index": 5
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 3.0
+                }
+            ],
+            "layout_bboxes": [],
+            "page_idx": 2,
+            "page_size": [
+                720.0,
+                405.0
+            ],
+            "_layout_tree": [],
+            "images": [
+                {
+                    "type": "image",
+                    "bbox": [
+                        123,
+                        133,
+                        560,
+                        370
+                    ],
+                    "blocks": [
+                        {
+                            "type": "image_caption",
+                            "bbox": [
+                                136,
+                                130,
+                                166,
+                                141
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        136,
+                                        130,
+                                        166,
+                                        141
+                                    ],
+                                    "spans": [],
+                                    "index": 2
+                                }
+                            ],
+                            "index": 2
+                        },
+                        {
+                            "type": "image_body",
+                            "bbox": [
+                                123,
+                                133,
+                                560,
+                                370
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        123,
+                                        134,
+                                        560,
+                                        370
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                123,
+                                                134,
+                                                560,
+                                                370
+                                            ],
+                                            "score": 0.594,
+                                            "type": "image",
+                                            "image_path": "ed2a6ae5e99528009946440809fbcf873d7b66cca47ca50b543cefe884bcf3a3.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 4,
+                            "virtual_lines": [
+                                {
+                                    "bbox": [
+                                        123,
+                                        133,
+                                        560,
+                                        212.0
+                                    ],
+                                    "spans": [],
+                                    "index": 3
+                                },
+                                {
+                                    "bbox": [
+                                        123,
+                                        212.0,
+                                        560,
+                                        291.0
+                                    ],
+                                    "spans": [],
+                                    "index": 4
+                                },
+                                {
+                                    "bbox": [
+                                        123,
+                                        291.0,
+                                        560,
+                                        370.0
+                                    ],
+                                    "spans": [],
+                                    "index": 5
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 3.0
+                }
+            ],
+            "tables": [],
+            "interline_equations": [],
+            "discarded_blocks": [
+                {
+                    "type": "discarded",
+                    "bbox": [
+                        124,
+                        376,
+                        202,
+                        387
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                124,
+                                376,
+                                202,
+                                387
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        124,
+                                        376,
+                                        202,
+                                        387
+                                    ],
+                                    "score": 0.974,
+                                    "content": "-971.548,-34.2345",
+                                    "type": "text"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "discarded",
+                    "bbox": [
+                        503,
+                        129,
+                        567,
+                        142
+                    ],
+                    "lines": []
+                }
+            ],
+            "need_drop": false,
+            "drop_reason": [],
+            "para_blocks": [
+                {
+                    "type": "title",
+                    "bbox": [
+                        30,
+                        45,
+                        112,
+                        72
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                30,
+                                46,
+                                111,
+                                74
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        30,
+                                        46,
+                                        111,
+                                        74
+                                    ],
+                                    "score": 1.0,
+                                    "content": "MFCC",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 0
+                        }
+                    ],
+                    "index": 0,
+                    "page_num": "page_2",
+                    "page_size": [
+                        720.0,
+                        405.0
+                    ]
+                },
+                {
+                    "type": "title",
+                    "bbox": [
+                        40,
+                        98,
+                        459,
+                        119
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                65,
+                                99,
+                                455,
+                                119
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        65,
+                                        99,
+                                        142,
+                                        119
+                                    ],
+                                    "score": 1.0,
+                                    "content": "cepstrum",
+                                    "type": "text"
+                                },
+                                {
+                                    "bbox": [
+                                        143,
+                                        99,
+                                        159,
+                                        116
+                                    ],
+                                    "score": 0.59,
+                                    "content": "\\mathbf { \\tau } = \\mathbf { \\tau }",
+                                    "type": "inline_equation",
+                                    "height": 17,
+                                    "width": 16
+                                },
+                                {
+                                    "bbox": [
+                                        160,
+                                        99,
+                                        455,
+                                        119
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Discrete Cosine Transform (log(|Fs|))",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 1
+                        }
+                    ],
+                    "index": 1,
+                    "page_num": "page_2",
+                    "page_size": [
+                        720.0,
+                        405.0
+                    ]
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        123,
+                        133,
+                        560,
+                        370
+                    ],
+                    "blocks": [
+                        {
+                            "type": "image_caption",
+                            "bbox": [
+                                136,
+                                130,
+                                166,
+                                141
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        136,
+                                        130,
+                                        166,
+                                        141
+                                    ],
+                                    "spans": [],
+                                    "index": 2
+                                }
+                            ],
+                            "index": 2
+                        },
+                        {
+                            "type": "image_body",
+                            "bbox": [
+                                123,
+                                133,
+                                560,
+                                370
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        123,
+                                        134,
+                                        560,
+                                        370
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                123,
+                                                134,
+                                                560,
+                                                370
+                                            ],
+                                            "score": 0.594,
+                                            "type": "image",
+                                            "image_path": "ed2a6ae5e99528009946440809fbcf873d7b66cca47ca50b543cefe884bcf3a3.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 4,
+                            "virtual_lines": [
+                                {
+                                    "bbox": [
+                                        123,
+                                        133,
+                                        560,
+                                        212.0
+                                    ],
+                                    "spans": [],
+                                    "index": 3
+                                },
+                                {
+                                    "bbox": [
+                                        123,
+                                        212.0,
+                                        560,
+                                        291.0
+                                    ],
+                                    "spans": [],
+                                    "index": 4
+                                },
+                                {
+                                    "bbox": [
+                                        123,
+                                        291.0,
+                                        560,
+                                        370.0
+                                    ],
+                                    "spans": [],
+                                    "index": 5
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 3.0,
+                    "page_num": "page_2",
+                    "page_size": [
+                        720.0,
+                        405.0
+                    ]
+                }
+            ]
+        },
+        {
+            "preproc_blocks": [
+                {
+                    "type": "title",
+                    "bbox": [
+                        30,
+                        45,
+                        113,
+                        72
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                29,
+                                46,
+                                112,
+                                73
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        29,
+                                        46,
+                                        112,
+                                        73
+                                    ],
+                                    "score": 1.0,
+                                    "content": "MFCC",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 0
+                        }
+                    ],
+                    "index": 0
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        41,
+                        97,
+                        670,
+                        144
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                61,
+                                99,
+                                672,
+                                119
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        61,
+                                        99,
+                                        672,
+                                        119
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Mel scale - scale that relates the perceived frequency of a tone to the actual",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 1
+                        },
+                        {
+                            "bbox": [
+                                64,
+                                122,
+                                232,
+                                146
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        64,
+                                        122,
+                                        232,
+                                        146
+                                    ],
+                                    "score": 1.0,
+                                    "content": "measured frequency",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 2
+                        }
+                    ],
+                    "index": 1.5
+                },
+                {
+                    "type": "interline_equation",
+                    "bbox": [
+                        164,
+                        145,
+                        530,
+                        269
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                164,
+                                145,
+                                530,
+                                269
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        164,
+                                        145,
+                                        530,
+                                        269
+                                    ],
+                                    "score": 0.72,
+                                    "content": "( f ) = 2 5 9 5 \\log \\left( 1 + { \\frac { \\ l } { 7 } } \\right.",
+                                    "type": "interline_equation"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 4,
+                    "virtual_lines": [
+                        {
+                            "bbox": [
+                                164,
+                                145,
+                                530,
+                                186.33333333333334
+                            ],
+                            "spans": [],
+                            "index": 3
+                        },
+                        {
+                            "bbox": [
+                                164,
+                                186.33333333333334,
+                                530,
+                                227.66666666666669
+                            ],
+                            "spans": [],
+                            "index": 4
+                        },
+                        {
+                            "bbox": [
+                                164,
+                                227.66666666666669,
+                                530,
+                                269.0
+                            ],
+                            "spans": [],
+                            "index": 5
+                        }
+                    ]
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        38,
+                        271,
+                        670,
+                        342
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                42,
+                                273,
+                                660,
+                                291
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        42,
+                                        279,
+                                        47,
+                                        287
+                                    ],
+                                    "score": 1.0,
+                                    "content": "●",
+                                    "type": "text"
+                                },
+                                {
+                                    "bbox": [
+                                        61,
+                                        273,
+                                        660,
+                                        291
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Filter banks - Representation of the signal obtained after dividing the audio",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 6
+                        },
+                        {
+                            "bbox": [
+                                66,
+                                298,
+                                670,
+                                317
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        66,
+                                        298,
+                                        670,
+                                        317
+                                    ],
+                                    "score": 1.0,
+                                    "content": "into slices, forming bandpass filters, which are excited by the original signal.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 7
+                        },
+                        {
+                            "bbox": [
+                                61,
+                                322,
+                                411,
+                                342
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        61,
+                                        322,
+                                        411,
+                                        342
+                                    ],
+                                    "score": 1.0,
+                                    "content": "MFCC - Cepstral obtained from filter banks",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 8
+                        }
+                    ],
+                    "index": 7
+                }
+            ],
+            "layout_bboxes": [],
+            "page_idx": 3,
+            "page_size": [
+                720.0,
+                405.0
+            ],
+            "_layout_tree": [],
+            "images": [],
+            "tables": [],
+            "interline_equations": [
+                {
+                    "type": "interline_equation",
+                    "bbox": [
+                        164,
+                        145,
+                        530,
+                        269
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                164,
+                                145,
+                                530,
+                                269
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        164,
+                                        145,
+                                        530,
+                                        269
+                                    ],
+                                    "score": 0.72,
+                                    "content": "( f ) = 2 5 9 5 \\log \\left( 1 + { \\frac { \\ l } { 7 } } \\right.",
+                                    "type": "interline_equation"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 4,
+                    "virtual_lines": [
+                        {
+                            "bbox": [
+                                164,
+                                145,
+                                530,
+                                186.33333333333334
+                            ],
+                            "spans": [],
+                            "index": 3
+                        },
+                        {
+                            "bbox": [
+                                164,
+                                186.33333333333334,
+                                530,
+                                227.66666666666669
+                            ],
+                            "spans": [],
+                            "index": 4
+                        },
+                        {
+                            "bbox": [
+                                164,
+                                227.66666666666669,
+                                530,
+                                269.0
+                            ],
+                            "spans": [],
+                            "index": 5
+                        }
+                    ]
+                }
+            ],
+            "discarded_blocks": [],
+            "need_drop": false,
+            "drop_reason": [],
+            "para_blocks": [
+                {
+                    "type": "title",
+                    "bbox": [
+                        30,
+                        45,
+                        113,
+                        72
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                29,
+                                46,
+                                112,
+                                73
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        29,
+                                        46,
+                                        112,
+                                        73
+                                    ],
+                                    "score": 1.0,
+                                    "content": "MFCC",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 0
+                        }
+                    ],
+                    "index": 0,
+                    "page_num": "page_3",
+                    "page_size": [
+                        720.0,
+                        405.0
+                    ]
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        41,
+                        97,
+                        670,
+                        144
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                61,
+                                99,
+                                672,
+                                119
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        61,
+                                        99,
+                                        672,
+                                        119
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Mel scale - scale that relates the perceived frequency of a tone to the actual",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 1
+                        },
+                        {
+                            "bbox": [
+                                64,
+                                122,
+                                232,
+                                146
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        64,
+                                        122,
+                                        232,
+                                        146
+                                    ],
+                                    "score": 1.0,
+                                    "content": "measured frequency",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 2
+                        }
+                    ],
+                    "index": 1.5,
+                    "page_num": "page_3",
+                    "page_size": [
+                        720.0,
+                        405.0
+                    ],
+                    "bbox_fs": [
+                        61,
+                        99,
+                        672,
+                        146
+                    ]
+                },
+                {
+                    "type": "interline_equation",
+                    "bbox": [
+                        164,
+                        145,
+                        530,
+                        269
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                164,
+                                145,
+                                530,
+                                269
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        164,
+                                        145,
+                                        530,
+                                        269
+                                    ],
+                                    "score": 0.72,
+                                    "content": "( f ) = 2 5 9 5 \\log \\left( 1 + { \\frac { \\ l } { 7 } } \\right.",
+                                    "type": "interline_equation"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 4,
+                    "virtual_lines": [
+                        {
+                            "bbox": [
+                                164,
+                                145,
+                                530,
+                                186.33333333333334
+                            ],
+                            "spans": [],
+                            "index": 3
+                        },
+                        {
+                            "bbox": [
+                                164,
+                                186.33333333333334,
+                                530,
+                                227.66666666666669
+                            ],
+                            "spans": [],
+                            "index": 4
+                        },
+                        {
+                            "bbox": [
+                                164,
+                                227.66666666666669,
+                                530,
+                                269.0
+                            ],
+                            "spans": [],
+                            "index": 5
+                        }
+                    ],
+                    "page_num": "page_3",
+                    "page_size": [
+                        720.0,
+                        405.0
+                    ]
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        38,
+                        271,
+                        670,
+                        342
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                42,
+                                273,
+                                660,
+                                291
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        42,
+                                        279,
+                                        47,
+                                        287
+                                    ],
+                                    "score": 1.0,
+                                    "content": "●",
+                                    "type": "text"
+                                },
+                                {
+                                    "bbox": [
+                                        61,
+                                        273,
+                                        660,
+                                        291
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Filter banks - Representation of the signal obtained after dividing the audio",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 6
+                        },
+                        {
+                            "bbox": [
+                                66,
+                                298,
+                                670,
+                                317
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        66,
+                                        298,
+                                        670,
+                                        317
+                                    ],
+                                    "score": 1.0,
+                                    "content": "into slices, forming bandpass filters, which are excited by the original signal.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 7
+                        },
+                        {
+                            "bbox": [
+                                61,
+                                322,
+                                411,
+                                342
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        61,
+                                        322,
+                                        411,
+                                        342
+                                    ],
+                                    "score": 1.0,
+                                    "content": "MFCC - Cepstral obtained from filter banks",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 8
+                        }
+                    ],
+                    "index": 7,
+                    "page_num": "page_3",
+                    "page_size": [
+                        720.0,
+                        405.0
+                    ],
+                    "bbox_fs": [
+                        42,
+                        273,
+                        670,
+                        342
+                    ]
+                }
+            ]
+        },
+        {
+            "preproc_blocks": [
+                {
+                    "type": "image",
+                    "bbox": [
+                        29,
+                        117,
+                        683,
+                        363
+                    ],
+                    "blocks": [
+                        {
+                            "type": "image_body",
+                            "bbox": [
+                                29,
+                                117,
+                                683,
+                                363
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        29,
+                                        117,
+                                        683,
+                                        363
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                29,
+                                                117,
+                                                683,
+                                                363
+                                            ],
+                                            "score": 0.913,
+                                            "type": "image",
+                                            "image_path": "164ff3c4518934564d77583ecffa90f205d6a3eb98f2b5d06cd441d11246669a.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 1,
+                            "virtual_lines": [
+                                {
+                                    "bbox": [
+                                        29,
+                                        117,
+                                        683,
+                                        199.0
+                                    ],
+                                    "spans": [],
+                                    "index": 0
+                                },
+                                {
+                                    "bbox": [
+                                        29,
+                                        199.0,
+                                        683,
+                                        281.0
+                                    ],
+                                    "spans": [],
+                                    "index": 1
+                                },
+                                {
+                                    "bbox": [
+                                        29,
+                                        281.0,
+                                        683,
+                                        363.0
+                                    ],
+                                    "spans": [],
+                                    "index": 2
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 1
+                }
+            ],
+            "layout_bboxes": [],
+            "page_idx": 4,
+            "page_size": [
+                720.0,
+                405.0
+            ],
+            "_layout_tree": [],
+            "images": [
+                {
+                    "type": "image",
+                    "bbox": [
+                        29,
+                        117,
+                        683,
+                        363
+                    ],
+                    "blocks": [
+                        {
+                            "type": "image_body",
+                            "bbox": [
+                                29,
+                                117,
+                                683,
+                                363
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        29,
+                                        117,
+                                        683,
+                                        363
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                29,
+                                                117,
+                                                683,
+                                                363
+                                            ],
+                                            "score": 0.913,
+                                            "type": "image",
+                                            "image_path": "164ff3c4518934564d77583ecffa90f205d6a3eb98f2b5d06cd441d11246669a.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 1,
+                            "virtual_lines": [
+                                {
+                                    "bbox": [
+                                        29,
+                                        117,
+                                        683,
+                                        199.0
+                                    ],
+                                    "spans": [],
+                                    "index": 0
+                                },
+                                {
+                                    "bbox": [
+                                        29,
+                                        199.0,
+                                        683,
+                                        281.0
+                                    ],
+                                    "spans": [],
+                                    "index": 1
+                                },
+                                {
+                                    "bbox": [
+                                        29,
+                                        281.0,
+                                        683,
+                                        363.0
+                                    ],
+                                    "spans": [],
+                                    "index": 2
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 1
+                }
+            ],
+            "tables": [],
+            "interline_equations": [],
+            "discarded_blocks": [
+                {
+                    "type": "discarded",
+                    "bbox": [
+                        30,
+                        45,
+                        113,
+                        72
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                30,
+                                46,
+                                112,
+                                74
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        30,
+                                        46,
+                                        112,
+                                        74
+                                    ],
+                                    "score": 1.0,
+                                    "content": "MFCC",
+                                    "type": "text"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "need_drop": false,
+            "drop_reason": [],
+            "para_blocks": [
+                {
+                    "type": "image",
+                    "bbox": [
+                        29,
+                        117,
+                        683,
+                        363
+                    ],
+                    "blocks": [
+                        {
+                            "type": "image_body",
+                            "bbox": [
+                                29,
+                                117,
+                                683,
+                                363
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        29,
+                                        117,
+                                        683,
+                                        363
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                29,
+                                                117,
+                                                683,
+                                                363
+                                            ],
+                                            "score": 0.913,
+                                            "type": "image",
+                                            "image_path": "164ff3c4518934564d77583ecffa90f205d6a3eb98f2b5d06cd441d11246669a.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 1,
+                            "virtual_lines": [
+                                {
+                                    "bbox": [
+                                        29,
+                                        117,
+                                        683,
+                                        199.0
+                                    ],
+                                    "spans": [],
+                                    "index": 0
+                                },
+                                {
+                                    "bbox": [
+                                        29,
+                                        199.0,
+                                        683,
+                                        281.0
+                                    ],
+                                    "spans": [],
+                                    "index": 1
+                                },
+                                {
+                                    "bbox": [
+                                        29,
+                                        281.0,
+                                        683,
+                                        363.0
+                                    ],
+                                    "spans": [],
+                                    "index": 2
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 1,
+                    "page_num": "page_4",
+                    "page_size": [
+                        720.0,
+                        405.0
+                    ]
+                }
+            ]
+        },
+        {
+            "preproc_blocks": [
+                {
+                    "type": "title",
+                    "bbox": [
+                        30,
+                        45,
+                        324,
+                        75
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                30,
+                                48,
+                                323,
+                                74
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        30,
+                                        48,
+                                        323,
+                                        74
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Pre-processing pipeline",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 0
+                        }
+                    ],
+                    "index": 0
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        36,
+                        97,
+                        693,
+                        244
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                62,
+                                97,
+                                120,
+                                117
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        62,
+                                        97,
+                                        120,
+                                        117
+                                    ],
+                                    "score": 1.0,
+                                    "content": "MFCC",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 1
+                        },
+                        {
+                            "bbox": [
+                                65,
+                                125,
+                                273,
+                                143
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        65,
+                                        125,
+                                        273,
+                                        143
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Append Sum (integration)",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 2
+                        },
+                        {
+                            "bbox": [
+                                63,
+                                147,
+                                687,
+                                170
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        63,
+                                        147,
+                                        687,
+                                        170
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Database Z-score (each signal has it means subtracted and is later divided by",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 3
+                        },
+                        {
+                            "bbox": [
+                                64,
+                                172,
+                                245,
+                                193
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        64,
+                                        172,
+                                        245,
+                                        193
+                                    ],
+                                    "score": 1.0,
+                                    "content": "its standard deviation)",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 4
+                        },
+                        {
+                            "bbox": [
+                                63,
+                                198,
+                                108,
+                                217
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        63,
+                                        198,
+                                        108,
+                                        217
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Tanh",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 5
+                        },
+                        {
+                            "bbox": [
+                                63,
+                                222,
+                                187,
+                                242
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        63,
+                                        222,
+                                        187,
+                                        242
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Kernel Canvas",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 6
+                        }
+                    ],
+                    "index": 3.5
+                }
+            ],
+            "layout_bboxes": [],
+            "page_idx": 5,
+            "page_size": [
+                720.0,
+                405.0
+            ],
+            "_layout_tree": [],
+            "images": [],
+            "tables": [],
+            "interline_equations": [],
+            "discarded_blocks": [],
+            "need_drop": false,
+            "drop_reason": [],
+            "para_blocks": [
+                {
+                    "type": "title",
+                    "bbox": [
+                        30,
+                        45,
+                        324,
+                        75
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                30,
+                                48,
+                                323,
+                                74
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        30,
+                                        48,
+                                        323,
+                                        74
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Pre-processing pipeline",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 0
+                        }
+                    ],
+                    "index": 0,
+                    "page_num": "page_5",
+                    "page_size": [
+                        720.0,
+                        405.0
+                    ]
+                },
+                {
+                    "type": "list",
+                    "bbox": [
+                        36,
+                        97,
+                        693,
+                        244
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                62,
+                                97,
+                                120,
+                                117
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        62,
+                                        97,
+                                        120,
+                                        117
+                                    ],
+                                    "score": 1.0,
+                                    "content": "MFCC",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 1,
+                            "is_list_start_line": true
+                        },
+                        {
+                            "bbox": [
+                                65,
+                                125,
+                                273,
+                                143
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        65,
+                                        125,
+                                        273,
+                                        143
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Append Sum (integration)",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 2,
+                            "is_list_start_line": true
+                        },
+                        {
+                            "bbox": [
+                                63,
+                                147,
+                                687,
+                                170
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        63,
+                                        147,
+                                        687,
+                                        170
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Database Z-score (each signal has it means subtracted and is later divided by",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 3,
+                            "is_list_start_line": true
+                        },
+                        {
+                            "bbox": [
+                                64,
+                                172,
+                                245,
+                                193
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        64,
+                                        172,
+                                        245,
+                                        193
+                                    ],
+                                    "score": 1.0,
+                                    "content": "its standard deviation)",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 4,
+                            "is_list_start_line": true
+                        },
+                        {
+                            "bbox": [
+                                63,
+                                198,
+                                108,
+                                217
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        63,
+                                        198,
+                                        108,
+                                        217
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Tanh",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 5,
+                            "is_list_start_line": true
+                        },
+                        {
+                            "bbox": [
+                                63,
+                                222,
+                                187,
+                                242
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        63,
+                                        222,
+                                        187,
+                                        242
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Kernel Canvas",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 6,
+                            "is_list_start_line": true
+                        }
+                    ],
+                    "index": 3.5,
+                    "page_num": "page_5",
+                    "page_size": [
+                        720.0,
+                        405.0
+                    ],
+                    "bbox_fs": [
+                        62,
+                        97,
+                        687,
+                        242
+                    ]
+                }
+            ]
+        }
+    ],
+    "_parse_type": "txt",
+    "_version_name": "1.3.10"
+}
