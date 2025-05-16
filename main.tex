@@ -167,15 +167,7 @@ O dataset \textbf{Glass} contém \textbf{214 instâncias} de fragmentos de vidro
 
 \subsubsection{Letter}
 
-O dataset \textbf{Letter} contém letras manuscritas. As imagens dos caracteres foram baseadas em \textbf{20 fontes diferentes}, e cada letra dentro dessas fontes foi distorcida aleatoriamente para produzir:
-
-\begin{itemize}
-    \item \textbf{20k entradas}, onde:
-    \begin{itemize}
-        \item \textbf{16k} foram usadas para treinamento.
-        \item \textbf{4k} para teste.
-    \end{itemize}
-\end{itemize}
+O dataset \textbf{Letter} contém letras manuscritas. As imagens dos caracteres foram baseadas em \textbf{20 fontes diferentes}, e cada letra dentro dessas fontes foi distorcida aleatoriamente para produzir \textbf{20k entradas}, onde \textbf{16k} foram usadas para treinamento e \textbf{4k} para teste.
 
 \subsubsection{Wine}
 
@@ -209,7 +201,7 @@ Nas tabelas a seguir, apresentamos os resultados obtidos com diferentes configur
     \item \textbf{Var. X}: Variações da configuração base, onde modificamos sistematicamente um hiperparâmetro por vez, seguindo a abordagem gulosa descrita na metodologia. Os números indicam a sequência das variações testadas.
 \end{itemize}
 
-Para cada configuração, apresentamos os valores dos hiperparâmetros (b, OWeN, FE, FH), a acurácia obtida, o percentual de empates ocorridos durante a classificação e o valor de bleaching que produziu os melhores resultados.
+Para cada configuração, apresentamos os valores dos hiperparâmetros (b, OWeN, FE, FH), a acurácia obtida, o percentual de empates ocorridos durante a classificação e o valor de bleaching que produziu os melhores resultados. A coluna ``Bleaching'' indica o valor ótimo encontrado durante o treinamento, que permite ao modelo obter a melhor acurácia possível.
 
 \subsubsection{Tabelas}
 
@@ -218,7 +210,7 @@ Para cada configuração, apresentamos os valores dos hiperparâmetros (b, OWeN,
 \caption{Parâmetros e métricas do dataset Iris}
 \begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
-\textbf{Configuração} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Melhor Bleaching} \\
+\textbf{Configuração} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Bleaching} \\
 \hline
 Bloom WiSARD & N/A & N/A & N/A & N/A & 960 & 2.0 & 3 \\
 \hline
@@ -243,7 +235,7 @@ Var. 6 & 4 & 2 & 256 & 2 & 900 & 12.0 & 3 \\
 \caption{Parâmetros e métricas do dataset Ecoli}
 \begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
-\textbf{Configuração} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Melhor Bleaching} \\
+\textbf{Configuração} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Bleaching} \\
 \hline
 Bloom WiSARD & N/A & N/A & N/A & N/A & 799 & N/A & N/A \\
 \hline
@@ -268,7 +260,7 @@ Var. 6 & 4 & 256 & 4 & 10 & 830 & 13.4 & 1 \\
 \caption{Parâmetros e métricas do dataset Glass}
 \begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
-\textbf{Configuração} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Melhor Bleaching} \\
+\textbf{Configuração} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Bleaching} \\
 \hline
 Bloom WiSARD & N/A & N/A & N/A & N/A & 726 & N/A & N/A \\
 \hline
@@ -293,7 +285,7 @@ Var. 6 & 4 & 256 & 4 & 10 & 676 & 28.2 & 1 \\
 \caption{Parâmetros e métricas do dataset Letter}
 \begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
-\textbf{Configuração} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Melhor Bleaching} \\
+\textbf{Configuração} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Bleaching} \\
 \hline
 Bloom WiSARD & N/A & N/A & N/A & N/A & 848 & N/A & N/A \\
 \hline
@@ -322,7 +314,7 @@ Var. 8 & 15 & 256 & 5 & 35 & 884 & 3.9 & 3 \\
 \caption{Parâmetros e métricas do dataset Wine}
 \begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
-\textbf{Configuração} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Melhor Bleaching} \\
+\textbf{Configuração} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Bleaching} \\
 \hline
 Bloom WiSARD & N/A & N/A & N/A & N/A & 926 & N/A & N/A \\
 \hline
@@ -351,7 +343,7 @@ Var. 7 & 7 & 9 & 256 & 4 & 932 & 5.08 & 1 \\
 \caption{Parâmetros e métricas do dataset Segment}
 \begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
-\textbf{Configuração} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Melhor Bleaching} \\
+\textbf{Configuração} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Bleaching} \\
 \hline
 Bloom WiSARD & N/A & N/A & N/A & N/A & N/A & N/A & N/A \\
 \hline
@@ -384,7 +376,7 @@ Var. 9 & 9 & 32 & 2048 & 4 & 936 & 34.9 & 1 \\
 \caption{Parâmetros e métricas do dataset Shuttle}
 \begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
-\textbf{Configuração} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Melhor Bleaching} \\
+\textbf{Configuração} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Bleaching} \\
 \hline
 Bloom WiSARD & N/A & N/A & N/A & N/A & 868 & N/A & N/A \\
 \hline
@@ -413,7 +405,7 @@ Var. 8 & 11 & 27 & 1024 & 2 & 976 & 4.99 & 276 \\
 \caption{Parâmetros e métricas do dataset Vehicle}
 \begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
-\textbf{Configuração} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Melhor Bleaching} \\
+\textbf{Configuração} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Bleaching} \\
 \hline
 Bloom WiSARD & N/A & N/A & N/A & N/A & 926 & N/A & N/A \\
 \hline
@@ -440,7 +432,7 @@ Var. 15 & 14 & 12 & 512 & 3 & 726 & 27.5 & 1 \\
 \caption{Parâmetros e métricas do dataset Vowel}
 \begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
-\textbf{Configuração} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Melhor Bleaching} \\
+\textbf{Configuração} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Bleaching} \\
 \hline
 Bloom WiSARD & N/A & N/A & N/A & N/A & 876 & N/A & N/A \\
 \hline
@@ -467,7 +459,7 @@ Var. 5 & 16 & 17 & 256 & 5 & 906 & 0 & 0 \\
 \caption{Parâmetros e métricas do dataset MNIST}
 \begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
-\textbf{Configuração} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Melhor Bleaching} \\
+\textbf{Configuração} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Bleaching} \\
 \hline
 ULEEN & 6 & 49 & 8192 & 4 & 952 & N/A & N/A \\
 \hline
