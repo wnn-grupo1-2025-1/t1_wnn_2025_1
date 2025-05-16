@@ -35,7 +35,8 @@
 \usepackage[brazil]{babel}  % brazilian portuguese
 \usepackage{array}          % tables
 \usepackage{longtable}      % multi-page tables
-
+\usepackage{xcolor}
+\definecolor{darkgreen}{rgb}{0.0, 0.5, 0.0}
 \title{Avaliação do Modelo BTHOWeN em Datasets Multiclasse}
 
 \author{%
@@ -585,16 +586,16 @@ Na tabela a seguir, apresentamos os parâmetros ótimos identificados para cada 
 \hline
 \textbf{Dataset} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Melhor Bleaching} & \textbf{Execução} & \textbf{Empates (\%)} \\
 \hline
-Iris & 3 & \textcolor{blue}{2} & \textcolor{green}{256} & \textcolor{blue}{2} & 2 & \textcolor{red}{1} & \textcolor{red}{0} \\
-Ecoli & \textcolor{red}{3} & \textcolor{green}{256} & \textcolor{green}{3} & 10 & \textcolor{red}{1} & 1 & \textcolor{green}{10.7} \\
-Glass & \textcolor{green}{4} & \textcolor{green}{256} & \textcolor{green}{4} & \textcolor{green}{10} & 1 & 1 & \textcolor{red}{28.2} \\
-Letter & \textcolor{green}{15} & \textcolor{green}{256} & \textcolor{green}{5} & \textcolor{green}{35} & \textcolor{red}{3} & 1 & \textcolor{red}{3.9} \\
-Wine & \textcolor{green}{10} & 13 & \textcolor{green}{256} & \textcolor{green}{4} & 1 & -- & 1.7 \\
-Segment & \textcolor{green}{10} & \textcolor{red}{18} & 1.14 & \textcolor{green}{3} & \textcolor{green}{2} & -- & 6.49 \\
-Shuttle & \textcolor{green}{11} & \textcolor{red}{25} & 1.14 & \textcolor{green}{3} & \textcolor{red}{1} & -- & \textcolor{green}{0.1} \\
-Vehicle & \textcolor{red}{15} & \textcolor{red}{12} & 256 & \textcolor{blue}{2} & 1 & -- & 20.2 \\
-Vowel & \textcolor{red}{15} & \textcolor{red}{13} & \textcolor{green}{512} & \textcolor{green}{5} & 1 & -- & \textcolor{green}{24.4} \\
-MNIST & \textcolor{green}{6} & \textcolor{green}{49} & \textcolor{green}{81.1} & \textcolor{green}{4} & -- & -- & -- \\
+Iris & 3 & \textcolor{black}{2} & \textcolor{darkgreen}{256} & \textcolor{black}{2} & 2 & \textcolor{red}{1} & \textcolor{red}{0} \\
+Ecoli & \textcolor{red}{3} & \textcolor{darkgreen}{256} & \textcolor{darkgreen}{3} & 10 & \textcolor{red}{1} & 1 & \textcolor{darkgreen}{10.7} \\
+Glass & \textcolor{darkgreen}{4} & \textcolor{darkgreen}{256} & \textcolor{darkgreen}{4} & \textcolor{darkgreen}{10} & 1 & 1 & \textcolor{red}{28.2} \\
+Letter & \textcolor{darkgreen}{15} & \textcolor{darkgreen}{256} & \textcolor{darkgreen}{5} & \textcolor{darkgreen}{35} & \textcolor{red}{3} & 1 & \textcolor{red}{3.9} \\
+Wine & \textcolor{darkgreen}{10} & 13 & \textcolor{darkgreen}{256} & \textcolor{darkgreen}{4} & 1 & -- & 1.7 \\
+Segment & \textcolor{darkgreen}{10} & \textcolor{red}{18} & 1024 & \textcolor{darkgreen}{3} & \textcolor{darkgreen}{2} & -- & 6.49 \\
+Shuttle & \textcolor{darkgreen}{11} & \textcolor{red}{25} & 1024 & \textcolor{darkgreen}{3} & \textcolor{red}{1} & -- & \textcolor{darkgreen}{0.1} \\
+Vehicle & \textcolor{red}{15} & \textcolor{red}{12} & 256 & \textcolor{black}{2} & 1 & -- & 20.2 \\
+Vowel & \textcolor{red}{15} & \textcolor{red}{13} & \textcolor{darkgreen}{512} & \textcolor{darkgreen}{5} & 1 & -- & \textcolor{darkgreen}{24.4} \\
+MNIST & \textcolor{darkgreen}{6} & \textcolor{darkgreen}{49} & \textcolor{darkgreen}{8192} & \textcolor{darkgreen}{4} & -- & -- & -- \\
 \hline
 \end{tabular}
 \end{center}
