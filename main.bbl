@@ -1,5 +1,10 @@
 \begin{thebibliography}{1}
 
+\bibitem{carvalho2013bleaching}
+Danilo Carvalho, Hugo Carneiro, Felipe M.~G. França, and Priscila M.~V. Lima.
+\newblock B-bleaching: Agile overtraining avoidance in the wisard weightless neural classifier.
+\newblock {\em ESANN 2013}, pages 267--272.
+
 \bibitem{lima2020wisardpkg}
 Aluízio~S. Lima~Filho, Gabriel~P. Guarisa, Leopoldo A.~D. Lusquino~Filho, Luiz F.~R. Oliveira, Felipe M.~G. França, and Priscila M.~V. Lima.
 \newblock wisardpkg - a library for wisard-based models.
@@ -15,10 +20,20 @@ Leandro Santiago.
 \newblock Redes sem peso wisard - soluções para memória eficiente, 2023.
 \newblock Apresentação sobre modelos WiSARD e otimizações de memória.
 
+\bibitem{santiago2019bloomwisard}
+Leandro Santiago, Felipe M.~G. França, Priscila M.~V. Lima, and Maurício~Breternitz Jr.
+\newblock Memory-efficient weightless neural network using bloom filter.
+\newblock In {\em ESANN 2019: European Symposium on Artificial Neural Networks}, 2019.
+
 \bibitem{santiago2020}
 Leandro Santiago, Leticia Verona, Fabio Rangel, Fabrício Firmino, Daniel~S. Menasché, Wouter Caarls, Mauricio Breternitz~Jr, Sandip Kundu, Priscila M.~V. Lima, and Felipe M.~G. França.
 \newblock Weightless neural networks as memory segmented bloom filters.
 \newblock {\em Neurocomputing}, 416:354--366, 2020.
+
+\bibitem{susskind2024phd}
+Zachary Susskind.
+\newblock {\em Weightless Neural Networks for Fast, Low-Energy Inference}.
+\newblock PhD thesis, The University of Texas at Austin, 2024.
 
 \bibitem{susskind2022}
 Zachary Susskind, Aman Arora, Igor D.~S. Miranda, Luis A.~Q. Villon, Rafael~F. Katopodis, Leandro~S. Araújo, Diego L.~C. Dutra, Priscila M.~V. Lima, Felipe M.~G. França, Mauricio Breternitz~Jr, and Lizy~K. John.
