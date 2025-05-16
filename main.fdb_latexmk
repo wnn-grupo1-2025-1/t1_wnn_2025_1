@@ -1,17 +1,16 @@
 # Fdb version 4
-["bibtex main"] 1747421918.17204 "main.aux" "main.bbl" "main" 1747421919.40075 0
-  "./references.bib" 1747412356.06665 2114 8724c764833372d1842301f0b6433a9c ""
+["bibtex main"] 1747429454.6557 "main.aux" "main.bbl" "main" 1747429454.68293 0
+  "./references.bib" 1747429454.18067 3100 77ee92bf2ce92130d8b73676fb716f50 ""
   "/usr/local/texlive/2025basic/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "main.aux" 1747421919.27356 10304 2e4583fc862525b54e88910830880559 "pdflatex"
+  "main.aux" 1747429227.68573 10997 0fc1eff267e95314513ab536fb5d43ea "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1747421918.19428 "main.tex" "main.pdf" "main" 1747421919.40087 0
+["pdflatex"] 1747429226.58824 "main.tex" "main.pdf" "main" 1747429454.68298 0
   "/Users/miguel/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk" 1747407902.77792 25396 a2df8cbd3976c6d56a0f694cebcd1969 ""
   "/Users/miguel/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk" 1747407902.36094 31928 29dfa169e5b190f627ba29c9f0a26e69 ""
   "/Users/miguel/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk" 1747413445.80291 49076 16aba50829e5945b1feacaed344a8c21 ""
-  "/Users/miguel/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk" 1747408824.63679 16976 6e26a8082bd75fcc8ec2f29a09f14db1 ""
   "/Users/miguel/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk" 1747407903.53872 23784 3c029bb6be6e943fa9e3c73ef023b6c8 ""
   "/Users/miguel/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk" 1747407906.97384 31872 a380fe9fbce0e69609394d67e8286e96 ""
   "/Users/miguel/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/tcbx1000.600pk" 1747407901.934 12100 755286cae338de49a2d52d4ecfceb62d ""
@@ -19,7 +18,6 @@
   "/usr/local/texlive/2025basic/texmf-dist/fonts/tfm/jknappen/ec/ecbx1000.tfm" 1136768653 3584 2d666ecf6d466d8b007246bc2f94d9da ""
   "/usr/local/texlive/2025basic/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm" 1136768653 3584 402da0b29eafbad07963b1224b222f18 ""
   "/usr/local/texlive/2025basic/texmf-dist/fonts/tfm/jknappen/ec/ecbx1728.tfm" 1136768653 3584 ad49a18d8515beef6d92d4d3f197d0fd ""
-  "/usr/local/texlive/2025basic/texmf-dist/fonts/tfm/jknappen/ec/ecrm0700.tfm" 1136768653 3584 cf973739aac7ab6247f9150296af7954 ""
   "/usr/local/texlive/2025basic/texmf-dist/fonts/tfm/jknappen/ec/ecrm0900.tfm" 1136768653 3584 d3d8ac8b25ca19c0a40b86a5db1e8ccc ""
   "/usr/local/texlive/2025basic/texmf-dist/fonts/tfm/jknappen/ec/ecrm1000.tfm" 1136768653 3584 adb004a0c8e7c46ee66cad73671f37b4 ""
   "/usr/local/texlive/2025basic/texmf-dist/fonts/tfm/jknappen/ec/ecrm1200.tfm" 1136768653 3584 f80ddd985bd00e29e9a6047ebd9d4781 ""
@@ -34,7 +32,6 @@
   "/usr/local/texlive/2025basic/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm" 1246382020 908 2921f8a10601f252058503cc6570e581 ""
   "/usr/local/texlive/2025basic/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm" 1246382020 940 75ac932a52f80982a9f8ea75d03a34cf ""
   "/usr/local/texlive/2025basic/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1246382020 940 228d6584342e91276bf566bcf9716b83 ""
-  "/usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "/usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
@@ -134,10 +131,10 @@
   "figures/image7.png" 1747416857.48236 30045 acd461aca69ef509d14a32e505631cfe ""
   "figures/image8.png" 1747416857.48303 30201 99aa3d41b788658c97bc5150ac27cd5a ""
   "figures/image9.png" 1747416857.48342 30775 a80aae5e01393010ce1cd9ebb2abf6c2 ""
-  "main.aux" 1747421919.27356 10304 2e4583fc862525b54e88910830880559 "pdflatex"
-  "main.bbl" 1747421918.19251 1606 7edd1ad2f4825627c7c63c3cca5f5da4 "bibtex main"
-  "main.out" 1747421919.27659 3697 ec47475f16537a3c5b1f17c707820e47 "pdflatex"
-  "main.tex" 1747421916.0983 31507 def8ddae0934a26a2fdb1a705c3b901f ""
+  "main.aux" 1747429227.68573 10997 0fc1eff267e95314513ab536fb5d43ea "pdflatex"
+  "main.bbl" 1747429454.68065 1606 7edd1ad2f4825627c7c63c3cca5f5da4 "bibtex main"
+  "main.out" 1747429227.68718 4086 c1103fa6d5d7ae4fdcb65f9b4663cb59 "pdflatex"
+  "main.tex" 1747429145.03606 39915 932024378c9550dc1b5fe7fd1a8b5e64 ""
   "neurips_2024.sty" 1747419339.23293 11926 ee81ed60ec5023e89b6918e38bd67da1 ""
   (generated)
   "main.aux"

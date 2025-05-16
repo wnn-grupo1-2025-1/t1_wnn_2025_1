@@ -62,9 +62,9 @@ Este trabalho avalia o modelo BTHOWeN (Bleached Thermometer-encoded Hashed-input
 A BTHOWeN (Bleached Thermometer-encoded Hashed-input Optimized Weightless Neural Network) é uma arquitetura de rede neural sem peso que se diferencia do modelo WiSARD (Wilkes, Stonham and Aleksander Recognition Device) \cite{lima2020wisardpkg} por:
 
 \begin{itemize}
-    \item Incorporar counting Bloom filters para reduzir o tamanho do modelo e permitir bleaching \cite{santiago2020}.
-    \item Usar função hash que não requer operações aritméticas \cite{susskind2022}.
-    \item Fazer encoding com termômetro não-linear de distribuição normal para melhorar a acurácia do modelo \cite{susskind2022, santiago2020}.
+    \item Incorporar \textbf{counting} Bloom filters para reduzir o tamanho do modelo e permitir bleaching \cite{santiago2020, santiago2019bloomwisard}. Diferentemente dos Bloom filters tradicionais que armazenam apenas bits (0 ou 1), os counting Bloom filters usados no BTHOWeN mantêm contadores que registram quantas vezes um padrão foi encontrado durante o treinamento, permitindo a aplicação de um limiar de bleaching (threshold) para reduzir o efeito do sobreajuste.
+    \item Usar função hash da família H3 que não requer operações aritméticas complexas, consistindo apenas de operações XOR entre bits de entrada e máscaras aleatórias, tornando-a ideal para implementações em hardware com baixo consumo de energia \cite{susskind2022, susskind2024phd}.
+    \item Codificação com termômetro não-linear baseado na distribuição gaussiana dos dados, que concentra mais níveis de resolução próximos à média dos dados e menos nos extremos, melhorando assim a acurácia do modelo \cite{susskind2022, santiago2020}.
 \end{itemize}
 
 \section{Proposta}
@@ -90,64 +90,107 @@ Tomamos o maior valor de acurácia de todos os experimentos e sua configuração
 
 \subsubsection{Tamanho do Endereço (Tamanho da Tupla)}
 
-O tamanho do endereço, também conhecido como tamanho da tupla, é um parâmetro da WiSARD que determina a quantidade de bits de entrada que são agrupados para formar um endereço para cada RAM no discriminador \cite{lima2020wisardpkg}. 
-No contexto do BTHOWeN, o tamanho do endereço define quantos bits são agrupados para endereçar cada filtro de Bloom, afeta o número total de filtros necessários (número total de entradas dividido pelo tamanho da tupla) e determina o espaço de endereçamento para cada filtro (2\textsuperscript{tamanho da tupla} possíveis endereços em WiSARD tradicional) \cite{santiago2023}.
+O tamanho do endereço, também conhecido como tamanho da tupla, é um parâmetro da WiSARD que determina a quantidade de bits de entrada agrupados para formar endereços nos filtros de Bloom do BTHOWeN \cite{lima2020wisardpkg, santiago2023}. Este parâmetro afeta o número total de filtros necessários (entradas totais divididas pelo tamanho da tupla) e o espaço de endereçamento de cada filtro.
 
-Tuplas menores resultam em mais filtros e melhor generalização, enquanto tuplas maiores reduzem o número de filtros, mas podem afetar a capacidade de generalização \cite{santiago2020}. Nos experimentos, este parâmetro varia conforme o dataset, desde valores pequenos (2 para Iris) até valores maiores (28 para MNIST).
+Tuplas menores resultam em mais filtros e melhor generalização, enquanto tuplas maiores reduzem o número de filtros mas podem comprometer a generalização \cite{santiago2020}. Nos experimentos, este parâmetro varia conforme o dataset, desde valores pequenos (2 para Iris) até valores maiores (28 para MNIST).
 
-\subsubsection{Número de Discriminadores (OWeN)}
+\subsubsection{Codificação Termômetro Baseada em Distribuição Gaussiana}
 
-O número de discriminadores no BTHOWeN está relacionado à estrutura de entrada do modelo, em que discriminador é responsável por processar uma parte específica do vetor de entrada, segmentandodos os dados de entrada em subconjuntos de bits \cite{lima2020wisardpkg, santiago2020}. 
+O BTHOWeN implementa uma codificação termômetro não-linear baseada na distribuição gaussiana dos valores de cada característica, diferenciando-se da codificação termômetro padrão com limiares uniformemente espaçados \cite{santiago2020}. Nesta abordagem, se cada característica é codificada com \textit{t} bits, seu intervalo de valores é dividido em \textit{t}+1 intervalos com densidade de probabilidade igual sob uma distribuição normal ajustada aos dados de treinamento \cite{susskind2022}.
 
-O número de discriminadores para cada classe é determinado pela divisão da dimensão total da entrada pelo número de bits por filtro \cite{santiago2020}. Por exemplo, em um modelo para MNIST com entrada de 784 pixels (28x28) e 28 bits por filtro, teríamos 28 discriminadores por classe.
+Esta técnica posiciona limiares mais próximos entre si perto da média dos dados (maior densidade) e mais espaçados nas caudas da distribuição, alocando maior resolução onde os dados são mais comuns \cite{santiago2020}. Isso otimiza a precisão nas faixas de valores mais frequentes, evitando o desperdício de bits em outliers raros que ocorre com limiares uniformes, o que resulta em melhor performance de classificação.
 
-O valor do parâmetro OWeN representa o número de bits de entrada que cada discriminador recebe \cite{santiago2020, susskind2022}. Quanto maior este valor, mais granular é a segmentação dos dados, o que pode melhorar a capacidade de distinção, mas aumenta a complexidade computacional.
+\subsubsection{Número de Bits por Filtro (OWeN)}
+
+O parâmetro OWeN (Optimized Weightless Neural Network) define o número de bits de entrada mapeados para cada filtro de Bloom dentro de um discriminador \cite{santiago2020}, determinando como o vetor de entrada é particionado entre os filtros. Por exemplo, em um modelo MNIST com entrada de 784 dimensões e OWeN = 28, cada discriminador conteria 28 filtros de Bloom, cada um processando 28 bits específicos da entrada.
+
+A escolha do valor OWeN envolve um trade-off importante \cite{santiago2020, susskind2022}: valores mais baixos resultam em mais filtros com "campos receptivos" menores, potencialmente melhorando a generalização mas aumentando a quantidade de filtros necessários; valores mais altos significam menos filtros com "campos receptivos" maiores, reduzindo a complexidade do modelo mas aumentando o risco de colisões. Nos experimentos do BTHOWeN, os valores de OWeN foram sistematicamente testados para cada dataset (por exemplo, 28, 49 e 56 bits por filtro para MNIST) \cite{santiago2020}.
 
 \subsubsection{Número de Funções Hash (FH)}
 
-As funções hash são utilizadas nos filtros de Bloom para mapear os dados de entrada em posições de memória \cite{santiago2020}. O parâmetro FH determina quantas diferentes funções hash são utilizadas em cada filtro de Bloom.
+O parâmetro FH determina quantas diferentes funções hash são utilizadas em cada filtro de Bloom para mapear os dados de entrada em posições de memória \cite{santiago2020}. O BTHOWeN implementa a família de funções hash H3, que consiste apenas em operações XOR entre bits de entrada e máscaras aleatórias, tornando-a ideal para implementações em hardware \cite{susskind2022}. Uma característica importante é que o BTHOWeN compartilha os mesmos parâmetros aleatórios de hash entre todos os filtros para economizar memória, sem degradar a acurácia \cite{santiago2020}.
 
-BTHOWeN implementa a família de funções hash H3, conforme descrita por Carter e Wegman, que não requer operações aritméticas complexas, sendo ideal para implementações em hardware \cite{susskind2022}.
-
-O número de funções hash tem uma relação complexa com a taxa de falsos positivos \cite{santiago2020}:
-\begin{itemize}
-    \item Valores típicos variam de 1 a 4, dependendo do dataset
-    \item Um maior número de funções hash pode aumentar o poder discriminativo do modelo, mas também eleva o custo computacional
-    \item Os melhores resultados obtidos nos experimentos utilizaram de 1 a 4 funções hash, dependendo da complexidade da tarefa
-\end{itemize}
+O número de funções hash tem uma relação complexa com a taxa de falsos positivos: valores maiores reduzem falsos positivos (todas as k posições precisam colidir para causar um falso positivo), mas aumentam o custo computacional e o número de posições a serem definidas por padrão \cite{santiago2020}. Valores típicos variam de 1 a 6 dependendo do dataset, com o valor ótimo sendo determinado empiricamente para cada caso.
 
 \subsubsection{Número de Filtros de Bloom (FE - Filter Entries)}
 
-O parâmetro FE define o número de entradas em cada filtro de Bloom, ou seja, o tamanho do vetor utilizado para armazenar os padrões aprendidos \cite{santiago2020}. Este tamanho é uma potência de 2 (por exemplo, 128, 256, 512, 1.14, 2048, etc.).
+O parâmetro FE define o número de entradas em cada filtro de Bloom, ou seja, o tamanho do vetor utilizado para armazenar os padrões aprendidos \cite{santiago2020}. Este tamanho é sempre uma potência de 2 (128, 256, 512, 1024, 2048, etc.).
 
-Aumentar o tamanho do filtro reduz a probabilidade de colisões e, consequentemente, a taxa de falsos positivos, mas também aumenta a memória necessária \cite{santiago2020, susskind2022}. A escolha deste parâmetro afeta diretamente o equilíbrio entre precisão e eficiência de memória do modelo.
+Aumentar o tamanho do filtro reduz a probabilidade de colisões e a taxa de falsos positivos, mas aumenta a memória necessária \cite{santiago2020, susskind2022}. Este parâmetro afeta diretamente o equilíbrio entre precisão e eficiência de memória do modelo e, em implementações de hardware, traduz-se na quantidade de memória alocada para cada filtro, influenciando diretamente o consumo de energia \cite{susskind2022}.
 
-Em hardware, este parâmetro se traduz na quantidade de memória alocada para cada filtro, influenciando o consumo de energia \cite{susskind2022}.
+\subsubsection{Limiar de Bleaching (b)}
 
-\subsubsection{Fator de Bleaching (b)}
+O limiar de bleaching é um hiperparâmetro exclusivo da arquitetura BTHOWeN \cite{santiago2020}. Enquanto filtros de Bloom tradicionais armazenam apenas bits (0 ou 1), no BTHOWeN cada posição mantém um contador durante o treinamento, registrando a frequência de cada padrão \cite{santiago2020, lusquino2020}. O parâmetro b define o valor mínimo que um contador deve ter para que um padrão seja considerado válido durante a inferência, funcionando como mecanismo de regularização que filtra padrões pouco frequentes, evitando sobreajuste \cite{carvalho2013bleaching}.
 
-O fator de bleaching é um hiperparâmetro introduzido pela arquitetura BTHOWeN, que não existia em outras redes neurais sem peso anteriores \cite{santiago2020}. Em implementações tradicionais de filtros de Bloom, cada posição de memória armazena apenas um bit (0 ou 1), indicando se um padrão foi visto ou não \cite{santiago2020, lusquino2020}. 
-
-Na BTHOWeN, cada posição armazena um contador, permitindo registrar quantas vezes um determinado padrão foi encontrado durante o treinamento \cite{santiago2020}. O fator de bleaching define o limiar mínimo de ocorrências para que um padrão seja considerado válido durante a inferência.
-
-Funcionamento \cite{santiago2020, susskind2022}:
-\begin{itemize}
-    \item Durante o treinamento, os contadores são incrementados cada vez que um padrão é encontrado
-    \item Na inferência, um padrão é considerado presente apenas se seu contador for $\geq b$
-    \item Aumentar o valor de b pode melhorar a precisão ao reduzir falsos positivos
-    \item Valores comuns de b variam de 1 a 10, sendo o valor ótimo determinado durante o treinamento
-\end{itemize}
-
-A técnica de bleaching permite ao modelo distinguir padrões frequentes e relevantes em detrimento de ocorrências aleatórias e ruidosas, melhorando a capacidade de generalização do modelo \cite{santiago2020}.
+Após o treinamento, um valor ótimo de b é determinado usando um conjunto de validação, geralmente via busca binária \cite{santiago2020, susskind2022}. Os contadores são então binarizados: posições com contadores $\geq$ b se tornam 1, e as demais 0. Na inferência, o modelo considera apenas padrões vistos pelo menos b vezes durante o treinamento. Este processo permite distinguir padrões relevantes de ocorrências aleatórias, melhorando a generalização e beneficiando datasets desbalanceados, onde classes majoritárias poderiam saturar a memória sem este mecanismo \cite{santiago2020}. Valores típicos de b variam de 1 a 20, sendo específicos para cada dataset e configuração.
 
 \subsection{Escolha dos Hiperparâmetros}
 
-A seleção de hiperparâmetros para o BTHOWeN segue uma abordagem iterativa de força bruta que explora sistematicamente o espaço de hiperparâmetros. Partindo de configurações baseline para cada dataset, o processo altera um hiperparâmetro por vez, mantendo os demais constantes, e avalia o impacto na performance do modelo. Para cada parâmetro, múltiplos valores são testados: cinco variações para bits\_per\_input (baseline ± 1, baseline ± 2, baseline + 3), seis para filter\_inputs (baseline ± 2, baseline ± 4, baseline ± 6), cinco para filter\_entries (múltiplos do baseline, ajustados para potências de 2) e quatro para filter\_hashes (baseline - 1 até baseline + 2).
+A seleção de hiperparâmetros para o BTHOWeN segue uma abordagem iterativa que explora sistematicamente o espaço de configurações. Partindo de baselines para cada dataset, o processo altera um hiperparâmetro por vez, testando múltiplas variações: cinco para bits\_per\_input, seis para filter\_inputs, cinco para filter\_entries e quatro para filter\_hashes. Seguimos uma estratégia gulosa, fixando o melhor valor de cada parâmetro antes de passar ao próximo, o que oferece eficiência computacional e facilita a análise do impacto individual de cada hiperparâmetro.
 
-O processo segue uma estratégia greedy, onde após avaliar todas as variações de um hiperparâmetro, o valor que produz a maior acurácia é selecionado e fixado para os experimentos subsequentes. Por exemplo, primeiro determinamos o melhor valor para bits\_per\_input, fixamos esse valor, e prosseguimos para otimizar filter\_inputs com o valor já otimizado de bits\_per\_input, e assim por diante. Esta abordagem sequencial, embora suscetível a ótimos locais, oferece eficiência computacional e facilita a análise do impacto individual de cada hiperparâmetro na performance do modelo.
+Para mitigar o risco de convergência para ótimos locais, repetimos o processo com múltiplos pontos de partida e validamos as configurações resultantes com validação cruzada 5-fold. A configuração final é selecionada com base no equilíbrio entre acurácia e robustez, seguida pela determinação do valor ideal de bleaching (testando valores de 1 a 20). Esta metodologia, embora computacionalmente intensiva, garante uma exploração abrangente do espaço de hiperparâmetros e produz configurações que equilibram eficazmente acurácia, eficiência de memória e estabilidade.
 
-Para mitigar o risco de convergência para ótimos locais, o processo é repetido com múltiplos pontos de partida para cada dataset. As configurações candidatas resultantes são submetidas a validação cruzada de 5-fold para estimar sua performance real e estabilidade. A configuração final é selecionada com base no melhor equilíbrio entre acurácia média e robustez. Após definir os valores estruturais ótimos, um processo adicional determina o valor ideal de bleaching, testando valores de 1 a 20 e selecionando aquele que oferece o melhor compromisso entre acurácia e taxa de empates. Esta metodologia sistemática e exaustiva, embora computacionalmente mais intensiva que métodos de otimização sofisticados, garante uma exploração abrangente do espaço de hiperparâmetros e produz configurações que equilibram eficazmente acurácia, eficiência de memória e estabilidade.
-
+% \subsection{Processo de Treinamento e Inferência do BTHOWeN}
+%
+% O BTHOWeN, como outras redes neurais sem peso baseadas em WiSARD, utiliza um processo de treinamento e inferência significativamente diferente das redes neurais tradicionais baseadas em gradiente. A seguir, descrevemos em detalhes como esses processos funcionam.
+%
+% \subsubsection{Treinamento (Aprendizado de Passagem Única)}
+%
+% Uma característica fundamental das redes neurais sem peso é o treinamento de passagem única (one-shot learning), onde cada amostra é apresentada apenas uma vez à rede \cite{santiago2020}. Este processo é determinístico e significativamente mais rápido que o treinamento iterativo de redes neurais convencionais. O processo de treinamento do BTHOWeN segue as seguintes etapas:
+%
+% \begin{enumerate}
+%     \item \textbf{Inicialização:} Todos os contadores nos filtros de Bloom são inicializados com zero.
+%
+%     \item \textbf{Codificação de Entrada:} Para cada amostra de treinamento, as características são codificadas usando o esquema de termômetro baseado em distribuição gaussiana, gerando um vetor binário.
+%
+%     \item \textbf{Hashing e Atualização de Memória:} 
+%     \begin{itemize}
+%         \item O rótulo da amostra determina qual discriminador (classe) aprenderá com essa amostra.
+%         \item O vetor binário é dividido em segmentos conforme o parâmetro OWeN e cada segmento é mapeado para um filtro de Bloom.
+%         \item Em cada filtro do discriminador da classe correta, as k funções hash H3 são aplicadas ao segmento correspondente para gerar k endereços.
+%         \item Os contadores nessas k posições são incrementados em 1.
+%     \end{itemize}
+%
+%     \item \textbf{Seleção do Limiar de Bleaching:} Após processar todas as amostras de treinamento, um conjunto de validação é usado para determinar o valor ótimo do limiar de bleaching b. 
+%     \begin{itemize}
+%         \item Diferentes valores de b são testados, geralmente usando busca binária.
+%         \item O valor que maximiza a acurácia no conjunto de validação é escolhido.
+%     \end{itemize}
+%
+%     \item \textbf{Binarização:} Com o valor b determinado, os contadores são convertidos em bits:
+%     \begin{itemize}
+%         \item Contadores $\geq$ b são definidos como 1 (padrão memorizado).
+%         \item Contadores < b são definidos como 0 (padrão ignorado).
+%     \end{itemize}
+% \end{enumerate}
+%
+% Este processo resulta em um modelo binário compacto, onde cada filtro de Bloom contém apenas bits que indicam a presença de padrões vistos pelo menos b vezes durante o treinamento.
+%
+% \subsubsection{Inferência}
+%
+% Na fase de inferência, o BTHOWeN segue um processo similar à codificação e hashing da entrada, mas ao invés de atualizar contadores, ele verifica quais padrões armazenados são reconhecidos:
+%
+% \begin{enumerate}
+%     \item \textbf{Codificação:} A amostra de teste passa pela mesma codificação termômetro baseada em distribuição gaussiana.
+%
+%     \item \textbf{Hashing:} O vetor binário é segmentado e as mesmas funções hash são aplicadas para gerar endereços em cada filtro de Bloom.
+%
+%     \item \textbf{Verificação de Correspondência:} Para cada discriminador (classe):
+%     \begin{itemize}
+%         \item Cada filtro de Bloom verifica se todos os k bits nas posições hashadas são 1.
+%         \item Se todas as k posições contêm 1, o filtro responde com 1 (padrão reconhecido).
+%         \item Se qualquer posição contém 0, o filtro responde com 0 (padrão não reconhecido).
+%     \end{itemize}
+%
+%     \item \textbf{Contagem (Popcount) e Decisão:} 
+%     \begin{itemize}
+%         \item Para cada discriminador, conta-se quantos filtros responderam com 1, gerando uma pontuação total.
+%         \item A classe com a maior pontuação (maior número de filtros ativados) é escolhida como a previsão.
+%     \end{itemize}
+% \end{enumerate}
+%
+% É importante notar que o BTHOWeN não utiliza bleaching dinâmico durante a inferência. O limiar de bleaching é fixo e já foi aplicado durante a binarização pós-treinamento, portanto o modelo de inferência trabalha apenas com memória binária e não com contadores.
+%
 \subsection{Datasets}
 
 \subsubsection{MNIST}
@@ -641,7 +684,31 @@ MNIST & \textcolor{darkgreen}{6} & \textcolor{darkgreen}{49} & \textcolor{darkgr
 
 \section{Conclusão}
 
-\ldots
+% Neste trabalho, avaliamos o desempenho do modelo BTHOWeN em diversos datasets multiclasse, explorando sistematicamente seu espaço de hiperparâmetros. Através de uma abordagem gulosa de otimização, conseguimos identificar configurações que, em muitos casos, superam os resultados do modelo Bloom WiSARD original. As principais conclusões desta análise são:
+%
+% \begin{enumerate}
+%     \item \textbf{Eficácia dos counting Bloom filters}: A utilização de counting Bloom filters no BTHOWeN, que permitem a implementação do mecanismo de bleaching, demonstrou ser um diferencial importante, especialmente em datasets desbalanceados como Shuttle. Verificamos que o bleaching reduz significativamente a taxa de falsos positivos e melhora a generalização do modelo.
+%
+%     \item \textbf{Impacto da codificação baseada em distribuição gaussiana}: A codificação termômetro não-linear baseada na distribuição gaussiana dos dados mostrou-se superior à codificação linear tradicional, alocando mais resolução onde os dados se concentram e contribuindo para ganhos de acurácia.
+%
+%     \item \textbf{Trade-offs de hiperparâmetros}: Identificamos relações importantes entre os hiperparâmetros do BTHOWeN:
+%     \begin{itemize}
+%         \item O número de bits por filtro (OWeN) afeta diretamente a granularidade da representação e o número total de filtros.
+%         \item O número de funções hash (FH) modula o compromisso entre falsos positivos e custo computacional.
+%         \item O tamanho dos filtros de Bloom (FE) equilibra precisão e eficiência de memória.
+%         \item O limiar de bleaching (b) determina quanto da memorização de padrões é mantida para inferência.
+%     \end{itemize}
+%
+%     \item \textbf{Melhoria de acurácia}: Em 7 dos 9 datasets testados, nossas configurações otimizadas de BTHOWeN superaram os resultados do Bloom WiSARD, com reduções médias de erro de aproximadamente 41%. Destacam-se os resultados nos datasets Shuttle (acurácia de 99,9%), Wine (acurácia de 100%) e Letter (acurácia de 88,4%).
+%
+%     \item \textbf{Eficiência de memória}: Além dos ganhos de acurácia, o BTHOWeN demonstrou maior eficiência de memória, com modelos típicamente 51% menores que os equivalentes em Bloom WiSARD para níveis similares ou superiores de acurácia.
+%
+%     \item \textbf{Redução de empates}: Através da otimização do limiar de bleaching, conseguimos reduzir significativamente a taxa de empates em vários datasets, um problema comum em redes neurais sem peso, sem comprometer a acurácia.
+% \end{enumerate}
+%
+% Os resultados demonstram que o BTHOWeN representa um avanço significativo na família de redes neurais sem peso, combinando maior acurácia, menor footprint de memória e mecanismos eficientes de regularização através do bleaching. Sua capacidade de aprendizado em passagem única (one-shot learning) e a implementação eficiente em hardware o tornam particularmente adequado para aplicações de inferência em dispositivos de borda com recursos limitados.
+%
+% Trabalhos futuros poderiam explorar outras distribuições além da gaussiana para a codificação termômetro, técnicas de bleaching dinâmico durante a inferência, e comparações mais extensas com outras arquiteturas de redes neurais em cenários de inferência em dispositivos de borda, considerando não apenas acurácia, mas também latência e consumo de energia.
 
 \bibliographystyle{plain}
 \bibliography{references}
