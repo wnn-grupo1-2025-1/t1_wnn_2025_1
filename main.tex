@@ -35,7 +35,7 @@
 \usepackage{array}          % tables
 \usepackage{longtable}      % multi-page tables
 
-\title{Avaliação do Modelo BTHOWeN em Datasets MultiClasses}
+\title{Avaliação do Modelo BTHOWeN em Datasets Multiclasse}
 
 \author{%
   \begin{tabular}{c@{\hspace{1.5em}}c@{\hspace{1.5em}}c}
@@ -52,7 +52,7 @@
 \maketitle
 
 \begin{abstract}
-Este trabalho avalia o modelo BTHOWeN (Bleached Thermometer-encoded Hashed-input Optimized Weightless Neural Network) em diversos datasets multiclasses. Comparamos a performance do BTHOWeN com o modelo BloomWiSARD, analisando o impacto dos hiperparâmetros na acurácia final. Utilizamos uma abordagem gulosa para otimização, variando sequencialmente os parâmetros de tamanho de endereço, número de discriminadores, funções hash, filtros Bloom e fator de bleaching. Os resultados demonstram as vantagens do BTHOWeN em termos de acurácia e eficiência para diversos conjuntos de dados de classificação.
+Este trabalho avalia o modelo BTHOWeN (Bleached Thermometer-encoded Hashed-input Optimized Weightless Neural Network) em diversos datasets multiclasse. Comparamos a performance do BTHOWeN com o modelo BloomWiSARD, analisando o impacto dos hiperparâmetros na acurácia final. Utilizamos uma abordagem gulosa para otimização, variando sequencialmente os parâmetros de tamanho de endereço, número de discriminadores, funções hash, filtros Bloom e fator de bleaching. Os resultados demonstram as vantagens do BTHOWeN em termos de acurácia e eficiência para diversos conjuntos de dados de classificação.
 \end{abstract}
 
 \section{Introdução}
@@ -68,7 +68,7 @@ BTHOWeN vem de Bleached Thermometer-encoded Hashed-input Optimized Weightless Ne
 \section{Proposta}
 \subsection{Metodologia}
 
-Neste trabalho, iremos replicar o BTHOWeN utilizando o BloomWisard como cerne, com os diferentes datasets multiclasses inclusos no artigo original. A proporção entre a massa de treinamento e a massa de teste foi mantida idêntica às respectivas proporções originais, porém os hiperparâmetros foram configurados para verificar o impacto de cada um deles na acurácia final.
+Neste trabalho, iremos replicar o BTHOWeN utilizando o BloomWisard como cerne, com os diferentes datasets multiclasse inclusos no artigo original. A proporção entre a massa de treinamento e a massa de teste foi mantida idêntica às respectivas proporções originais, porém os hiperparâmetros foram configurados para verificar o impacto de cada um deles na acurácia final.
 
 Os hiperparâmetros configuráveis são:
 
@@ -201,276 +201,303 @@ O dataset \textbf{Vowel Recognition} inclui \textbf{990 amostras} de fala gravad
 
 \subsection{Resultados por dataset}
 
+Nas tabelas a seguir, apresentamos os resultados obtidos com diferentes configurações do BTHOWeN para cada dataset. As configurações são organizadas da seguinte forma:
+
+\begin{itemize}
+    \item \textbf{Bloom WiSARD}: Resultados obtidos pela implementação original do Bloom WiSARD, apresentados como referência para comparação.
+    \item \textbf{Base}: Configuração inicial do BTHOWeN utilizada como ponto de partida para os experimentos, com parâmetros utilizados nos experimentos originais publicados pelo autor.
+    \item \textbf{Var. X}: Variações da configuração base, onde modificamos sistematicamente um hiperparâmetro por vez, seguindo a abordagem gulosa descrita na metodologia. Os números indicam a sequência das variações testadas.
+\end{itemize}
+
+Para cada configuração, apresentamos os valores dos hiperparâmetros (b, OWeN, FE, FH), a acurácia obtida, o percentual de empates ocorridos durante a classificação e o valor de bleaching que produziu os melhores resultados.
+
 \subsubsection{Tabelas}
 
 {\small
-\begin{longtable}{|c|c|c|c|c|c|c|c|c|}
-\caption{Parâmetros e métricas do dataset Iris} \\
+\begin{table}[!htbp]
+\caption{Parâmetros e métricas do dataset Iris}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
-\textbf{Config Type} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Melhor Bleaching} & \textbf{Execução} \\
+\textbf{Configuração} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Melhor Bleaching} \\
 \hline
-Referência Bloom WiSARD & N/A & N/A & N/A & N/A & 960 & 2.0 & 3 & 1 \\
+Bloom WiSARD & N/A & N/A & N/A & N/A & 960 & 2.0 & 3 \\
 \hline
-BTHOWeN Base Estudo & 3 & 2 & 128 & 1 & 980 & 12.0 & 2 & 3 \\
+Base & 3 & 2 & 128 & 1 & 980 & 12.0 & 2 \\
 \hline
-BTHOWeN Variação 1 & 4 & 2 & 128 & 1 & 920 & 16.0 & 1 & 1 \\
+Var. 1 & 4 & 2 & 128 & 1 & 920 & 16.0 & 1 \\
 \hline
-BTHOWeN Variação 2 & 3 & 2 & 256 & 1 & 980 & 14.0 & 2 & 1 \\
+Var. 2 & 3 & 2 & 256 & 1 & 980 & 14.0 & 2 \\
 \hline
-BTHOWeN Variação 3 & 3 & 2 & 128 & 2 & 980 & 8.0 & 2 & 1 \\
+Var. 3 & 3 & 2 & 128 & 2 & 980 & 8.0 & 2 \\
 \hline
-BTHOWeN Variação 4 & 4 & 2 & 128 & 2 & 860 & 4.0 & 9 & 1 \\
+Var. 4 & 4 & 2 & 128 & 2 & 860 & 4.0 & 9 \\
 \hline
-BTHOWeN Variação 5 & 3 & 2 & 256 & 2 & 980 & 0.0 & 2 & 1 \\
+Var. 5 & 3 & 2 & 256 & 2 & 980 & 0.0 & 2 \\
 \hline
-BTHOWeN Variação 6 & 4 & 2 & 256 & 2 & 900 & 12.0 & 3 & 1 \\
+Var. 6 & 4 & 2 & 256 & 2 & 900 & 12.0 & 3 \\
 \hline
-\end{longtable}
+\end{tabular}
+\end{table}
+\pagebreak
 
-\begin{longtable}{|c|c|c|c|c|c|c|c|c|}
-\caption{Parâmetros e métricas do dataset Ecoli} \\
+\begin{table}[!htbp]
+\caption{Parâmetros e métricas do dataset Ecoli}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
-\textbf{Config Type} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Melhor Bleaching} & \textbf{Execução} \\
+\textbf{Configuração} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Melhor Bleaching} \\
 \hline
-Referência Bloom WiSARD & N/A & N/A & N/A & N/A & 799 & N/A & N/A & - \\
+Bloom WiSARD & N/A & N/A & N/A & N/A & 799 & N/A & N/A \\
 \hline
-BTHOWeN Base Estudo & 10 & 128 & 2 & 10 & 786 & 8.9 & 7 & 1 \\
+Base & 10 & 128 & 2 & 10 & 786 & 8.9 & 7 \\
 \hline
-BTHOWeN Variação 1 & 4 & 128 & 2 & 11 & 821 & 10.7 & 1 & 1 \\
+Var. 1 & 4 & 128 & 2 & 11 & 821 & 10.7 & 1 \\
 \hline
-BTHOWeN Variação 2 & 3 & 256 & 2 & 10 & 813 & 19.6 & 1 & 1 \\
+Var. 2 & 3 & 256 & 2 & 10 & 813 & 19.6 & 1 \\
 \hline
-BTHOWeN Variação 3 & 3 & 128 & 3 & 10 & 786 & 15.2 & 7 & 1 \\
+Var. 3 & 3 & 128 & 3 & 10 & 786 & 15.2 & 7 \\
 \hline
-BTHOWeN Variação 4 & 4 & 128 & 3 & 11 & 839 & 17.9 & 1 & 1 \\
+Var. 4 & 4 & 128 & 3 & 11 & 839 & 17.9 & 1 \\
 \hline
-BTHOWeN Variação 5 & 3 & 256 & 3 & 10 & 848 & 10.7 & 1 & 1 \\
+Var. 5 & 3 & 256 & 3 & 10 & 848 & 10.7 & 1 \\
 \hline
-BTHOWeN Variação 6 & 4 & 256 & 4 & 10 & 830 & 13.4 & 1 & 1 \\
+Var. 6 & 4 & 256 & 4 & 10 & 830 & 13.4 & 1 \\
 \hline
-\end{longtable}
+\end{tabular}
+\end{table}
+\pagebreak
 
-\begin{longtable}{|c|c|c|c|c|c|c|c|c|}
-\caption{Parâmetros e métricas do dataset Glass} \\
+\begin{table}[!htbp]
+\caption{Parâmetros e métricas do dataset Glass}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
-\textbf{Config Type} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Melhor Bleaching} & \textbf{Execução} \\
+\textbf{Configuração} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Melhor Bleaching} \\
 \hline
-Referência Bloom WiSARD & N/A & N/A & N/A & N/A & 726 & N/A & N/A & - \\
+Bloom WiSARD & N/A & N/A & N/A & N/A & 726 & N/A & N/A \\
 \hline
-BTHOWeN Base Estudo & 3 & 128 & 3 & 9 & 577 & 39.4 & 1 & 1 \\
+Base & 3 & 128 & 3 & 9 & 577 & 39.4 & 1 \\
 \hline
-BTHOWeN Variação 1 & 4 & 128 & 3 & 10 & 563 & 38.0 & 1 & 1 \\
+Var. 1 & 4 & 128 & 3 & 10 & 563 & 38.0 & 1 \\
 \hline
-BTHOWeN Variação 2 & 3 & 256 & 3 & 9 & 493 & 33.8 & 1 & 1 \\
+Var. 2 & 3 & 256 & 3 & 9 & 493 & 33.8 & 1 \\
 \hline
-BTHOWeN Variação 3 & 3 & 128 & 4 & 9 & 549 & 19.7 & 4 & 1 \\
+Var. 3 & 3 & 128 & 4 & 9 & 549 & 19.7 & 4 \\
 \hline
-BTHOWeN Variação 4 & 4 & 128 & 4 & 10 & 592 & 40.8 & 1 & 1 \\
+Var. 4 & 4 & 128 & 4 & 10 & 592 & 40.8 & 1 \\
 \hline
-BTHOWeN Variação 5 & 3 & 256 & 4 & 9 & 676 & 29.6 & 1 & 1 \\
+Var. 5 & 3 & 256 & 4 & 9 & 676 & 29.6 & 1 \\
 \hline
-BTHOWeN Variação 6 & 4 & 256 & 4 & 10 & 676 & 28.2 & 1 & 1 \\
+Var. 6 & 4 & 256 & 4 & 10 & 676 & 28.2 & 1 \\
 \hline
-\end{longtable}
+\end{tabular}
+\end{table}
+\pagebreak
 
-\begin{longtable}{|c|c|c|c|c|c|c|c|c|}
-\caption{Parâmetros e métricas do dataset Letter} \\
+\begin{table}[!htbp]
+\caption{Parâmetros e métricas do dataset Letter}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
-\textbf{Config Type} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Melhor Bleaching} & \textbf{Execução} \\
+\textbf{Configuração} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Melhor Bleaching} \\
 \hline
-Referência Bloom WiSARD & N/A & N/A & N/A & N/A & 848 & N/A & N/A & - \\
+Bloom WiSARD & N/A & N/A & N/A & N/A & 848 & N/A & N/A \\
 \hline
-BTHOWeN Base Estudo & 3 & 128 & 3 & 9 & 734 & 18.6 & 6 & 1 \\
+Base & 3 & 128 & 3 & 9 & 734 & 18.6 & 6 \\
 \hline
-BTHOWeN Variação 1 & 4 & 128 & 3 & 10 & 736 & 17.4 & 5 & 1 \\
+Var. 1 & 4 & 128 & 3 & 10 & 736 & 17.4 & 5 \\
 \hline
-BTHOWeN Variação 2 & 3 & 256 & 3 & 9 & 789 & 15.2 & 3 & 1 \\
+Var. 2 & 3 & 256 & 3 & 9 & 789 & 15.2 & 3 \\
 \hline
-BTHOWeN Variação 3 & 3 & 128 & 4 & 9 & 707 & 19.2 & 5 & 1 \\
+Var. 3 & 3 & 128 & 4 & 9 & 707 & 19.2 & 5 \\
 \hline
-BTHOWeN Variação 4 & 4 & 128 & 4 & 10 & 719 & 18.7 & 6 & 1 \\
+Var. 4 & 4 & 128 & 4 & 10 & 719 & 18.7 & 6 \\
 \hline
-BTHOWeN Variação 5 & 3 & 256 & 4 & 9 & 775 & 15.6 & 4 & 1 \\
+Var. 5 & 3 & 256 & 4 & 9 & 775 & 15.6 & 4 \\
 \hline
-BTHOWeN Variação 6 & 4 & 256 & 5 & 12 & 811 & 11.3 & 4 & 1 \\
+Var. 6 & 4 & 256 & 5 & 12 & 811 & 11.3 & 4 \\
 \hline
-BTHOWeN Variação 7 & 11 & 256 & 5 & 18 & 840 & 7.6 & 3 & 1 \\
+Var. 7 & 11 & 256 & 5 & 18 & 840 & 7.6 & 3 \\
 \hline
-BTHOWeN Variação 8 & 15 & 256 & 5 & 35 & 884 & 3.9 & 3 & 1 \\
+Var. 8 & 15 & 256 & 5 & 35 & 884 & 3.9 & 3 \\
 \hline
-\end{longtable}
+\end{tabular}
+\end{table}
+\pagebreak
 
-\begin{longtable}{|c|c|c|c|c|c|c|c|c|}
-\caption{Parâmetros e métricas do dataset Wine} \\
+\begin{table}[!htbp]
+\caption{Parâmetros e métricas do dataset Wine}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
-\textbf{Config Type} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Melhor Bleaching} & \textbf{Execução} \\
+\textbf{Configuração} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Melhor Bleaching} \\
 \hline
-Referência Bloom WiSARD & N/A & N/A & N/A & N/A & 926 & N/A & N/A & - \\
+Bloom WiSARD & N/A & N/A & N/A & N/A & 926 & N/A & N/A \\
 \hline
-Referência BTHOWeN & 9 & 13 & 128 & 3 & 983 & N/A & N/A & - \\
+Base & 9 & 13 & 128 & 3 & 983 & N/A & 1 \\
 \hline
-BTHOWeN Base Estudo & 9 & 13 & 128 & 3 & 983 & N/A & 1 & - \\
+Var. 1.1 & 10 & 13 & 256 & 4 & 1.000 & 1.7 & 1 \\
 \hline
-BTHOWeN Variação 1.1 & 10 & 13 & 256 & 4 & 1.000 & 1.7 & 1 & - \\
+Var. 1.2 & 10 & 13 & 256 & 4 & 949 & 3.39 & 1 \\
 \hline
-BTHOWeN Variação 1.2 & 10 & 13 & 256 & 4 & 949 & 3.39 & 1 & - \\
+Var. 2 & 11 & 9 & 256 & 4 & 983 & 1.69 & 1 \\
 \hline
-BTHOWeN Variação 2 & 11 & 9 & 256 & 4 & 983 & 1.69 & 1 & - \\
+Var. 3 & 11 & 13 & 256 & 2 & 966 & 3.38 & 1 \\
 \hline
-BTHOWeN Variação 3 & 11 & 13 & 256 & 2 & 966 & 3.38 & 1 & - \\
+Var. 4 & 9 & 9 & 256 & 4 & 966 & 1.69 & 1 \\
 \hline
-BTHOWeN Variação 4 & 9 & 9 & 256 & 4 & 966 & 1.69 & 1 & - \\
+Var. 5 & 10 & 17 & 256 & 4 & 966 & 11.8 & 1 \\
 \hline
-BTHOWeN Variação 5 & 10 & 17 & 256 & 4 & 966 & 11.8 & 1 & - \\
+Var. 6 & 11 & 15 & 256 & 2 & 966 & N/A & N/A \\
 \hline
-BTHOWeN Variação 6 & 11 & 15 & 256 & 2 & 966 & N/A & N/A & - \\
+Var. 7 & 7 & 9 & 256 & 4 & 932 & 5.08 & 1 \\
 \hline
-BTHOWeN Variação 7 & 7 & 9 & 256 & 4 & 932 & 5.08 & 1 & - \\
-\hline
-\end{longtable}
+\end{tabular}
+\end{table}
+\pagebreak
 
-\begin{longtable}{|c|c|c|c|c|c|c|c|c|}
-\caption{Parâmetros e métricas do dataset Segment} \\
+\begin{table}[!htbp]
+\caption{Parâmetros e métricas do dataset Segment}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
-\textbf{Config Type} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Melhor Bleaching} & \textbf{Execução} \\
+\textbf{Configuração} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Melhor Bleaching} \\
 \hline
-Referência Bloom WiSARD & N/A & N/A & N/A & N/A & N/A & N/A & N/A & - \\
+Bloom WiSARD & N/A & N/A & N/A & N/A & N/A & N/A & N/A \\
 \hline
-Referência BTHOWeN & 8 & 12 & 512 & 4 & 880 & N/A & - & - \\
+Base & 9 & 27 & 1024 & 2 & 925 & N/A & 1 \\
 \hline
-BTHOWeN Base Estudo & 9 & 27 & 1024 & 2 & 925 & N/A & 1 & - \\
+Var. 1 & 10 & 16 & 256 & 4 & 938 & 9.35 & 1 \\
 \hline
-BTHOWeN Variação 1 & 10 & 16 & 256 & 4 & 938 & 9.35 & 1 & - \\
+Var. 2 & 8 & 20 & 512 & 3 & 924 & 9.24 & 1 \\
 \hline
-BTHOWeN Variação 2 & 8 & 20 & 512 & 3 & 924 & 9.24 & 1 & - \\
+Var. 3.1 & 10 & 18 & 1024 & 3 & 942 & 8.57 & 2 \\
 \hline
-BTHOWeN Variação 3.1 & 10 & 18 & 1024 & 3 & 942 & 8.57 & 2 & - \\
+Var. 3.2 & 10 & 18 & 1024 & 3 & 944 & 6.49 & 2 \\
 \hline
-BTHOWeN Variação 3.2 & 10 & 18 & 1024 & 3 & 944 & 6.49 & 2 & - \\
+Var. 4 & 10 & 20 & 512 & 2 & 944 & 8.96 & 1 \\
 \hline
-BTHOWeN Variação 4 & 10 & 20 & 512 & 2 & 944 & 8.96 & 1 & - \\
+Var. 5 & 16 & 16 & 256 & 3 & 941 & 10.8 & 8 \\
 \hline
-BTHOWeN Variação 5 & 16 & 16 & 256 & 3 & 941 & 10.8 & 8 & - \\
+Var. 6 & 10 & 14 & 512 & 4 & 939 & 8.10 & 2 \\
 \hline
-BTHOWeN Variação 6 & 10 & 14 & 512 & 4 & 939 & 8.10 & 2 & - \\
+Var. 7 & 9 & 20 & 1024 & 2 & 937 & 23.7 & 1 \\
 \hline
-BTHOWeN Variação 7 & 9 & 20 & 1024 & 2 & 937 & 23.7 & 1 & - \\
+Var. 8 & 15 & 15 & 256 & 4 & 936 & 9.8 & 1 \\
 \hline
-BTHOWeN Variação 8 & 15 & 15 & 256 & 4 & 936 & 9.8 & 1 & - \\
+Var. 9 & 9 & 32 & 2048 & 4 & 936 & 34.9 & 1 \\
 \hline
-BTHOWeN Variação 9 & 9 & 32 & 2048 & 4 & 936 & 34.9 & 1 & - \\
-\hline
-\end{longtable}
+\end{tabular}
+\end{table}
+\pagebreak
 
-\begin{longtable}{|c|c|c|c|c|c|c|c|c|}
-\caption{Parâmetros e métricas do dataset Shuttle} \\
+\begin{table}[!htbp]
+\caption{Parâmetros e métricas do dataset Shuttle}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
-\textbf{Config Type} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Melhor Bleaching} & \textbf{Execução} \\
+\textbf{Configuração} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Melhor Bleaching} \\
 \hline
-Referência Bloom WiSARD & N/A & N/A & N/A & N/A & 868 & N/A & N/A & - \\
+Bloom WiSARD & N/A & N/A & N/A & N/A & 868 & N/A & N/A \\
 \hline
-Referência BTHOWeN README & 9 & 27 & 1024 & 2 & 868 & N/A & N/A & - \\
+Base & 9 & 27 & 1024 & 2 & 0 & 0 & 0 \\
 \hline
-BTHOWeN Base Estudo & 9 & 27 & 1024 & 2 & 0 & 0 & 0 & 0 \\
+Var. 1.1 & 11 & 29 & 1024 & 2 & 999 & 0.11 & 1 \\
 \hline
-BTHOWeN Variação 1.1 & 11 & 29 & 1024 & 2 & 999 & 0.11 & 1 & - \\
+Var. 1.2 & 11 & 29 & 1024 & 2 & 998 & 0.17 & 1 \\
 \hline
-BTHOWeN Variação 1.2 & 11 & 29 & 1024 & 2 & 998 & 0.17 & 1 & - \\
+Var. 2 & 11 & 25 & 1024 & 3 & 999 & 0.10 & 1 \\
 \hline
-BTHOWeN Variação 2 & 11 & 25 & 1024 & 3 & 999 & 0.10 & 1 & - \\
+Var. 3 & 8 & 27 & 1024 & 1 & 998 & 0.21 & 4 \\
 \hline
-BTHOWeN Variação 3 & 8 & 27 & 1024 & 1 & 998 & 0.21 & 4 & - \\
+Var. 4 & 9 & 23 & 512 & 3 & 998 & 0.21 & 8 \\
 \hline
-BTHOWeN Variação 4 & 9 & 23 & 512 & 3 & 998 & 0.21 & 8 & - \\
+Var. 5 & 8 & 23 & 2048 & 1 & 998 & 0.70 & 1 \\
 \hline
-BTHOWeN Variação 5 & 8 & 23 & 2048 & 1 & 998 & 0.70 & 1 & - \\
+Var. 6 & 7 & 27 & 1024 & 2 & 989 & 2.55 & 5 \\
 \hline
-BTHOWeN Variação 6 & 7 & 27 & 1024 & 2 & 989 & 2.55 & 5 & - \\
+Var. 8 & 11 & 27 & 1024 & 2 & 976 & 4.99 & 276 \\
 \hline
-BTHOWeN Variação 8 & 11 & 27 & 1024 & 2 & 976 & 4.99 & 276 & - \\
-\hline
-\end{longtable}
+\end{tabular}
+\end{table}
+\pagebreak
 
-\begin{longtable}{|c|c|c|c|c|c|c|c|c|}
-\caption{Parâmetros e métricas do dataset Vehicle} \\
+\begin{table}[!htbp]
+\caption{Parâmetros e métricas do dataset Vehicle}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
-\textbf{Config Type} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Melhor Bleaching} & \textbf{Execução} \\
+\textbf{Configuração} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Melhor Bleaching} \\
 \hline
-Referência Bloom WiSARD & N/A & N/A & N/A & N/A & 926 & N/A & N/A & - \\
+Bloom WiSARD & N/A & N/A & N/A & N/A & 926 & N/A & N/A \\
 \hline
-Referência BTHOWeN README & 16 & 16 & 256 & 3 & 662 & N/A & N/A & - \\
+Base & 16 & 16 & 256 & 3 & N/A & N/A & N/A \\
 \hline
-BTHOWeN Base Estudo & 16 & 16 & 256 & 3 & N/A & N/A & N/A & N/A \\
+Var. 1 & 14 & 14 & 512 & 4 & 755 & 32.1 & 1 \\
 \hline
-BTHOWeN Variação 1 & 14 & 14 & 512 & 4 & 755 & 32.1 & 1 & - \\
+Var. 11 & 15 & 12 & 256 & 2 & 755 & 20.2 & 1 \\
 \hline
-BTHOWeN Variação 11 & 15 & 12 & 256 & 2 & 755 & 20.2 & 1 & - \\
+Var. 19 & 18 & 16 & 512 & 2 & 748 & 30.3 & 1 \\
 \hline
-BTHOWeN Variação 19 & 18 & 16 & 512 & 2 & 748 & 30.3 & 1 & - \\
+Var. 9 & 18 & 18 & 512 & 3 & 737 & 25.5 & 1 \\
 \hline
-BTHOWeN Variação 9 & 18 & 18 & 512 & 3 & 737 & 25.5 & 1 & - \\
+Var. 18 & 16 & 14 & 512 & 2 & 734 & 20.2 & 1 \\
 \hline
-BTHOWeN Variação 18 & 16 & 14 & 512 & 2 & 734 & 20.2 & 1 & - \\
+Var. 10 & 15 & 16 & 512 & 3 & 726 & 32.8 & 1 \\
 \hline
-BTHOWeN Variação 10 & 15 & 16 & 512 & 3 & 726 & 32.8 & 1 & - \\
+Var. 15 & 14 & 12 & 512 & 3 & 726 & 27.5 & 1 \\
 \hline
-BTHOWeN Variação 15 & 14 & 12 & 512 & 3 & 726 & 27.5 & 1 & - \\
-\hline
-\end{longtable}
+\end{tabular}
+\end{table}
+\pagebreak
 
-\begin{longtable}{|c|c|c|c|c|c|c|c|c|}
-\caption{Parâmetros e métricas do dataset Vowel} \\
+\begin{table}[!htbp]
+\caption{Parâmetros e métricas do dataset Vowel}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
-\textbf{Config Type} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Melhor Bleaching} & \textbf{Execução} \\
+\textbf{Configuração} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Melhor Bleaching} \\
 \hline
-Referência Bloom WiSARD & N/A & N/A & N/A & N/A & 876 & N/A & N/A & - \\
+Bloom WiSARD & N/A & N/A & N/A & N/A & 876 & N/A & N/A \\
 \hline
-Referência BTHOWeN & 15 & 15 & 256 & 4 & 876 & N/A & N/A & - \\
+Base & 15 & 15 & 256 & 4 & 0 & 0 & 0 \\
 \hline
-BTHOWeN Base Estudo & 15 & 15 & 256 & 4 & 0 & 0 & 0 & 0 \\
+Var. 16 & 15 & 13 & 512 & 5 & 924 & 24.4 & 1 \\
 \hline
-BTHOWeN Variação 16 & 15 & 13 & 512 & 5 & 924 & 24.4 & 1 & - \\
+Var. 8 & 16 & 11 & 256 & 3 & 918 & 21.8 & 1 \\
 \hline
-BTHOWeN Variação 8 & 16 & 11 & 256 & 3 & 918 & 21.8 & 1 & - \\
+Var. 9 & 16 & 11 & 256 & 5 & 918 & 0 & 0 \\
 \hline
-BTHOWeN Variação 9 & 16 & 11 & 256 & 5 & 918 & 0 & 0 & - \\
+Var. 19 & 17 & 11 & 512 & 5 & 918 & 23.0 & 1 \\
 \hline
-BTHOWeN Variação 19 & 17 & 11 & 512 & 5 & 918 & 23.0 & 1 & - \\
+Var. 18 & 14 & 11 & 128 & 3 & 912 & 28.8 & 1 \\
 \hline
-BTHOWeN Variação 18 & 14 & 11 & 128 & 3 & 912 & 28.8 & 1 & - \\
+Var. 17 & 16 & 13 & 512 & 5 & 909 & 0 & 0 \\
 \hline
-BTHOWeN Variação 17 & 16 & 13 & 512 & 5 & 909 & 0 & 0 & - \\
+Var. 5 & 16 & 17 & 256 & 5 & 906 & 0 & 0 \\
 \hline
-BTHOWeN Variação 5 & 16 & 17 & 256 & 5 & 906 & 0 & 0 & - \\
-\hline
-\end{longtable}
+\end{tabular}
+\end{table}
+\pagebreak
 
-\begin{longtable}{|c|c|c|c|c|c|c|c|c|}
-\caption{Parâmetros e métricas do dataset MNIST} \\
+\begin{table}[!htbp]
+\caption{Parâmetros e métricas do dataset MNIST}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
-\textbf{Config Type} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Melhor Bleaching} & \textbf{Execução} \\
+\textbf{Configuração} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Melhor Bleaching} \\
 \hline
-ULEEN Base Estudo & 6 & 49 & 8192 & 4 & 952 & N/A & N/A & N/A \\
+ULEEN & 6 & 49 & 8192 & 4 & 952 & N/A & N/A \\
 \hline
-Referência BTHOWeN & 2 & 28 & 1024 & 2 & 934 & N/A & N/A & N/A \\
+Base & 2 & 28 & 1024 & 2 & 929 & 1.61 & 8 \\
 \hline
-BTHOWeN Base Estudo & 2 & 28 & 1024 & 2 & 929 & 1.61 & 8 & - \\
+Var. 1 & 16 & 16 & 256 & 3 & 915 & N/A & N/A \\
 \hline
-BTHOWeN Variação 1 & 16 & 16 & 256 & 3 & 915 & N/A & N/A & - \\
+Var. 2 & 15 & 15 & 256 & 4 & 913 & N/A & N/A \\
 \hline
-BTHOWeN Variação 2 & 15 & 15 & 256 & 4 & 913 & N/A & N/A & - \\
+Var. 3 & 9 & 27 & 1024 & 2 & 933 & N/A & N/A \\
 \hline
-BTHOWeN Variação 3 & 9 & 27 & 1024 & 2 & 933 & N/A & N/A & - \\
+Var. 4 & 4 & 16 & 512 & 2 & 918 & 2.1 & 16 \\
 \hline
-BTHOWeN Variação 4 & 4 & 16 & 512 & 2 & 918 & 2.1 & 16 & - \\
+Var. 5 & 8 & 20 & 512 & 3 & 921 & N/A & N/A \\
 \hline
-BTHOWeN Variação 5 & 8 & 20 & 512 & 3 & 921 & N/A & N/A & - \\
+Var. 6 & 4 & 24 & 256 & 2 & 916 & N/A & N/A \\
 \hline
-BTHOWeN Variação 6 & 4 & 24 & 256 & 2 & 916 & N/A & N/A & - \\
+Var. 7 & 8 & 32 & 2048 & 4 & 943 & 0.36 & 6 \\
 \hline
-BTHOWeN Variação 7 & 8 & 32 & 2048 & 4 & 943 & 0.36 & 6 & - \\
-\hline
-\end{longtable}
+\end{tabular}
+\end{table}
 }
 
 \subsection{Resultados agregados}
