@@ -234,7 +234,7 @@ Var. 3 & 3 & 2 & 128 & 2 & 980 & 8.0 & 2 \\
 \hline
 Var. 4 & 4 & 2 & 128 & 2 & 860 & 4.0 & 9 \\
 \hline
-Var. 5 & 3 & 2 & 256 & 2 & 980 & 0.0 & 2 \\
+\textbf{Var. 5} & 3 & 2 & 256 & 2 & \textbf{980} & \textbf{0.0} & 2 \\
 \hline
 Var. 6 & 4 & 2 & 256 & 2 & 900 & 12.0 & 3 \\
 \hline
@@ -390,23 +390,23 @@ Var. 9 & 9 & 32 & 2048 & 4 & 936 & 34.9 & 1 \\
 \hline
 Bloom WiSARD & N/A & N/A & N/A & N/A & 868 & N/A & N/A \\
 \hline
-Base & 9 & 27 & 1.14 & 2 & 0 & 0 & 0 \\
+Base & 9 & 27 & 1024 & 2 & 0 & 0 & 0 \\
 \hline
-Var. 1.1 & 11 & 29 & 1.14 & 2 & 999 & 0.11 & 1 \\
+Var. 1.1 & 11 & 29 & 1024 & 2 & 999 & 0.11 & 1 \\
 \hline
 Var. 1.1 & 11 & 29 & 1024 & 2 & 998 & 0.17 & 1 \\
 \hline
-Var. 2 & 11 & 25 & 1.14 & 3 & 999 & 0.10 & 1 \\
+Var. 2 & 11 & 25 & 1024 & 3 & 999 & 0.10 & 1 \\
 \hline
-Var. 3 & 8 & 27 & 1.14 & 1 & 998 & 0.21 & 4 \\
+Var. 3 & 8 & 27 & 1024 & 1 & 998 & 0.21 & 4 \\
 \hline
 Var. 4 & 9 & 23 & 512 & 3 & 998 & 0.21 & 8 \\
 \hline
 Var. 5 & 8 & 23 & 2048 & 1 & 998 & 0.70 & 1 \\
 \hline
-Var. 6 & 7 & 27 & 1.14 & 2 & 989 & 2.55 & 5 \\
+Var. 6 & 7 & 27 & 1024 & 2 & 989 & 2.55 & 5 \\
 \hline
-Var. 8 & 11 & 27 & 1.14 & 2 & 976 & 4.99 & 276 \\
+Var. 8 & 11 & 27 & 1024 & 2 & 976 & 4.99 & 276 \\
 \hline
 \end{tabular}
 \end{table}
@@ -611,11 +611,12 @@ Vowel    & 876           & 0               & \textbf{924}  & --            & 0  
 \end{table}
 }
 
-Na tabela a seguir, apresentamos os parâmetros ótimos identificados para cada dataset, junto com as métricas de desempenho obtidas:
+A seguir, na Tabela ~\ref{tab:Opt-params}, apresentamos os parâmetros ótimos identificados para cada dataset, junto com as métricas de desempenho obtidas:
 
 {\small
 \begin{table}[H]
-\caption{Parâmetros ótimos para cada dataset}
+\caption{Parâmetros ótimos para cada dataset. Em \textcolor{red}{vermelho} destacamos valores menores que os observados na referência Bloom WiSARD; em \textcolor{darkgreen}{verde} os valores maiores.}
+\label{tab:Opt-params}
 \renewcommand{\arraystretch}{1.1}
 \begin{center}
 \begin{tabular}{lccccccc}
@@ -628,7 +629,7 @@ Glass & \textcolor{darkgreen}{4} & \textcolor{darkgreen}{256} & \textcolor{darkg
 Letter & \textcolor{darkgreen}{15} & \textcolor{darkgreen}{256} & \textcolor{darkgreen}{5} & \textcolor{darkgreen}{35} & \textcolor{red}{3} & 1 & \textcolor{red}{3.9} \\
 Wine & \textcolor{darkgreen}{10} & 13 & \textcolor{darkgreen}{256} & \textcolor{darkgreen}{4} & 1 & -- & 1.7 \\
 Segment & \textcolor{darkgreen}{10} & \textcolor{red}{18} & 1024 & \textcolor{darkgreen}{3} & \textcolor{darkgreen}{2} & -- & 6.49 \\
-Shuttle & \textcolor{darkgreen}{11} & \textcolor{red}{25} & 1024 & \textcolor{darkgreen}{3} & \textcolor{red}{1} & -- & \textcolor{darkgreen}{0.1} \\
+Shuttle & \textcolor{darkgreen}{11} & \textcolor{red}{25} & 1.14 & \textcolor{darkgreen}{3} & \textcolor{red}{1} & -- & \textcolor{darkgreen}{0.1} \\
 Vehicle & \textcolor{red}{15} & \textcolor{red}{12} & 256 & \textcolor{black}{2} & 1 & -- & 20.2 \\
 Vowel & \textcolor{red}{15} & \textcolor{red}{13} & \textcolor{darkgreen}{512} & \textcolor{darkgreen}{5} & 1 & -- & \textcolor{darkgreen}{24.4} \\
 MNIST & \textcolor{darkgreen}{6} & \textcolor{darkgreen}{49} & \textcolor{darkgreen}{8192} & \textcolor{darkgreen}{4} & -- & -- & -- \\
