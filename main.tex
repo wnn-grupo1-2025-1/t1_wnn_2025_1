@@ -32,12 +32,12 @@ Este trabalho avalia o modelo BTHOWeN (Bleached Thermometer-encoded Hashed-input
 
 \section{Introdução}
 
-BTHOWeN vem de Bleached Thermometer-encoded Hashed-input Optimized Weightless Neural Network, e como o nome indica, é uma arquitetura de rede neural sem peso que se diferencia do uso do modelo WiSARD por:
+BTHOWeN vem de Bleached Thermometer-encoded Hashed-input Optimized Weightless Neural Network, e como o nome indica, é uma arquitetura de rede neural sem peso que se diferencia do uso do modelo WiSARD (Wilkes, Stonham and Aleksander Recognition Device) \cite{lima2020wisardpkg} por:
 
 \begin{itemize}
-    \item Incorporar counting Bloom filters para reduzir o tamanho do modelo e permitir bleaching.
-    \item Usar função hash que não requer operações aritméticas.
-    \item Fazer encoding com termômetro não-linear de distribuição normal para melhorar a acurácia do modelo \cite{susskind2022}.
+    \item Incorporar counting Bloom filters para reduzir o tamanho do modelo e permitir bleaching \cite{santiago2020}.
+    \item Usar função hash que não requer operações aritméticas \cite{susskind2022}.
+    \item Fazer encoding com termômetro não-linear de distribuição normal para melhorar a acurácia do modelo \cite{susskind2022, santiago2020}.
 \end{itemize}
 
 \section{Proposta}
@@ -63,26 +63,26 @@ Tomamos o maior valor de acurácia de todos os experimentos e sua configuração
 
 \subsubsection{Tamanho do Endereço (Tamanho da Tupla)}
 
-O tamanho do endereço, também conhecido como tamanho da tupla, é um parâmetro da WiSARD que determina a quantidade de bits de entrada que são agrupados para formar um endereço para cada RAM no discriminador. 
-No contexto do BTHOWeN, o tamanho do endereço define quantos bits são agrupados para endereçar cada filtro de Bloom, afeta o número total de filtros necessários (número total de entradas dividido pelo tamanho da tupla) e determina o espaço de endereçamento para cada filtro (2\textsuperscript{tamanho da tupla} possíveis endereços em WiSARD tradicional).
+O tamanho do endereço, também conhecido como tamanho da tupla, é um parâmetro da WiSARD que determina a quantidade de bits de entrada que são agrupados para formar um endereço para cada RAM no discriminador \cite{lima2020wisardpkg}. 
+No contexto do BTHOWeN, o tamanho do endereço define quantos bits são agrupados para endereçar cada filtro de Bloom, afeta o número total de filtros necessários (número total de entradas dividido pelo tamanho da tupla) e determina o espaço de endereçamento para cada filtro (2\textsuperscript{tamanho da tupla} possíveis endereços em WiSARD tradicional) \cite{santiago2023}.
 
-Tuplas menores resultam em mais filtros e melhor generalização, enquanto tuplas maiores reduzem o número de filtros, mas podem afetar a capacidade de generalização. Nos experimentos, este parâmetro varia conforme o dataset, desde valores pequenos (2 para Iris) até valores maiores (28 para MNIST).
+Tuplas menores resultam em mais filtros e melhor generalização, enquanto tuplas maiores reduzem o número de filtros, mas podem afetar a capacidade de generalização \cite{santiago2020}. Nos experimentos, este parâmetro varia conforme o dataset, desde valores pequenos (2 para Iris) até valores maiores (28 para MNIST).
 
 \subsubsection{Número de Discriminadores (OWeN)}
 
-O número de discriminadores no BTHOWeN está relacionado à estrutura de entrada do modelo, em que discriminador é responsável por processar uma parte específica do vetor de entrada, segmentandodos os dados de entrada em subconjuntos de bits. 
+O número de discriminadores no BTHOWeN está relacionado à estrutura de entrada do modelo, em que discriminador é responsável por processar uma parte específica do vetor de entrada, segmentandodos os dados de entrada em subconjuntos de bits \cite{lima2020wisardpkg, santiago2020}. 
 
-O número de discriminadores para cada classe é determinado pela divisão da dimensão total da entrada pelo número de bits por filtro. Por exemplo, em um modelo para MNIST com entrada de 784 pixels (28x28) e 28 bits por filtro, teríamos 28 discriminadores por classe.
+O número de discriminadores para cada classe é determinado pela divisão da dimensão total da entrada pelo número de bits por filtro \cite{santiago2020}. Por exemplo, em um modelo para MNIST com entrada de 784 pixels (28x28) e 28 bits por filtro, teríamos 28 discriminadores por classe.
 
-O valor do parâmetro OWeN representa o número de bits de entrada que cada discriminador recebe. Quanto maior este valor, mais granular é a segmentação dos dados, o que pode melhorar a capacidade de distinção, mas aumenta a complexidade computacional.
+O valor do parâmetro OWeN representa o número de bits de entrada que cada discriminador recebe \cite{santiago2020, susskind2022}. Quanto maior este valor, mais granular é a segmentação dos dados, o que pode melhorar a capacidade de distinção, mas aumenta a complexidade computacional.
 
 \subsubsection{Número de Funções Hash (FH)}
 
-As funções hash são utilizadas nos filtros de Bloom para mapear os dados de entrada em posições de memória. O parâmetro FH determina quantas diferentes funções hash são utilizadas em cada filtro de Bloom.
+As funções hash são utilizadas nos filtros de Bloom para mapear os dados de entrada em posições de memória \cite{santiago2020}. O parâmetro FH determina quantas diferentes funções hash são utilizadas em cada filtro de Bloom.
 
-BTHOWeN implementa a família de funções hash H3, conforme descrita por Carter e Wegman, que não requer operações aritméticas complexas, sendo ideal para implementações em hardware.
+BTHOWeN implementa a família de funções hash H3, conforme descrita por Carter e Wegman, que não requer operações aritméticas complexas, sendo ideal para implementações em hardware \cite{susskind2022}.
 
-O número de funções hash tem uma relação complexa com a taxa de falsos positivos:
+O número de funções hash tem uma relação complexa com a taxa de falsos positivos \cite{santiago2020}:
 \begin{itemize}
     \item Valores típicos variam de 1 a 4, dependendo do dataset
     \item Um maior número de funções hash pode aumentar o poder discriminativo do modelo, mas também eleva o custo computacional
@@ -91,19 +91,19 @@ O número de funções hash tem uma relação complexa com a taxa de falsos posi
 
 \subsubsection{Número de Filtros de Bloom (FE - Filter Entries)}
 
-O parâmetro FE define o número de entradas em cada filtro de Bloom, ou seja, o tamanho do vetor utilizado para armazenar os padrões aprendidos. Este tamanho é uma potência de 2 (por exemplo, 128, 256, 512, 1024, 2048, etc.).
+O parâmetro FE define o número de entradas em cada filtro de Bloom, ou seja, o tamanho do vetor utilizado para armazenar os padrões aprendidos \cite{santiago2020}. Este tamanho é uma potência de 2 (por exemplo, 128, 256, 512, 1024, 2048, etc.).
 
-Aumentar o tamanho do filtro reduz a probabilidade de colisões e, consequentemente, a taxa de falsos positivos, mas também aumenta a memória necessária. A escolha deste parâmetro afeta diretamente o equilíbrio entre precisão e eficiência de memória do modelo.
+Aumentar o tamanho do filtro reduz a probabilidade de colisões e, consequentemente, a taxa de falsos positivos, mas também aumenta a memória necessária \cite{santiago2020, susskind2022}. A escolha deste parâmetro afeta diretamente o equilíbrio entre precisão e eficiência de memória do modelo.
 
-Em hardware, este parâmetro se traduz na quantidade de memória alocada para cada filtro, influenciando o consumo de energia.
+Em hardware, este parâmetro se traduz na quantidade de memória alocada para cada filtro, influenciando o consumo de energia \cite{susskind2022}.
 
 \subsubsection{Fator de Bleaching (b)}
 
-O fator de bleaching é um hiperparâmetro introduzido pela arquitetura BTHOWeN, que não existia em outras redes neurais sem peso anteriores. Em implementações tradicionais de filtros de Bloom, cada posição de memória armazena apenas um bit (0 ou 1), indicando se um padrão foi visto ou não. 
+O fator de bleaching é um hiperparâmetro introduzido pela arquitetura BTHOWeN, que não existia em outras redes neurais sem peso anteriores \cite{santiago2020}. Em implementações tradicionais de filtros de Bloom, cada posição de memória armazena apenas um bit (0 ou 1), indicando se um padrão foi visto ou não \cite{santiago2020, lusquino2020}. 
 
-Na BTHOWeN, cada posição armazena um contador, permitindo registrar quantas vezes um determinado padrão foi encontrado durante o treinamento. O fator de bleaching define o limiar mínimo de ocorrências para que um padrão seja considerado válido durante a inferência.
+Na BTHOWeN, cada posição armazena um contador, permitindo registrar quantas vezes um determinado padrão foi encontrado durante o treinamento \cite{santiago2020}. O fator de bleaching define o limiar mínimo de ocorrências para que um padrão seja considerado válido durante a inferência.
 
-Funcionamento:
+Funcionamento \cite{santiago2020, susskind2022}:
 \begin{itemize}
     \item Durante o treinamento, os contadores são incrementados cada vez que um padrão é encontrado
     \item Na inferência, um padrão é considerado presente apenas se seu contador for $\geq b$
@@ -111,10 +111,7 @@ Funcionamento:
     \item Valores comuns de b variam de 1 a 10, sendo o valor ótimo determinado durante o treinamento
 \end{itemize}
 
-
-Funcionamento: Durante o treinamento, os contadores são incrementados cada vez que um padrão é encontrado. Na inferência, um padrão é considerado presente apenas se seu contador for $\geq b$. Aumentar o valor de $b$ pode melhorar a precisão ao reduzir falsos positivos. Valores comuns de $b$ variam de 1 a 10, sendo o valor ótimo determinado durante o treinamento.
-
-A técnica de bleaching permite ao modelo distinguir padrões frequentes e relevantes em detrimento de ocorrências aleatórias e ruidosas, melhorando a capacidade de generalização do modelo.
+A técnica de bleaching permite ao modelo distinguir padrões frequentes e relevantes em detrimento de ocorrências aleatórias e ruidosas, melhorando a capacidade de generalização do modelo \cite{santiago2020}.
 
 \subsection{Datasets}
 
