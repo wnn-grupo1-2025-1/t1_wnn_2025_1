@@ -1,0 +1,75 @@
+# LaTeX temporary files
+*.aux
+*.bbl
+*.blg
+*.dvi
+*.fdb_latexmk
+*.fls
+*.glg
+*.glo
+*.gls
+*.idx
+*.ilg
+*.ind
+*.ist
+*.lof
+*.log
+*.lot
+*.nav
+*.nlo
+*.out
+*.pdfsync
+*.ps
+*.snm
+*.synctex
+*.synctex.gz
+*.toc
+*.vrb
+*.maf
+*.mtc
+*.mtc0
+*.bak
+*.bcf
+
+# PDF output - comment the next line if you want to keep PDFs in the repo
+# *.pdf
+
+# BibTeX
+*-blx.bib
+*.run.xml
+
+# Build tool auxiliary files
+*.fot
+*.cb
+*.cb2
+.*.lb
+
+# Editors
+*~
+*.swp
+.DS_Store
+.vscode/
+.idea/
+*.iml
+
+# Latexmk
+.latexmk
+
+# SyncTeX
+*.synctex(busy)
+*.synctex.gz(busy)
+*.synctex.gz
+
+# macOS-specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows-specific files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
