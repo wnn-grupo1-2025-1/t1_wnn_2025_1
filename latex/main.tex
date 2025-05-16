@@ -1,0 +1,463 @@
+\documentclass{article}
+
+% Packages for formatting, figures, and tables
+\usepackage[protrusion=false,expansion=false]{microtype}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{amsthm}
+\usepackage[capitalize,noabbrev]{cleveref}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{array}
+\usepackage{longtable}
+
+% Title configuration
+\title{Avaliação do Modelo BTHOWeN em Datasets MultiClasses}
+\author{Breno Tostes \and Eduardo Naslausky \and Felipe Barrocas \and Giordano Souza \and Maria Bianca Irace \and Miguel Sousa \and Rafael Paladini}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Este trabalho avalia o modelo BTHOWeN (Bleached Thermometer-encoded Hashed-input Optimized Weightless Neural Network) em diversos datasets multiclasses. Comparamos a performance do BTHOWeN com o modelo BloomWiSARD, analisando o impacto dos hiperparâmetros na acurácia final. Utilizamos uma abordagem gulosa para otimização, variando sequencialmente os parâmetros de tamanho de endereço, número de discriminadores, funções hash, filtros Bloom e fator de bleaching. Os resultados demonstram as vantagens do BTHOWeN em termos de acurácia e eficiência para diversos conjuntos de dados de classificação.
+\end{abstract}
+
+\section{Introdução}
+
+BTHOWeN vem de Bleached Thermometer-encoded Hashed-input Optimized Weightless Neural Network, e como o nome indica, é uma arquitetura de rede neural sem peso que se diferencia do uso do modelo WiSARD por:
+
+\begin{itemize}
+    \item Incorporar counting Bloom filters para reduzir o tamanho do modelo e permitir bleaching.
+    \item Usar função hash que não requer operações aritméticas.
+    \item Fazer encoding com termômetro não-linear de distribuição normal para melhorar a acurácia do modelo \cite{susskind2022}.
+\end{itemize}
+
+\section{Proposta}
+\subsection{Metodologia}
+
+Neste trabalho, iremos replicar o BTHOWeN utilizando o BloomWisard como cerne, com os diferentes datasets multiclasses inclusos no artigo original. A proporção entre a massa de treinamento e a massa de teste foi mantida idêntica às respectivas proporções originais, porém os hiperparâmetros foram configurados para verificar o impacto de cada um deles na acurácia final.
+
+Os hiperparâmetros configuráveis são:
+
+\begin{itemize}
+    \item Tamanho do endereço (ou tamanho da tupla).
+    \item Número de discriminadores.
+    \item Número de funções hash.
+    \item Número de filtros de bloom.
+    \item Fator do bleaching.
+\end{itemize}
+
+Os experimentos são feitos alterando um hiperparâmetro de cada vez, de maneira gulosa. Ao atingir um valor máximo variando apenas um hiperparâmetro, este tem seu valor mantido pelo resto do experimento, e o próximo hiperparâmetro passa a ser o variável. Ao realizar este procedimento com todos os hiperparâmetros, identificamos o melhor resultado.
+
+Tomamos o maior valor de acurácia de todos os experimentos e sua configuração de hiperparâmetros como melhor valor obtido e o comparamos com a acurácia obtida no artigo original.
+
+\subsection{Hiperparâmetros}
+
+\subsubsection{Tamanho do Endereço (Tamanho da Tupla)}
+
+O tamanho do endereço, também conhecido como tamanho da tupla, é um parâmetro da WiSARD que determina a quantidade de bits de entrada que são agrupados para formar um endereço para cada RAM no discriminador. 
+No contexto do BTHOWeN, o tamanho do endereço define quantos bits são agrupados para endereçar cada filtro de Bloom, afeta o número total de filtros necessários (número total de entradas dividido pelo tamanho da tupla) e determina o espaço de endereçamento para cada filtro (2\textsuperscript{tamanho da tupla} possíveis endereços em WiSARD tradicional).
+
+Tuplas menores resultam em mais filtros e melhor generalização, enquanto tuplas maiores reduzem o número de filtros, mas podem afetar a capacidade de generalização. Nos experimentos, este parâmetro varia conforme o dataset, desde valores pequenos (2 para Iris) até valores maiores (28 para MNIST).
+
+\subsubsection{Número de Discriminadores (OWeN)}
+
+O número de discriminadores no BTHOWeN está relacionado à estrutura de entrada do modelo, em que discriminador é responsável por processar uma parte específica do vetor de entrada, segmentandodos os dados de entrada em subconjuntos de bits. 
+
+O número de discriminadores para cada classe é determinado pela divisão da dimensão total da entrada pelo número de bits por filtro. Por exemplo, em um modelo para MNIST com entrada de 784 pixels (28x28) e 28 bits por filtro, teríamos 28 discriminadores por classe.
+
+O valor do parâmetro OWeN representa o número de bits de entrada que cada discriminador recebe. Quanto maior este valor, mais granular é a segmentação dos dados, o que pode melhorar a capacidade de distinção, mas aumenta a complexidade computacional.
+
+\subsubsection{Número de Funções Hash (FH)}
+
+As funções hash são utilizadas nos filtros de Bloom para mapear os dados de entrada em posições de memória. O parâmetro FH determina quantas diferentes funções hash são utilizadas em cada filtro de Bloom.
+
+BTHOWeN implementa a família de funções hash H3, conforme descrita por Carter e Wegman, que não requer operações aritméticas complexas, sendo ideal para implementações em hardware.
+
+O número de funções hash tem uma relação complexa com a taxa de falsos positivos:
+\begin{itemize}
+    \item Valores típicos variam de 1 a 4, dependendo do dataset
+    \item Um maior número de funções hash pode aumentar o poder discriminativo do modelo, mas também eleva o custo computacional
+    \item Os melhores resultados obtidos nos experimentos utilizaram de 1 a 4 funções hash, dependendo da complexidade da tarefa
+\end{itemize}
+
+\subsubsection{Número de Filtros de Bloom (FE - Filter Entries)}
+
+O parâmetro FE define o número de entradas em cada filtro de Bloom, ou seja, o tamanho do vetor utilizado para armazenar os padrões aprendidos. Este tamanho é uma potência de 2 (por exemplo, 128, 256, 512, 1024, 2048, etc.).
+
+Aumentar o tamanho do filtro reduz a probabilidade de colisões e, consequentemente, a taxa de falsos positivos, mas também aumenta a memória necessária. A escolha deste parâmetro afeta diretamente o equilíbrio entre precisão e eficiência de memória do modelo.
+
+Em hardware, este parâmetro se traduz na quantidade de memória alocada para cada filtro, influenciando o consumo de energia.
+
+\subsubsection{Fator de Bleaching (b)}
+
+O fator de bleaching é um hiperparâmetro introduzido pela arquitetura BTHOWeN, que não existia em outras redes neurais sem peso anteriores. Em implementações tradicionais de filtros de Bloom, cada posição de memória armazena apenas um bit (0 ou 1), indicando se um padrão foi visto ou não. 
+
+Na BTHOWeN, cada posição armazena um contador, permitindo registrar quantas vezes um determinado padrão foi encontrado durante o treinamento. O fator de bleaching define o limiar mínimo de ocorrências para que um padrão seja considerado válido durante a inferência.
+
+Funcionamento:
+\begin{itemize}
+    \item Durante o treinamento, os contadores são incrementados cada vez que um padrão é encontrado
+    \item Na inferência, um padrão é considerado presente apenas se seu contador for $\geq b$
+    \item Aumentar o valor de b pode melhorar a precisão ao reduzir falsos positivos
+    \item Valores comuns de b variam de 1 a 10, sendo o valor ótimo determinado durante o treinamento
+\end{itemize}
+
+
+Funcionamento: Durante o treinamento, os contadores são incrementados cada vez que um padrão é encontrado. Na inferência, um padrão é considerado presente apenas se seu contador for $\geq b$. Aumentar o valor de $b$ pode melhorar a precisão ao reduzir falsos positivos. Valores comuns de $b$ variam de 1 a 10, sendo o valor ótimo determinado durante o treinamento.
+
+A técnica de bleaching permite ao modelo distinguir padrões frequentes e relevantes em detrimento de ocorrências aleatórias e ruidosas, melhorando a capacidade de generalização do modelo.
+
+\subsection{Datasets}
+
+\subsubsection{MNIST}
+
+O dataset \textbf{MNIST} (Modified National Institute of Standards and Technology) é uma coleção de dígitos manuscritos. Ele inclui \textbf{60k imagens de treinamento} e \textbf{10k imagens de teste}. Todas as imagens estão em escala de cinza e possuem tamanho de \textbf{28×28 pixels}.
+
+\subsubsection{Ecoli}
+
+O dataset \textbf{Ecoli} é usado para prever onde proteínas celulares se localizam com base em suas sequências de aminoácidos. Ele contém \textbf{336 proteínas}, cada uma descrita por \textbf{sete atributos numéricos} derivados da sequência. As proteínas são classificadas em \textbf{oito possíveis locais celulares}.
+
+\subsubsection{Iris}
+
+O dataset \textbf{Iris} contém \textbf{150 observações} de flores de íris, cada uma descrita por:
+
+\begin{itemize}
+    \item Comprimento da sépala.
+    \item Largura da sépala.
+    \item Comprimento da pétala.
+    \item Largura da pétala.
+\end{itemize}
+
+A classificação é feita em uma de \textbf{três espécies}: \textbf{Iris Setosa}, \textbf{Versicolor} ou \textbf{Virginica}.
+
+\subsubsection{Glass}
+
+O dataset \textbf{Glass} contém \textbf{214 instâncias} de fragmentos de vidro, cada uma descrita por \textbf{10 atributos}. Com ele, conseguimos prever o tipo de vidro com base em sua composição química e índice de refração.
+
+\subsubsection{Letter}
+
+O dataset \textbf{Letter} contém letras manuscritas. As imagens dos caracteres foram baseadas em \textbf{20 fontes diferentes}, e cada letra dentro dessas fontes foi distorcida aleatoriamente para produzir:
+
+\begin{itemize}
+    \item \textbf{20k entradas}, onde:
+    \begin{itemize}
+        \item \textbf{16k} foram usadas para treinamento.
+        \item \textbf{4k} para teste.
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Wine}
+
+O dataset \textbf{Wine} reúne \textbf{178 amostras} de vinho de três cultivares de uvas da região de Piemonte, Itália. Cada amostra é descrita por \textbf{13 atributos químicos contínuos} – como teor de álcool, magnésio e intensidade de cor. O objetivo é identificar a cultivar correta entre as \textbf{três classes} disponíveis.
+
+\subsubsection{Segment}
+
+O dataset \textbf{Image Segmentation} (Segment) contém \textbf{2.310 segmentos} de imagens externas, distribuídos igualmente entre \textbf{sete classes} de região: tijolo, céu, folhagem, cimento, janela, caminho e grama. Cada segmento é representado por \textbf{19 atributos numéricos} que descrevem características de cor e textura. A tarefa é prever a classe da região na qual o segmento se enquadra.
+
+\subsubsection{Shuttle}
+
+O dataset \textbf{Statlog Shuttle} possui cerca de \textbf{58.000 registros} de telemetria do sistema de controle do ônibus espacial. Cada registro é descrito por \textbf{nove atributos numéricos} derivados de sensores a bordo e está rotulado em um de \textbf{sete possíveis estados operacionais}. O conjunto é fortemente desbalanceado, com predominância da classe 1.
+
+\subsubsection{Vehicle}
+
+O dataset \textbf{Vehicle Silhouettes} contém \textbf{846 silhuetas} de veículos, cada uma descrita por \textbf{18 medidas geométricas} extraídas da imagem, como área, compacidade e momentos. Os veículos devem ser classificados em uma de \textbf{quatro categorias}: ônibus, Opel, Saab ou van.
+
+\subsubsection{Vowel}
+
+O dataset \textbf{Vowel Recognition} inclui \textbf{990 amostras} de fala gravadas por 15 locutores. Cada amostra é caracterizada por \textbf{10 atributos acústicos contínuos} (coeficientes derivados do espectro) e deve ser classificada em uma de \textbf{11 vogais} do inglês, como /a/, /e/ ou /i/.
+
+\section{Resultados}
+
+\subsection{Resultados por dataset}
+
+\subsubsection{Tabelas}
+
+\begin{longtable}{|c|c|c|c|c|c|c|c|c|c|}
+\caption{Parâmetros e métricas do dataset Iris} \\
+\hline
+\textbf{Dataset} & \textbf{Config Type} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Melhor Bleaching} & \textbf{Execução} \\
+\hline
+Iris & Referência Bloom WiSARD & N/A & N/A & N/A & N/A & 960 & 2.0 & 3 & 1 \\
+\hline
+Iris & BTHOWeN Base Estudo & 3 & 2 & 128 & 1 & 980 & 12.0 & 2 & 3 \\
+\hline
+Iris & BTHOWeN Variação 1 & 4 & 2 & 128 & 1 & 920 & 16.0 & 1 & 1 \\
+\hline
+Iris & BTHOWeN Variação 2 & 3 & 2 & 256 & 1 & 980 & 14.0 & 2 & 1 \\
+\hline
+Iris & BTHOWeN Variação 3 & 3 & 2 & 128 & 2 & 980 & 8.0 & 2 & 1 \\
+\hline
+Iris & BTHOWeN Variação 4 & 4 & 2 & 128 & 2 & 860 & 4.0 & 9 & 1 \\
+\hline
+Iris & BTHOWeN Variação 5 & 3 & 2 & 256 & 2 & 980 & 0.0 & 2 & 1 \\
+\hline
+Iris & BTHOWeN Variação 6 & 4 & 2 & 256 & 2 & 900 & 12.0 & 3 & 1 \\
+\hline
+\end{longtable}
+
+\begin{longtable}{|c|c|c|c|c|c|c|c|c|c|}
+\caption{Parâmetros e métricas do dataset Ecoli} \\
+\hline
+\textbf{Dataset} & \textbf{Config Type} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Melhor Bleaching} & \textbf{Execução} \\
+\hline
+Ecoli & Referência Bloom WiSARD & N/A & N/A & N/A & N/A & 799 & N/A & N/A & - \\
+\hline
+Ecoli & BTHOWeN Base Estudo & 10 & 128 & 2 & 10 & 786 & 8.9 & 7 & 1 \\
+\hline
+Ecoli & BTHOWeN Variação 1 & 4 & 128 & 2 & 11 & 821 & 10.7 & 1 & 1 \\
+\hline
+Ecoli & BTHOWeN Variação 2 & 3 & 256 & 2 & 10 & 813 & 19.6 & 1 & 1 \\
+\hline
+Ecoli & BTHOWeN Variação 3 & 3 & 128 & 3 & 10 & 786 & 15.2 & 7 & 1 \\
+\hline
+Ecoli & BTHOWeN Variação 4 & 4 & 128 & 3 & 11 & 839 & 17.9 & 1 & 1 \\
+\hline
+Ecoli & BTHOWeN Variação 5 & 3 & 256 & 3 & 10 & 848 & 10.7 & 1 & 1 \\
+\hline
+Ecoli & BTHOWeN Variação 6 & 4 & 256 & 4 & 10 & 830 & 13.4 & 1 & 1 \\
+\hline
+\end{longtable}
+
+\begin{longtable}{|c|c|c|c|c|c|c|c|c|c|}
+\caption{Parâmetros e métricas do dataset Glass} \\
+\hline
+\textbf{Dataset} & \textbf{Config Type} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Melhor Bleaching} & \textbf{Execução} \\
+\hline
+Glass & Referência Bloom WiSARD & N/A & N/A & N/A & N/A & 726 & N/A & N/A & - \\
+\hline
+Glass & BTHOWeN Base Estudo & 3 & 128 & 3 & 9 & 577 & 39.4 & 1 & 1 \\
+\hline
+Glass & BTHOWeN Variação 1 & 4 & 128 & 3 & 10 & 563 & 38.0 & 1 & 1 \\
+\hline
+Glass & BTHOWeN Variação 2 & 3 & 256 & 3 & 9 & 493 & 33.8 & 1 & 1 \\
+\hline
+Glass & BTHOWeN Variação 3 & 3 & 128 & 4 & 9 & 549 & 19.7 & 4 & 1 \\
+\hline
+Glass & BTHOWeN Variação 4 & 4 & 128 & 4 & 10 & 592 & 40.8 & 1 & 1 \\
+\hline
+Glass & BTHOWeN Variação 5 & 3 & 256 & 4 & 9 & 676 & 29.6 & 1 & 1 \\
+\hline
+Glass & BTHOWeN Variação 6 & 4 & 256 & 4 & 10 & 676 & 28.2 & 1 & 1 \\
+\hline
+\end{longtable}
+
+\begin{longtable}{|c|c|c|c|c|c|c|c|c|c|}
+\caption{Parâmetros e métricas do dataset Letter} \\
+\hline
+\textbf{Dataset} & \textbf{Config Type} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Melhor Bleaching} & \textbf{Execução} \\
+\hline
+Letter & Referência Bloom WiSARD & N/A & N/A & N/A & N/A & 848 & N/A & N/A & - \\
+\hline
+Letter & BTHOWeN Base Estudo & 3 & 128 & 3 & 9 & 734 & 18.6 & 6 & 1 \\
+\hline
+Letter & BTHOWeN Variação 1 & 4 & 128 & 3 & 10 & 736 & 17.4 & 5 & 1 \\
+\hline
+Letter & BTHOWeN Variação 2 & 3 & 256 & 3 & 9 & 789 & 15.2 & 3 & 1 \\
+\hline
+Letter & BTHOWeN Variação 3 & 3 & 128 & 4 & 9 & 707 & 19.2 & 5 & 1 \\
+\hline
+Letter & BTHOWeN Variação 4 & 4 & 128 & 4 & 10 & 719 & 18.7 & 6 & 1 \\
+\hline
+Letter & BTHOWeN Variação 5 & 3 & 256 & 4 & 9 & 775 & 15.6 & 4 & 1 \\
+\hline
+Letter & BTHOWeN Variação 6 & 4 & 256 & 5 & 12 & 811 & 11.3 & 4 & 1 \\
+\hline
+Letter & BTHOWeN Variação 7 & 11 & 256 & 5 & 18 & 840 & 7.6 & 3 & 1 \\
+\hline
+Letter & BTHOWeN Variação 8 & 15 & 256 & 5 & 35 & 884 & 3.9 & 3 & 1 \\
+\hline
+\end{longtable}
+
+\begin{longtable}{|c|c|c|c|c|c|c|c|c|c|}
+\caption{Parâmetros e métricas do dataset Wine} \\
+\hline
+\textbf{Dataset} & \textbf{Config Type} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Melhor Bleaching} & \textbf{Execução} \\
+\hline
+Wine & Referência Bloom WiSARD & N/A & N/A & N/A & N/A & 926 & N/A & N/A & - \\
+\hline
+Wine & Referência BTHOWeN & 9 & 13 & 128 & 3 & 983 & N/A & N/A & - \\
+\hline
+Wine & BTHOWeN Base Estudo & 9 & 13 & 128 & 3 & 983 & N/A & 1 & - \\
+\hline
+Wine & BTHOWeN Variação 1.1 & 10 & 13 & 256 & 4 & 1.000 & 1.7 & 1 & - \\
+\hline
+Wine & BTHOWeN Variação 1.2 & 10 & 13 & 256 & 4 & 949 & 3.39 & 1 & - \\
+\hline
+Wine & BTHOWeN Variação 2 & 11 & 9 & 256 & 4 & 983 & 1.69 & 1 & - \\
+\hline
+Wine & BTHOWeN Variação 3 & 11 & 13 & 256 & 2 & 966 & 3.38 & 1 & - \\
+\hline
+Wine & BTHOWeN Variação 4 & 9 & 9 & 256 & 4 & 966 & 1.69 & 1 & - \\
+\hline
+Wine & BTHOWeN Variação 5 & 10 & 17 & 256 & 4 & 966 & 11.8 & 1 & - \\
+\hline
+Wine & BTHOWeN Variação 6 & 11 & 15 & 256 & 2 & 966 & N/A & N/A & - \\
+\hline
+Wine & BTHOWeN Variação 7 & 7 & 9 & 256 & 4 & 932 & 5.08 & 1 & - \\
+\hline
+\end{longtable}
+
+\begin{longtable}{|c|c|c|c|c|c|c|c|c|c|}
+\caption{Parâmetros e métricas do dataset Segment} \\
+\hline
+\textbf{Dataset} & \textbf{Config Type} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Melhor Bleaching} & \textbf{Execução} \\
+\hline
+Segment & Referência Bloom WiSARD & N/A & N/A & N/A & N/A & N/A & N/A & N/A & - \\
+\hline
+Segment & Referência BTHOWeN & 8 & 12 & 512 & 4 & 880 & N/A & - & - \\
+\hline
+Segment & BTHOWeN Base Estudo & 9 & 27 & 1024 & 2 & 925 & N/A & 1 & - \\
+\hline
+Segment & BTHOWeN Variação 1 & 10 & 16 & 256 & 4 & 938 & 9.35 & 1 & - \\
+\hline
+Segment & BTHOWeN Variação 2 & 8 & 20 & 512 & 3 & 924 & 9.24 & 1 & - \\
+\hline
+Segment & BTHOWeN Variação 3.1 & 10 & 18 & 1024 & 3 & 942 & 8.57 & 2 & - \\
+\hline
+Segment & BTHOWeN Variação 3.2 & 10 & 18 & 1024 & 3 & 944 & 6.49 & 2 & - \\
+\hline
+Segment & BTHOWeN Variação 4 & 10 & 20 & 512 & 2 & 944 & 8.96 & 1 & - \\
+\hline
+Segment & BTHOWeN Variação 5 & 16 & 16 & 256 & 3 & 941 & 10.8 & 8 & - \\
+\hline
+Segment & BTHOWeN Variação 6 & 10 & 14 & 512 & 4 & 939 & 8.10 & 2 & - \\
+\hline
+Segment & BTHOWeN Variação 7 & 9 & 20 & 1024 & 2 & 937 & 23.7 & 1 & - \\
+\hline
+Segment & BTHOWeN Variação 8 & 15 & 15 & 256 & 4 & 936 & 9.8 & 1 & - \\
+\hline
+Segment & BTHOWeN Variação 9 & 9 & 32 & 2048 & 4 & 936 & 34.9 & 1 & - \\
+\hline
+\end{longtable}
+
+\begin{longtable}{|c|c|c|c|c|c|c|c|c|c|}
+\caption{Parâmetros e métricas do dataset Shuttle} \\
+\hline
+\textbf{Dataset} & \textbf{Config Type} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Melhor Bleaching} & \textbf{Execução} \\
+\hline
+Shuttle & Referência Bloom WiSARD & N/A & N/A & N/A & N/A & 868 & N/A & N/A & - \\
+\hline
+Shuttle & Referência BTHOWeN README & 9 & 27 & 1024 & 2 & 868 & N/A & N/A & - \\
+\hline
+Shuttle & BTHOWeN Base Estudo & 9 & 27 & 1024 & 2 & 0 & 0 & 0 & 0 \\
+\hline
+Shuttle & BTHOWeN Variação 1.1 & 11 & 29 & 1024 & 2 & 999 & 0.11 & 1 & - \\
+\hline
+Shuttle & BTHOWeN Variação 1.2 & 11 & 29 & 1024 & 2 & 998 & 0.17 & 1 & - \\
+\hline
+Shuttle & BTHOWeN Variação 2 & 11 & 25 & 1024 & 3 & 999 & 0.10 & 1 & - \\
+\hline
+Shuttle & BTHOWeN Variação 3 & 8 & 27 & 1024 & 1 & 998 & 0.21 & 4 & - \\
+\hline
+Shuttle & BTHOWeN Variação 4 & 9 & 23 & 512 & 3 & 998 & 0.21 & 8 & - \\
+\hline
+Shuttle & BTHOWeN Variação 5 & 8 & 23 & 2048 & 1 & 998 & 0.70 & 1 & - \\
+\hline
+Shuttle & BTHOWeN Variação 6 & 7 & 27 & 1024 & 2 & 989 & 2.55 & 5 & - \\
+\hline
+Shuttle & BTHOWeN Variação 8 & 11 & 27 & 1024 & 2 & 976 & 4.99 & 276 & - \\
+\hline
+\end{longtable}
+
+\begin{longtable}{|c|c|c|c|c|c|c|c|c|c|}
+\caption{Parâmetros e métricas do dataset Vehicle} \\
+\hline
+\textbf{Dataset} & \textbf{Config Type} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Melhor Bleaching} & \textbf{Execução} \\
+\hline
+Wine & Referência Bloom WiSARD & N/A & N/A & N/A & N/A & 926 & N/A & N/A & - \\
+\hline
+Vehicle & Referência BTHOWeN README & 16 & 16 & 256 & 3 & 662 & N/A & N/A & - \\
+\hline
+Vehicle & BTHOWeN Base Estudo & 16 & 16 & 256 & 3 & N/A & N/A & N/A & N/A \\
+\hline
+Vehicle & BTHOWeN Variação 1 & 14 & 14 & 512 & 4 & 755 & 32.1 & 1 & - \\
+\hline
+Vehicle & BTHOWeN Variação 11 & 15 & 12 & 256 & 2 & 755 & 20.2 & 1 & - \\
+\hline
+Vehicle & BTHOWeN Variação 19 & 18 & 16 & 512 & 2 & 748 & 30.3 & 1 & - \\
+\hline
+Vehicle & BTHOWeN Variação 9 & 18 & 18 & 512 & 3 & 737 & 25.5 & 1 & - \\
+\hline
+Vehicle & BTHOWeN Variação 18 & 16 & 14 & 512 & 2 & 734 & 20.2 & 1 & - \\
+\hline
+Vehicle & BTHOWeN Variação 10 & 15 & 16 & 512 & 3 & 726 & 32.8 & 1 & - \\
+\hline
+Vehicle & BTHOWeN Variação 15 & 14 & 12 & 512 & 3 & 726 & 27.5 & 1 & - \\
+\hline
+\end{longtable}
+
+\begin{longtable}{|c|c|c|c|c|c|c|c|c|c|}
+\caption{Parâmetros e métricas do dataset Vowel} \\
+\hline
+\textbf{Dataset} & \textbf{Config Type} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Melhor Bleaching} & \textbf{Execução} \\
+\hline
+Vowel & Referência Bloom WiSARD & N/A & N/A & N/A & N/A & 876 & N/A & N/A & - \\
+\hline
+Vowel & Referência BTHOWeN & 15 & 15 & 256 & 4 & 876 & N/A & N/A & - \\
+\hline
+Vowel & BTHOWeN Base Estudo & 15 & 15 & 256 & 4 & 0 & 0 & 0 & 0 \\
+\hline
+Vowel & BTHOWeN Variação 16 & 15 & 13 & 512 & 5 & 924 & 24.4 & 1 & - \\
+\hline
+Vowel & BTHOWeN Variação 8 & 16 & 11 & 256 & 3 & 918 & 21.8 & 1 & - \\
+\hline
+Vowel & BTHOWeN Variação 9 & 16 & 11 & 256 & 5 & 918 & 0 & 0 & - \\
+\hline
+Vowel & BTHOWeN Variação 19 & 17 & 11 & 512 & 5 & 918 & 23.0 & 1 & - \\
+\hline
+Vowel & BTHOWeN Variação 18 & 14 & 11 & 128 & 3 & 912 & 28.8 & 1 & - \\
+\hline
+Vowel & BTHOWeN Variação 17 & 16 & 13 & 512 & 5 & 909 & 0 & 0 & - \\
+\hline
+Vowel & BTHOWeN Variação 5 & 16 & 17 & 256 & 5 & 906 & 0 & 0 & - \\
+\hline
+\end{longtable}
+
+\begin{longtable}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+\caption{Parâmetros e métricas do dataset MNIST} \\
+\hline
+\textbf{Dataset} & \textbf{Config Type} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Melhor Bleaching} & \textbf{Execução} & \textbf{Encoding bits} & \textbf{Dropout} \\
+\hline
+MNIST & ULEEN Base Estudo & 6 & 49 & 8192 & 4 & 952 & N/A & N/A & N/A &  &  \\
+\hline
+MNIST & Referência BTHOWeN & 2 & 28 & 1024 & 2 & 934 & N/A & N/A & N/A &  &  \\
+\hline
+MNIST & BTHOWeN Base Estudo & 2 & 28 & 1024 & 2 & 929 & 1.61 & 8 & - &  &  \\
+\hline
+MNIST & BTHOWeN Variação 1 & 16 & 16 & 256 & 3 & 915 & N/A & N/A & - &  &  \\
+\hline
+MNIST & BTHOWeN Variação 2 & 15 & 15 & 256 & 4 & 913 & N/A & N/A & - &  &  \\
+\hline
+MNIST & BTHOWeN Variação 3 & 9 & 27 & 1024 & 2 & 933 & N/A & N/A & - &  &  \\
+\hline
+MNIST & BTHOWeN Variação 4 & 4 & 16 & 512 & 2 & 918 & 2.1 & 16 & - &  &  \\
+\hline
+MNIST & BTHOWeN Variação 5 & 8 & 20 & 512 & 3 & 921 & N/A & N/A & - &  &  \\
+\hline
+MNIST & BTHOWeN Variação 6 & 4 & 24 & 256 & 2 & 916 & N/A & N/A & - &  &  \\
+\hline
+MNIST & BTHOWeN Variação 7 & 8 & 32 & 2048 & 4 & 943 & 0.36 & 6 & - &  &  \\
+\hline
+\end{longtable}
+
+\subsection{Resultados agregados}
+
+\ldots
+
+\section{Conclusão}
+
+\ldots
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}
