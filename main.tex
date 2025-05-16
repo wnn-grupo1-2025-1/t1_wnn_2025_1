@@ -140,6 +140,14 @@ Funcionamento \cite{santiago2020, susskind2022}:
 
 A técnica de bleaching permite ao modelo distinguir padrões frequentes e relevantes em detrimento de ocorrências aleatórias e ruidosas, melhorando a capacidade de generalização do modelo \cite{santiago2020}.
 
+\subsection{Escolha dos Hiperparâmetros}
+
+A seleção de hiperparâmetros para o BTHOWeN segue uma abordagem iterativa de força bruta que explora sistematicamente o espaço de hiperparâmetros. Partindo de configurações baseline para cada dataset, o processo altera um hiperparâmetro por vez, mantendo os demais constantes, e avalia o impacto na performance do modelo. Para cada parâmetro, múltiplos valores são testados: cinco variações para bits\_per\_input (baseline ± 1, baseline ± 2, baseline + 3), seis para filter\_inputs (baseline ± 2, baseline ± 4, baseline ± 6), cinco para filter\_entries (múltiplos do baseline, ajustados para potências de 2) e quatro para filter\_hashes (baseline - 1 até baseline + 2).
+
+O processo segue uma estratégia greedy, onde após avaliar todas as variações de um hiperparâmetro, o valor que produz a maior acurácia é selecionado e fixado para os experimentos subsequentes. Por exemplo, primeiro determinamos o melhor valor para bits\_per\_input, fixamos esse valor, e prosseguimos para otimizar filter\_inputs com o valor já otimizado de bits\_per\_input, e assim por diante. Esta abordagem sequencial, embora suscetível a ótimos locais, oferece eficiência computacional e facilita a análise do impacto individual de cada hiperparâmetro na performance do modelo.
+
+Para mitigar o risco de convergência para ótimos locais, o processo é repetido com múltiplos pontos de partida para cada dataset. As configurações candidatas resultantes são submetidas a validação cruzada de 5-fold para estimar sua performance real e estabilidade. A configuração final é selecionada com base no melhor equilíbrio entre acurácia média e robustez. Após definir os valores estruturais ótimos, um processo adicional determina o valor ideal de bleaching, testando valores de 1 a 20 e selecionando aquele que oferece o melhor compromisso entre acurácia e taxa de empates. Esta metodologia sistemática e exaustiva, embora computacionalmente mais intensiva que métodos de otimização sofisticados, garante uma exploração abrangente do espaço de hiperparâmetros e produz configurações que equilibram eficazmente acurácia, eficiência de memória e estabilidade.
+
 \subsection{Datasets}
 
 \subsubsection{MNIST}
@@ -574,6 +582,34 @@ As linhas de referência indicam:
 
 
 \subsection{Resultados agregados}
+
+Apresentamos na Tabela 1 a comparação de acurácia e percentual de empates entre a implementação de referência (Bloom WiSARD), nossa configuração base e a melhor configuração alcançada para cada dataset.
+
+{\small
+\begin{table}[H]
+\caption{Comparação de acurácia (Ac, $\times10^{-3}$) e percentual de empates (Emp, \%) para cada dataset. Ref = implementação de referência (Bloom WiSARD), Base = configuração inicial, Melhor = melhor configuração obtida. Valores em \textbf{negrito} indicam o melhor resultado por métrica na linha.}
+\label{tab:acuracia-empates}
+\renewcommand{\arraystretch}{1.2}
+\setlength{\tabcolsep}{8pt}
+\begin{center}
+\begin{tabular}{l@{\hspace{4pt}}c@{\hspace{4pt}}c@{\hspace{4pt}}c@{\hspace{4pt}}c@{\hspace{4pt}}c@{\hspace{4pt}}c}
+\toprule
+\textbf{Dataset} & \textbf{Ac Ref} & \textbf{Ac Base} & \textbf{Ac Melhor} & \textbf{Emp Ref} & \textbf{Emp Base} & \textbf{Emp Melhor} \\
+\midrule
+Iris     & 960           & \textbf{980}    & 980           & 2             & 12            & \textbf{0}     \\
+Ecoli    & 799           & 786             & \textbf{848}  & --            & \textbf{8.9}  & 10.7           \\
+Glass    & \textbf{726}  & 577             & 676           & --            & 39.4          & \textbf{28.2}  \\
+Letter   & 848           & 734             & \textbf{884}  & --            & 18.6          & \textbf{3.9}   \\
+Wine     & 926           & 983             & \textbf{1000} & --            & --            & \textbf{1.7}   \\
+Segment  & --            & 925             & \textbf{944}  & --            & --            & \textbf{6.49}  \\
+Shuttle  & 868           & 0               & \textbf{999}  & --            & 0             & \textbf{0.1}   \\
+Vehicle  & \textbf{926}  & --              & 755           & --            & --            & \textbf{20.2}  \\
+Vowel    & 876           & 0               & \textbf{924}  & --            & 0             & \textbf{24.4}  \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+}
 
 Na tabela a seguir, apresentamos os parâmetros ótimos identificados para cada dataset, junto com as métricas de desempenho obtidas:
 

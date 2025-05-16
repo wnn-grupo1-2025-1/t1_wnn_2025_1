@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.5)  16 MAY 2025 15:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.5)  16 MAY 2025 15:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -607,27 +607,17 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 [3]
 
 [4]
-Overfull \hbox (27.23846pt too wide) in paragraph at lines 213--234
+Overfull \hbox (27.23846pt too wide) in paragraph at lines 221--242
 [][] 
  []
 
 
-Overfull \hbox (27.23846pt too wide) in paragraph at lines 238--259
+Overfull \hbox (27.23846pt too wide) in paragraph at lines 246--267
 [][] 
  []
 
 
-Overfull \hbox (27.23846pt too wide) in paragraph at lines 263--284
-[][] 
- []
-
-
-Overfull \hbox (27.23846pt too wide) in paragraph at lines 288--313
-[][] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1221) has occurred while \output is active []
 
 
 
@@ -635,115 +625,25 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.314 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.314 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{table.3}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.314 
+l.268 
       ]
-Overfull \hbox (27.23846pt too wide) in paragraph at lines 317--342
+Overfull \hbox (27.23846pt too wide) in paragraph at lines 271--292
 [][] 
  []
 
 
-Overfull \hbox (27.23846pt too wide) in paragraph at lines 346--375
+Overfull \hbox (27.23846pt too wide) in paragraph at lines 296--321
 [][] 
  []
 
 
-Overfull \hbox (27.23846pt too wide) in paragraph at lines 379--404
+Overfull \hbox (27.23846pt too wide) in paragraph at lines 325--350
 [][] 
  []
 
 
-Overfull \hbox (27.23846pt too wide) in paragraph at lines 408--431
+Overfull \hbox (27.23846pt too wide) in paragraph at lines 354--383
 [][] 
- []
-
-
-
-[6
-pdfTeX warning (ext4): destination with the same identifier (name{table.4}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.432 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{table.5}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.432 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{table.6}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.432 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{table.7}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.432 
-      ]
-Overfull \hbox (27.23846pt too wide) in paragraph at lines 435--458
-[][] 
- []
-
-
-Overfull \hbox (6.31302pt too wide) in paragraph at lines 462--485
-[][] 
- []
-
-<figures/image1.png, id=182, 658.3797pt x 408.3255pt>
-File: figures/image1.png Graphic file (type png)
-<use figures/image1.png>
-Package pdftex.def Info: figures/image1.png  used on input line 507.
-(pdftex.def)             Requested size: 437.2359pt x 271.17166pt.
-
-Overfull \hbox (39.75092pt too wide) in paragraph at lines 507--508
- [][] 
- []
-
-
-
-[7
-pdfTeX warning (ext4): destination with the same identifier (name{table.8}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.511 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{table.9}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.511 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{table.10}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.511 
-      ]
-<figures/image3.png, id=192, 661.9932pt x 408.3255pt>
-File: figures/image3.png Graphic file (type png)
-<use figures/image3.png>
-Package pdftex.def Info: figures/image3.png  used on input line 514.
-(pdftex.def)             Requested size: 437.2359pt x 269.70126pt.
-
-Overfull \hbox (39.75092pt too wide) in paragraph at lines 514--515
- [][] 
- []
-
-<figures/image5.png, id=193, 658.3797pt x 408.3255pt>
-File: figures/image5.png Graphic file (type png)
-<use figures/image5.png>
-Package pdftex.def Info: figures/image5.png  used on input line 521.
-(pdftex.def)             Requested size: 437.2359pt x 271.17166pt.
-
-Overfull \hbox (39.75092pt too wide) in paragraph at lines 521--522
- [][] 
  []
 
 
@@ -751,34 +651,119 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[8
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
+[6
+pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.525 
+l.384 
       
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{table.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.525 
-       <./figures/image1.png> <./figures/image3.png>]
-<figures/image6.png, id=202, 660.5478pt x 408.3255pt>
-File: figures/image6.png Graphic file (type png)
-<use figures/image6.png>
-Package pdftex.def Info: figures/image6.png  used on input line 528.
-(pdftex.def)             Requested size: 437.2359pt x 270.28693pt.
+l.384 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{table.4}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.384 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{table.5}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.384 
+      ]
+Overfull \hbox (27.23846pt too wide) in paragraph at lines 387--412
+[][] 
+ []
 
-Overfull \hbox (39.75092pt too wide) in paragraph at lines 528--529
+
+Overfull \hbox (27.23846pt too wide) in paragraph at lines 416--439
+[][] 
+ []
+
+
+Overfull \hbox (27.23846pt too wide) in paragraph at lines 443--466
+[][] 
+ []
+
+
+Overfull \hbox (6.31302pt too wide) in paragraph at lines 470--493
+[][] 
+ []
+
+
+
+[7
+pdfTeX warning (ext4): destination with the same identifier (name{table.6}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.495 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{table.7}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.495 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{table.8}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.495 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{table.9}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.495 
+      ]
+<figures/image1.png, id=193, 658.3797pt x 408.3255pt>
+File: figures/image1.png Graphic file (type png)
+<use figures/image1.png>
+Package pdftex.def Info: figures/image1.png  used on input line 515.
+(pdftex.def)             Requested size: 437.2359pt x 271.17166pt.
+
+Overfull \hbox (39.75092pt too wide) in paragraph at lines 515--516
  [][] 
  []
 
-<figures/image12.png, id=203, 660.5478pt x 408.3255pt>
-File: figures/image12.png Graphic file (type png)
-<use figures/image12.png>
-Package pdftex.def Info: figures/image12.png  used on input line 535.
+<figures/image3.png, id=195, 661.9932pt x 408.3255pt>
+File: figures/image3.png Graphic file (type png)
+<use figures/image3.png>
+Package pdftex.def Info: figures/image3.png  used on input line 522.
+(pdftex.def)             Requested size: 437.2359pt x 269.70126pt.
+
+Overfull \hbox (39.75092pt too wide) in paragraph at lines 522--523
+ [][] 
+ []
+
+
+
+[8
+pdfTeX warning (ext4): destination with the same identifier (name{table.10}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.526 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.526 
+       <./figures/image1.png>]
+<figures/image5.png, id=203, 658.3797pt x 408.3255pt>
+File: figures/image5.png Graphic file (type png)
+<use figures/image5.png>
+Package pdftex.def Info: figures/image5.png  used on input line 529.
+(pdftex.def)             Requested size: 437.2359pt x 271.17166pt.
+
+Overfull \hbox (39.75092pt too wide) in paragraph at lines 529--530
+ [][] 
+ []
+
+<figures/image6.png, id=204, 660.5478pt x 408.3255pt>
+File: figures/image6.png Graphic file (type png)
+<use figures/image6.png>
+Package pdftex.def Info: figures/image6.png  used on input line 536.
 (pdftex.def)             Requested size: 437.2359pt x 270.28693pt.
 
-Overfull \hbox (39.75092pt too wide) in paragraph at lines 535--536
+Overfull \hbox (39.75092pt too wide) in paragraph at lines 536--537
  [][] 
  []
 
@@ -788,69 +773,33 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [9
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.540 
+      
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.539 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.539 
-       <./figures/image5.png> <./figures/image6.png>]
-<figures/image2.png, id=212, 643.203pt x 408.3255pt>
+l.540 
+       <./figures/image3.png> <./figures/image5.png>]
+<figures/image12.png, id=213, 660.5478pt x 408.3255pt>
+File: figures/image12.png Graphic file (type png)
+<use figures/image12.png>
+Package pdftex.def Info: figures/image12.png  used on input line 543.
+(pdftex.def)             Requested size: 437.2359pt x 270.28693pt.
+
+Overfull \hbox (39.75092pt too wide) in paragraph at lines 543--544
+ [][] 
+ []
+
+<figures/image2.png, id=214, 643.203pt x 408.3255pt>
 File: figures/image2.png Graphic file (type png)
 <use figures/image2.png>
-Package pdftex.def Info: figures/image2.png  used on input line 542.
+Package pdftex.def Info: figures/image2.png  used on input line 550.
 (pdftex.def)             Requested size: 437.2359pt x 277.57666pt.
 
-Overfull \hbox (39.75092pt too wide) in paragraph at lines 542--543
- [][] 
- []
-
-<figures/image9.png, id=213, 652.5981pt x 408.3255pt>
-File: figures/image9.png Graphic file (type png)
-<use figures/image9.png>
-Package pdftex.def Info: figures/image9.png  used on input line 549.
-(pdftex.def)             Requested size: 437.2359pt x 273.57042pt.
-
-Overfull \hbox (39.75092pt too wide) in paragraph at lines 549--550
- [][] 
- []
-
-
-Underfull \vbox (badness 6236) has occurred while \output is active []
-
-
-
-[10
-pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.553 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.553 
-       <./figures/image12.png> <./figures/image2.png>]
-<figures/image7.png, id=222, 667.7748pt x 408.3255pt>
-File: figures/image7.png Graphic file (type png)
-<use figures/image7.png>
-Package pdftex.def Info: figures/image7.png  used on input line 556.
-(pdftex.def)             Requested size: 437.2359pt x 267.3648pt.
-
-Overfull \hbox (39.75092pt too wide) in paragraph at lines 556--557
- [][] 
- []
-
-<figures/image8.png, id=223, 658.3797pt x 408.3255pt>
-File: figures/image8.png Graphic file (type png)
-<use figures/image8.png>
-Package pdftex.def Info: figures/image8.png  used on input line 563.
-(pdftex.def)             Requested size: 437.2359pt x 271.17166pt.
-
-Overfull \hbox (39.75092pt too wide) in paragraph at lines 563--564
+Overfull \hbox (39.75092pt too wide) in paragraph at lines 550--551
  [][] 
  []
 
@@ -859,112 +808,136 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[11
-pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has been already used, duplicate ignored
+[10
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.567 
+l.554 
       
-pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.567 
-       <./figures/image9.png> <./figures/image7.png>]
-<figures/image11.png, id=232, 646.0938pt x 408.3255pt>
-File: figures/image11.png Graphic file (type png)
-<use figures/image11.png>
-Package pdftex.def Info: figures/image11.png  used on input line 570.
-(pdftex.def)             Requested size: 437.2359pt x 276.33678pt.
+l.554 
+       <./figures/image6.png> <./figures/image12.png>]
+<figures/image9.png, id=223, 652.5981pt x 408.3255pt>
+File: figures/image9.png Graphic file (type png)
+<use figures/image9.png>
+Package pdftex.def Info: figures/image9.png  used on input line 557.
+(pdftex.def)             Requested size: 437.2359pt x 273.57042pt.
 
-Overfull \hbox (39.75092pt too wide) in paragraph at lines 570--571
+Overfull \hbox (39.75092pt too wide) in paragraph at lines 557--558
  [][] 
  []
 
-./main.tex:612: Misplaced \noalign.
-\hline ->\noalign 
-                  {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
-l.612 \hline
-            
-I expect to see \noalign only after the \cr of
-an alignment. Proceed, and I'll ignore this case.
+<figures/image7.png, id=224, 667.7748pt x 408.3255pt>
+File: figures/image7.png Graphic file (type png)
+<use figures/image7.png>
+Package pdftex.def Info: figures/image7.png  used on input line 564.
+(pdftex.def)             Requested size: 437.2359pt x 267.3648pt.
 
-./main.tex:612: You can't use `\hrule' here except with leaders.
-\hline ->\noalign {\ifnum 0=`}\fi \hrule 
-                                         \@height \arrayrulewidth \futurelet...
-l.612 \hline
-            
-To put a horizontal rule in an hbox or an alignment,
-you should use \leaders or \hrulefill (see The TeXbook).
-
-./main.tex:612: Missing number, treated as zero.
-<to be read again> 
-                   \futurelet 
-l.612 \hline
-            
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./main.tex:612: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \futurelet 
-l.612 \hline
-            
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-
-Overfull \hbox (144.51872pt too wide) in paragraph at lines 585--614
- [] 
+Overfull \hbox (39.75092pt too wide) in paragraph at lines 564--565
+ [][] 
  []
 
 
-Underfull \vbox (badness 6675) has occurred while \output is active []
+Underfull \vbox (badness 3118) has occurred while \output is active []
+
+
+
+[11
+pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.568 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.568 
+       <./figures/image2.png> <./figures/image9.png>]
+<figures/image8.png, id=233, 658.3797pt x 408.3255pt>
+File: figures/image8.png Graphic file (type png)
+<use figures/image8.png>
+Package pdftex.def Info: figures/image8.png  used on input line 571.
+(pdftex.def)             Requested size: 437.2359pt x 271.17166pt.
+
+Overfull \hbox (39.75092pt too wide) in paragraph at lines 571--572
+ [][] 
+ []
+
+<figures/image11.png, id=234, 646.0938pt x 408.3255pt>
+File: figures/image11.png Graphic file (type png)
+<use figures/image11.png>
+Package pdftex.def Info: figures/image11.png  used on input line 578.
+(pdftex.def)             Requested size: 437.2359pt x 276.33678pt.
+
+Overfull \hbox (39.75092pt too wide) in paragraph at lines 578--579
+ [][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
 [12
+pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.582 
+      
 pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.615 \end{table}
-                 
+l.582 
+       <./figures/image7.png> <./figures/image8.png>]
+Overfull \hbox (18.55087pt too wide) in paragraph at lines 621--637
+ [] 
+ []
+
+
+Underfull \vbox (badness 1082) has occurred while \output is active []
+
+
+
+[13
 pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.615 \end{table}
-                  <./figures/image8.png> <./figures/image11.png>] (./main.bbl)
-
-[13
+l.640 
+      
 pdfTeX warning (ext4): destination with the same identifier (name{table.11}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.625 \end{document}
+l.640 
+       <./figures/image11.png>] (./main.bbl)
+
+[14
+pdfTeX warning (ext4): destination with the same identifier (name{table.12}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.648 \end{document}
                     ] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: CA9DDD170661BC39A9F3A650B3BAE58C;3495.
+(rerunfilecheck)             Checksum: EC47475F16537A3C5B1F17C707820E47;3697.
  ) 
 Here is how much of TeX's memory you used:
- 17263 strings out of 474662
- 284992 string characters out of 5751110
- 769476 words of memory out of 5000000
- 40020 multiletter control sequences out of 15000+600000
+ 17270 strings out of 474662
+ 285095 string characters out of 5751110
+ 767829 words of memory out of 5000000
+ 40024 multiletter control sequences out of 15000+600000
  568054 words of font info for 55 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 75i,14n,79p,1001b,552s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </Users/miguel/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk> </Users/miguel/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/tcbx1000.600pk> </Users/miguel/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk> </Users/miguel/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk> </Users/miguel/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </Users/miguel/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </Users/miguel/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </Users/miguel/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on main.pdf (13 pages, 372633 bytes).
+ 75i,14n,79p,1001b,551s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ </Users/miguel/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk> </Users/miguel/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/tcbx1000.600pk> </Users/miguel/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk> </Users/miguel/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk> </Users/miguel/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </Users/miguel/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </Users/miguel/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </Users/miguel/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on main.pdf (14 pages, 399753 bytes).
 PDF statistics:
- 562 PDF objects out of 1000 (max. 8388607)
- 260 compressed objects within 3 object streams
- 67 named destinations out of 1000 (max. 500000)
- 259 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 586 PDF objects out of 1000 (max. 8388607)
+ 277 compressed objects within 3 object streams
+ 70 named destinations out of 1000 (max. 500000)
+ 267 words of extra memory for PDF output out of 10000 (max. 10000000)
 
