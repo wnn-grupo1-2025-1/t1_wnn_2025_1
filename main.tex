@@ -23,6 +23,7 @@
 \usepackage{amsfonts}       % blackboard math symbols
 \usepackage{amsmath}        % math equations
 \usepackage{amssymb}        % math symbols
+\usepackage{float}
 \usepackage{mathtools}      % math tools
 \usepackage{amsthm}         % theorem environments
 \usepackage{nicefrac}       % compact symbols for 1/2, etc.
@@ -483,9 +484,146 @@ Var. 7 & 8 & 32 & 2048 & 4 & 943 & 0.36 & 6 \\
 \end{table}
 }
 
+\subsection{Gráficos}
+
+Nas figuras a seguir, apresentamos gráficos de dispersão que ilustram a relação entre taxa de erro (1 - acurácia) e taxa de empates para diferentes configurações do BTHOWeN em cada dataset. Os pontos são categorizados em:
+
+\begin{itemize}
+  \item \textbf{Melhor ponto}: Configuração que obteve o melhor desempenho (azul)
+  \item \textbf{Melhor que as bases}: Configurações que superaram a linha base (verde)
+  \item \textbf{Demais variações}: Outras configurações testadas (vermelho)
+\end{itemize}
+
+As linhas de referência indicam:
+\begin{itemize}
+  \item \textbf{Referência Bloom WiSARD}: Desempenho da implementação de referência do Bloom WiSARD (linha pontilhada)
+  \item \textbf{BTHOWeN Base Estudo}: Desempenho da configuração base do BTHOWeN utilizada como ponto de partida (linha tracejada)
+\end{itemize}
+
 \subsection{Resultados agregados}
 
-\ldots
+Na tabela a seguir, apresentamos os parâmetros ótimos identificados para cada dataset, junto com as métricas de desempenho obtidas:
+
+{\small
+\begin{table}[h!]
+\caption{Parâmetros ótimos para cada dataset}
+\renewcommand{\arraystretch}{1.2}
+\begin{center}
+\begin{tabular}{lccccccc}
+\hline
+\textbf{Dataset} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Melhor Bleaching} & \textbf{Execução} & \textbf{Empates (\%)} \\
+\hline
+Iris & 3 & \textcolor{blue}{2} & \textcolor{green}{256} & \textcolor{blue}{2} & 2 & \textcolor{red}{1} & \textcolor{red}{0} \\
+Ecoli & \textcolor{red}{3} & \textcolor{green}{256} & \textcolor{green}{3} & 10 & \textcolor{red}{1} & 1 & \textcolor{green}{10.7} \\
+Glass & \textcolor{green}{4} & \textcolor{green}{256} & \textcolor{green}{4} & \textcolor{green}{10} & 1 & 1 & \textcolor{red}{28.2} \\
+Letter & \textcolor{green}{15} & \textcolor{green}{256} & \textcolor{green}{5} & \textcolor{green}{35} & \textcolor{red}{3} & 1 & \textcolor{red}{3.9} \\
+Wine & \textcolor{green}{10} & 13 & \textcolor{green}{256} & \textcolor{green}{4} & 1 & -- & 1.7 \\
+Segment & \textcolor{green}{10} & \textcolor{red}{18} & 1024 & \textcolor{green}{3} & \textcolor{green}{2} & -- & 6.49 \\
+Shuttle & \textcolor{green}{11} & \textcolor{red}{25} & 1024 & \textcolor{green}{3} & \textcolor{red}{1} & -- & \textcolor{green}{0.1} \\
+Vehicle & \textcolor{red}{15} & \textcolor{red}{12} & 256 & \textcolor{blue}{2} & 1 & -- & 20.2 \\
+Vowel & \textcolor{red}{15} & \textcolor{red}{13} & \textcolor{green}{512} & \textcolor{green}{5} & 1 & -- & \textcolor{green}{24.4} \\
+MNIST & \textcolor{green}{6} & \textcolor{green}{49} & \textcolor{green}{8192} & \textcolor{green}{4} & -- & -- & -- \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+}
+
+Também apresentamos uma comparação dos resultados entre as diferentes implementações:
+
+{\small
+\begin{table}[h!]
+\caption{Comparação de acurácia e empates entre implementações}
+\renewcommand{\arraystretch}{1.2}
+\begin{center}
+\begin{tabular}{lcccccc}
+\hline
+\textbf{Dataset} & \textbf{Acurácia Ref} & \textbf{Acurácia Base} & \textbf{Acurácia Melhor} & \textbf{Empates Ref} & \textbf{Empates Base} & \textbf{Empates Melhor} \\
+\hline
+Iris & 960 & \textbf{980} & \textbf{980} & 2 & 12 & \textbf{0} \\
+Ecoli & 799 & 786 & \textbf{848} & -- & 8.9 & 10.7 \\
+Glass & \textbf{726} & 577 & 676 & -- & 39.4 & \textbf{28.2} \\
+Letter & 848 & 734 & \textbf{884} & -- & 18.6 & \textbf{3.9} \\
+Wine & 926 & 983 & \textbf{1000} & -- & -- & \textbf{1.7} \\
+Segment & -- & 925 & \textbf{944} & -- & -- & 6.49 \\
+Shuttle & 868 & 0 & \textbf{999} & -- & 0 & 0.1 \\
+Vehicle & \textbf{926} & -- & 755 & -- & -- & 20.2 \\
+Vowel & 876 & 0 & \textbf{924} & -- & 0 & 24.4 \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.95\textwidth]{figures/image1.png}
+\caption{Relação entre erro e empates para o dataset Iris}
+\label{fig:iris}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.95\textwidth]{figures/image3.png}
+\caption{Relação entre erro e empates para o dataset Wine}
+\label{fig:wine}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.95\textwidth]{figures/image5.png}
+\caption{Relação entre erro e empates para o dataset Glass}
+\label{fig:glass}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.95\textwidth]{figures/image6.png}
+\caption{Relação entre erro e empates para o dataset Ecoli}
+\label{fig:ecoli}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.95\textwidth]{figures/image12.png}
+\caption{Relação entre erro e empates para o dataset Letter}
+\label{fig:letter}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.95\textwidth]{figures/image2.png}
+\caption{Relação entre erro e empates para o dataset Segment}
+\label{fig:segment}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.95\textwidth]{figures/image9.png}
+\caption{Relação entre erro e empates para o dataset Shuttle}
+\label{fig:shuttle}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.95\textwidth]{figures/image7.png}
+\caption{Relação entre erro e empates para o dataset Vehicle}
+\label{fig:vehicle}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.95\textwidth]{figures/image8.png}
+\caption{Relação entre erro e empates para o dataset Vowel}
+\label{fig:vowel}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.95\textwidth]{figures/image11.png}
+\caption{Relação entre erro e empates para o dataset MNIST}
+\label{fig:mnist}
+\end{figure}
 
 \section{Conclusão}
 
