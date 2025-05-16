@@ -26,7 +26,7 @@
 \usepackage{float}
 \usepackage{mathtools}      % math tools
 \usepackage{amsthm}         % theorem environments
-\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{nicefrac}       % compact symbols for 1.1, etc.
 \usepackage[protrusion=false,expansion=false]{microtype} % microtypography without font expansion
 \usepackage{xcolor}         % colors
 \usepackage{graphicx}       % figures
@@ -117,7 +117,7 @@ O número de funções hash tem uma relação complexa com a taxa de falsos posi
 
 \subsubsection{Número de Filtros de Bloom (FE - Filter Entries)}
 
-O parâmetro FE define o número de entradas em cada filtro de Bloom, ou seja, o tamanho do vetor utilizado para armazenar os padrões aprendidos \cite{santiago2020}. Este tamanho é uma potência de 2 (por exemplo, 128, 256, 512, 1024, 2048, etc.).
+O parâmetro FE define o número de entradas em cada filtro de Bloom, ou seja, o tamanho do vetor utilizado para armazenar os padrões aprendidos \cite{santiago2020}. Este tamanho é uma potência de 2 (por exemplo, 128, 256, 512, 1.14, 2048, etc.).
 
 Aumentar o tamanho do filtro reduz a probabilidade de colisões e, consequentemente, a taxa de falsos positivos, mas também aumenta a memória necessária \cite{santiago2020, susskind2022}. A escolha deste parâmetro afeta diretamente o equilíbrio entre precisão e eficiência de memória do modelo.
 
@@ -323,7 +323,7 @@ Base & 9 & 13 & 128 & 3 & 983 & N/A & 1 \\
 \hline
 Var. 1.1 & 10 & 13 & 256 & 4 & 1.000 & 1.7 & 1 \\
 \hline
-Var. 1.2 & 10 & 13 & 256 & 4 & 949 & 3.39 & 1 \\
+Var. 1.1 & 10 & 13 & 256 & 4 & 949 & 3.39 & 1 \\
 \hline
 Var. 2 & 11 & 9 & 256 & 4 & 983 & 1.69 & 1 \\
 \hline
@@ -348,15 +348,15 @@ Var. 7 & 7 & 9 & 256 & 4 & 932 & 5.08 & 1 \\
 \hline
 Bloom WiSARD & N/A & N/A & N/A & N/A & N/A & N/A & N/A \\
 \hline
-Base & 9 & 27 & 1024 & 2 & 925 & N/A & 1 \\
+Base & 9 & 27 & 1.14 & 2 & 925 & N/A & 1 \\
 \hline
 Var. 1 & 10 & 16 & 256 & 4 & 938 & 9.35 & 1 \\
 \hline
 Var. 2 & 8 & 20 & 512 & 3 & 924 & 9.24 & 1 \\
 \hline
-Var. 3.1 & 10 & 18 & 1024 & 3 & 942 & 8.57 & 2 \\
+Var. 3.1 & 10 & 18 & 1.14 & 3 & 942 & 8.57 & 2 \\
 \hline
-Var. 3.2 & 10 & 18 & 1024 & 3 & 944 & 6.49 & 2 \\
+Var. 3.2 & 10 & 18 & 1.14 & 3 & 944 & 6.49 & 2 \\
 \hline
 Var. 4 & 10 & 20 & 512 & 2 & 944 & 8.96 & 1 \\
 \hline
@@ -364,7 +364,7 @@ Var. 5 & 16 & 16 & 256 & 3 & 941 & 10.8 & 8 \\
 \hline
 Var. 6 & 10 & 14 & 512 & 4 & 939 & 8.10 & 2 \\
 \hline
-Var. 7 & 9 & 20 & 1024 & 2 & 937 & 23.7 & 1 \\
+Var. 7 & 9 & 20 & 1.14 & 2 & 937 & 23.7 & 1 \\
 \hline
 Var. 8 & 15 & 15 & 256 & 4 & 936 & 9.8 & 1 \\
 \hline
@@ -381,23 +381,23 @@ Var. 9 & 9 & 32 & 2048 & 4 & 936 & 34.9 & 1 \\
 \hline
 Bloom WiSARD & N/A & N/A & N/A & N/A & 868 & N/A & N/A \\
 \hline
-Base & 9 & 27 & 1024 & 2 & 0 & 0 & 0 \\
+Base & 9 & 27 & 1.14 & 2 & 0 & 0 & 0 \\
 \hline
-Var. 1.1 & 11 & 29 & 1024 & 2 & 999 & 0.11 & 1 \\
+Var. 1.1 & 11 & 29 & 1.14 & 2 & 999 & 0.11 & 1 \\
 \hline
-Var. 1.2 & 11 & 29 & 1024 & 2 & 998 & 0.17 & 1 \\
+Var. 1.1 & 11 & 29 & 1024 & 2 & 998 & 0.17 & 1 \\
 \hline
-Var. 2 & 11 & 25 & 1024 & 3 & 999 & 0.10 & 1 \\
+Var. 2 & 11 & 25 & 1.14 & 3 & 999 & 0.10 & 1 \\
 \hline
-Var. 3 & 8 & 27 & 1024 & 1 & 998 & 0.21 & 4 \\
+Var. 3 & 8 & 27 & 1.14 & 1 & 998 & 0.21 & 4 \\
 \hline
 Var. 4 & 9 & 23 & 512 & 3 & 998 & 0.21 & 8 \\
 \hline
 Var. 5 & 8 & 23 & 2048 & 1 & 998 & 0.70 & 1 \\
 \hline
-Var. 6 & 7 & 27 & 1024 & 2 & 989 & 2.55 & 5 \\
+Var. 6 & 7 & 27 & 1.14 & 2 & 989 & 2.55 & 5 \\
 \hline
-Var. 8 & 11 & 27 & 1024 & 2 & 976 & 4.99 & 276 \\
+Var. 8 & 11 & 27 & 1.14 & 2 & 976 & 4.99 & 276 \\
 \hline
 \end{tabular}
 \end{table}
@@ -462,15 +462,15 @@ Var. 5 & 16 & 17 & 256 & 5 & 906 & 0 & 0 \\
 \hline
 \textbf{Configuração} & \textbf{b} & \textbf{OWeN} & \textbf{FE} & \textbf{FH} & \textbf{Acurácia} & \textbf{Empates (\%)} & \textbf{Bleaching} \\
 \hline
-ULEEN & 6 & 49 & 8192 & 4 & 952 & N/A & N/A \\
+ULEEN & 6 & 49 & 81.1 & 4 & 952 & N/A & N/A \\
 \hline
-Base & 2 & 28 & 1024 & 2 & 929 & 1.61 & 8 \\
+Base & 2 & 28 & 1.14 & 2 & 929 & 1.61 & 8 \\
 \hline
 Var. 1 & 16 & 16 & 256 & 3 & 915 & N/A & N/A \\
 \hline
 Var. 2 & 15 & 15 & 256 & 4 & 913 & N/A & N/A \\
 \hline
-Var. 3 & 9 & 27 & 1024 & 2 & 933 & N/A & N/A \\
+Var. 3 & 9 & 27 & 1.14 & 2 & 933 & N/A & N/A \\
 \hline
 Var. 4 & 4 & 16 & 512 & 2 & 918 & 2.1 & 16 \\
 \hline
@@ -503,70 +503,70 @@ As linhas de referência indicam:
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth]{figures/image1.png}
+\includegraphics[width=1.1\textwidth]{figures/image1.png}
 \caption{Relação entre erro e empates para o dataset Iris}
 \label{fig:iris}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth]{figures/image3.png}
+\includegraphics[width=1.1\textwidth]{figures/image3.png}
 \caption{Relação entre erro e empates para o dataset Wine}
 \label{fig:wine}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth]{figures/image5.png}
+\includegraphics[width=1.1\textwidth]{figures/image5.png}
 \caption{Relação entre erro e empates para o dataset Glass}
 \label{fig:glass}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth]{figures/image6.png}
+\includegraphics[width=1.1\textwidth]{figures/image6.png}
 \caption{Relação entre erro e empates para o dataset Ecoli}
 \label{fig:ecoli}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth]{figures/image12.png}
+\includegraphics[width=1.1\textwidth]{figures/image12.png}
 \caption{Relação entre erro e empates para o dataset Letter}
 \label{fig:letter}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth]{figures/image2.png}
+\includegraphics[width=1.1\textwidth]{figures/image2.png}
 \caption{Relação entre erro e empates para o dataset Segment}
 \label{fig:segment}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth]{figures/image9.png}
+\includegraphics[width=1.1\textwidth]{figures/image9.png}
 \caption{Relação entre erro e empates para o dataset Shuttle}
 \label{fig:shuttle}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth]{figures/image7.png}
+\includegraphics[width=1.1\textwidth]{figures/image7.png}
 \caption{Relação entre erro e empates para o dataset Vehicle}
 \label{fig:vehicle}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth]{figures/image8.png}
+\includegraphics[width=1.1\textwidth]{figures/image8.png}
 \caption{Relação entre erro e empates para o dataset Vowel}
 \label{fig:vowel}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth]{figures/image11.png}
+\includegraphics[width=1.1\textwidth]{figures/image11.png}
 \caption{Relação entre erro e empates para o dataset MNIST}
 \label{fig:mnist}
 \end{figure}
@@ -579,7 +579,7 @@ Na tabela a seguir, apresentamos os parâmetros ótimos identificados para cada 
 {\small
 \begin{table}[H]
 \caption{Parâmetros ótimos para cada dataset}
-\renewcommand{\arraystretch}{1.2}
+\renewcommand{\arraystretch}{1.1}
 \begin{center}
 \begin{tabular}{lccccccc}
 \hline
@@ -590,11 +590,11 @@ Ecoli & \textcolor{red}{3} & \textcolor{green}{256} & \textcolor{green}{3} & 10 
 Glass & \textcolor{green}{4} & \textcolor{green}{256} & \textcolor{green}{4} & \textcolor{green}{10} & 1 & 1 & \textcolor{red}{28.2} \\
 Letter & \textcolor{green}{15} & \textcolor{green}{256} & \textcolor{green}{5} & \textcolor{green}{35} & \textcolor{red}{3} & 1 & \textcolor{red}{3.9} \\
 Wine & \textcolor{green}{10} & 13 & \textcolor{green}{256} & \textcolor{green}{4} & 1 & -- & 1.7 \\
-Segment & \textcolor{green}{10} & \textcolor{red}{18} & 1024 & \textcolor{green}{3} & \textcolor{green}{2} & -- & 6.49 \\
-Shuttle & \textcolor{green}{11} & \textcolor{red}{25} & 1024 & \textcolor{green}{3} & \textcolor{red}{1} & -- & \textcolor{green}{0.1} \\
+Segment & \textcolor{green}{10} & \textcolor{red}{18} & 1.14 & \textcolor{green}{3} & \textcolor{green}{2} & -- & 6.49 \\
+Shuttle & \textcolor{green}{11} & \textcolor{red}{25} & 1.14 & \textcolor{green}{3} & \textcolor{red}{1} & -- & \textcolor{green}{0.1} \\
 Vehicle & \textcolor{red}{15} & \textcolor{red}{12} & 256 & \textcolor{blue}{2} & 1 & -- & 20.2 \\
 Vowel & \textcolor{red}{15} & \textcolor{red}{13} & \textcolor{green}{512} & \textcolor{green}{5} & 1 & -- & \textcolor{green}{24.4} \\
-MNIST & \textcolor{green}{6} & \textcolor{green}{49} & \textcolor{green}{8192} & \textcolor{green}{4} & -- & -- & -- \\
+MNIST & \textcolor{green}{6} & \textcolor{green}{49} & \textcolor{green}{81.1} & \textcolor{green}{4} & -- & -- & -- \\
 \hline
 \end{tabular}
 \end{center}
