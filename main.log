@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.5)  16 MAY 2025 14:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.5)  16 MAY 2025 14:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -605,98 +605,84 @@ Overfull \hbox (67.31895pt too wide) in paragraph at lines 219--240
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[5]
-Overfull \hbox (67.31895pt too wide) in paragraph at lines 245--266
+Overfull \hbox (67.31895pt too wide) in paragraph at lines 244--265
 [][] 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \hbox (67.31895pt too wide) in paragraph at lines 269--290
+[][] 
+ []
+
+
+Overfull \hbox (67.31895pt too wide) in paragraph at lines 294--319
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (67.31895pt too wide) in paragraph at lines 323--348
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (67.31895pt too wide) in paragraph at lines 352--381
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (67.31895pt too wide) in paragraph at lines 385--410
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (67.31895pt too wide) in paragraph at lines 414--437
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (67.31895pt too wide) in paragraph at lines 441--464
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (46.39351pt too wide) in paragraph at lines 468--491
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./main.bbl
+
+[5]
+
+LaTeX Warning: Text page 6 contains only floats.
 
 
 
 [6]
-Overfull \hbox (67.31895pt too wide) in paragraph at lines 271--292
-[][] 
- []
 
+[7])
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[7]
-Overfull \hbox (67.31895pt too wide) in paragraph at lines 297--322
-[][] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[8]
-Overfull \hbox (67.31895pt too wide) in paragraph at lines 327--352
-[][] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[9]
-Overfull \hbox (67.31895pt too wide) in paragraph at lines 357--386
-[][] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[10]
-Overfull \hbox (67.31895pt too wide) in paragraph at lines 391--416
-[][] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[11]
-Overfull \hbox (67.31895pt too wide) in paragraph at lines 421--444
-[][] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[12]
-Overfull \hbox (67.31895pt too wide) in paragraph at lines 449--472
-[][] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[13]
-Overfull \hbox (46.39351pt too wide) in paragraph at lines 477--500
-[][] 
- []
-
-(./main.bbl)
-
-[14] (./main.aux)
+[8] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -705,18 +691,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 49225BC26567D828691B7D1DB55F5DF8;3394.
  ) 
 Here is how much of TeX's memory you used:
- 17085 strings out of 474662
- 281618 string characters out of 5751110
- 734905 words of memory out of 5000000
+ 17079 strings out of 474662
+ 281577 string characters out of 5751110
+ 785903 words of memory out of 5000000
  39857 multiletter control sequences out of 15000+600000
  568054 words of font info for 55 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 75i,14n,79p,1001b,547s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,14n,79p,1001b,612s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </Users/miguel/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk> </Users/miguel/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/tcbx1000.600pk> </Users/miguel/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk> </Users/miguel/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk> </Users/miguel/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </Users/miguel/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </Users/miguel/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </Users/miguel/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on main.pdf (14 pages, 124963 bytes).
+Output written on main.pdf (8 pages, 121582 bytes).
 PDF statistics:
- 522 PDF objects out of 1000 (max. 8388607)
- 245 compressed objects within 3 object streams
- 56 named destinations out of 1000 (max. 500000)
+ 496 PDF objects out of 1000 (max. 8388607)
+ 225 compressed objects within 3 object streams
+ 50 named destinations out of 1000 (max. 500000)
  201 words of extra memory for PDF output out of 10000 (max. 10000000)
 
