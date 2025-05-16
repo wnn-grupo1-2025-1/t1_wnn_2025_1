@@ -1,26 +1,51 @@
 \documentclass{article}
 
-% Packages for formatting, figures, and tables
-\usepackage[protrusion=false,expansion=false]{microtype}
-\usepackage{graphicx}
-\usepackage{subfigure}
-\usepackage{booktabs}
-\usepackage{hyperref}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{mathtools}
-\usepackage{amsthm}
-\usepackage[capitalize,noabbrev]{cleveref}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage[brazil]{babel}
-\usepackage{array}
-\usepackage{longtable}
+% This document uses the NeurIPS 2024 conference template 
+% The NeurIPS template features:
+% - Clean, professional typesetting suitable for machine learning publications
+% - Two-column layout optimized for conference proceedings
+% - Specific formatting for title, authors, sections, and references
+% - Support for mathematics and algorithmic content
+% - Standardized spacing and margins that follow conference guidelines
+%
+% Note: The original template has been modified to use Computer Modern Sans Serif
+% fonts instead of Helvetica to avoid font compatibility issues.
+%
+% Load NeurIPS package with "final" option to get camera-ready formatting
+\usepackage[final]{neurips_2024}
 
-% Title configuration
+% Additional packages
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{amsmath}        % math equations
+\usepackage{amssymb}        % math symbols
+\usepackage{mathtools}      % math tools
+\usepackage{amsthm}         % theorem environments
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage[protrusion=false,expansion=false]{microtype} % microtypography without font expansion
+\usepackage{xcolor}         % colors
+\usepackage{graphicx}       % figures
+\usepackage{subfigure}      % subfigures
+\usepackage[capitalize,noabbrev]{cleveref} % better cross-referencing
+\usepackage[brazil]{babel}  % brazilian portuguese
+\usepackage{array}          % tables
+\usepackage{longtable}      % multi-page tables
+
 \title{Avaliação do Modelo BTHOWeN em Datasets MultiClasses}
-\author{Breno Tostes \and Eduardo Naslausky \and Felipe Barrocas \and Giordano Souza \and Maria Bianca Irace \and Miguel Sousa \and Rafael Paladini}
-\date{\today}
+
+\author{%
+  \begin{tabular}{c@{\hspace{1.5em}}c@{\hspace{1.5em}}c}
+    Breno Tostes & Eduardo Naslausky & Felipe Barrocas \\[0.8em]
+    Giordano Souza & Maria Bianca Irace & Miguel Sousa \\[0.8em]
+    \multicolumn{3}{c}{Rafael Paladini}
+  \end{tabular}
+  \\[3em]
+  COPPE, Universidade Federal do Rio de Janeiro
+}
 
 \begin{document}
 
